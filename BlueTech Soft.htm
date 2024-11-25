@@ -1,0 +1,1511 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" >
+    <link rel="stylesheet" href="BlueTech soft.css" /> 
+    <title>BlueTechSoft.cloud</title>
+    <style>
+        body{
+            background-color:black;
+            padding:0;
+            margin:0;
+            display:block;
+            height:100%;
+            width:100%;
+            overflow-x:auto;
+        }
+        .menu1{
+            background-color:dimgrey; 
+            border:2px solid black;
+            padding:7px;
+            justify-content:center;
+            width:100%;
+            display:inline-block;
+            align-items:center;
+            align-content:center;
+            overflow-x:hidden;
+            height:auto;
+        }
+        .menu1 svg{
+            align-self:flex-end;
+        }
+        svg{
+            background-color:transparent;
+            padding:0;
+            margin:0;
+            border-radius:15px;
+        }
+       .menu1 img{
+           border-radius:50px;
+           padding:0;
+           margin:0;
+       }
+        .menu1 a{
+            color:yellowgreen;
+            line-height: 32px;
+            font: bold 14px arial;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0 8px 8px 8px;
+        }
+       .footer .footer-container .footer-column ul,li,a{
+            color:red;
+            display:inline;
+            font-size:15px;
+            list-style-type:circle;
+            text-decoration:none;
+            margin:0px;
+            padding:0px;
+            text-align:left;
+        }
+        .footer-column a:hover{
+            color:lightgreen;
+            text-decoration:underline;
+            background-color:black;
+            border-radius:5px;
+            padding:0px;
+        }
+.menu1 p,ul, li{
+           color:lightgoldenrodyellow;
+           background-color:none;
+           line-height:32px;
+           font-size:20px;
+           display:inline-block;
+           text-decoration:none;
+           padding:1px;
+           margin:1px;
+       }
+       .menu1 a:hover{
+            text-decoration:underline;
+           border-radius:3px;
+           color:greenyellow;
+           background-color:silver;
+           padding-bottom:1px;
+           padding-top:1px;
+       }
+       .menu1 a:after{
+           color:red;
+           background-color:red;
+       }
+       .menu1 .fa-youtube {
+            text-decoration: none;
+            color: red; /* YouTube red color */
+            font-size: 25px; /* Icon size */
+        }
+
+            .menu1 .fa-youtube:hover {
+                color:darkred; /* Darker red on hover */
+                padding:0px;
+            }
+
+        .menu1 .fa-whatsapp {
+            text-decoration: none;
+            color:lightseagreen; /* WhatsApp green color */
+            font-size: 25px; /* Icon size */
+        }
+
+            .menu1 .fa-whatsapp:hover {
+                color:lightgreen; /* Darker green on hover */
+                 padding:0px;
+            }
+
+        .menu1 .fa-instagram {
+            text-decoration: none;
+            color:deeppink; /* Darker pink on hover */
+            font-size: 25px; /* Icon size */
+        }
+
+            .menu1 .fa-instagram:hover {
+                color:pink; /* Instagram pink color */
+                 padding:0px;
+            }
+
+        .menu1 .fa-x {
+            text-decoration: none;
+            color: Blue; /* Twitter blue color */
+            font-size: 25px; /* Icon size */
+        }
+
+            .menu1 .fa-x:hover {
+                color: #0a95e0; /* Darker blue on hover */
+                 padding:0px;
+            }
+
+        .menu1 .fa-tiktok {
+            text-decoration: none;
+            color: Black; /* TikTok color */
+            font-size: 25px; /* Icon size */
+        }
+
+          .menu1 .fa-tiktok:hover {
+                color: #444; /* Darker color on hover */
+                 padding:0px;
+            }
+
+        .menu1 .fa-linkedin{
+            text-decoration: none;
+            color: #0077B5; /* LinkedIn blue color */
+            font-size: 25px; /* Icon size */
+            padding:0px;
+        }
+
+            .menu1 .fa-linkedin:hover {
+                color: #005582; /* Darker blue on hover */
+                 padding:0px;
+            }
+
+        .menu1 .fa-github {
+            text-decoration: none;
+            color: #333; /* GitHub icon color */
+            font-size: 25px; /* Icon size */
+            padding:0px;
+        }
+
+            .menu1 .fa-github:hover {
+                color: #444; /* Darker color on hover */
+                 padding:0px;
+            }
+           .menu1 .fa-telegram {
+            text-decoration: none;
+            fill:white;
+            color:lightskyblue;
+            background-color:transparent;
+            font-size: 25px; /* Icon size */
+            padding:0px;
+        }
+
+           .menu1 .fa-telegram:hover {
+                color:darkblue; /* Darker color on hover */
+                 padding:0px;
+            }
+            .menu-container {  
+            position: relative;  
+            display: flex;  
+            justify-content:flex-start; 
+            padding:5px;
+            margin:0; 
+        }  
+
+        .menu-icon {  
+            cursor: pointer;  
+            width: 36px; /* Adjust width */  
+            height: 36px; /* Adjust height */  
+            background:linear-gradient(cadetblue,silver); 
+            display:grid;  
+            justify-content: center;   
+            align-items: center;   
+            color: white; /* Text color */  
+            font-weight: bold; /* Make the text bold */  
+            font-size: 16px; /* Font size */  
+            border-radius: 5px; /* Optional: rounded corners */  
+            padding:0;
+            margin:0;
+        }  
+
+        .dropdown-menu {  
+            display: none; /* Hidden by default */  
+            position: absolute;  
+            left: 0px; /* Align with the icon */  
+            background:linear-gradient(cadetblue,silver);  
+            border: 1px solid #ccc;  
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);  
+            z-index: 1; /* Stay above other elements */  
+		    max-height: 400px; /* Set maximum height */  
+            max-width:200px;
+            overflow-y: auto; /* Enable vertical scroll */
+            margin:0;
+            padding:0;
+        }  
+
+        .dropdown-menu a {  
+            display:grid;  
+            padding:5px;  
+            text-decoration: none;  
+            color:purple;  
+            margin:0;
+            font-size:17px;
+        }  
+
+        .dropdown-menu a:hover {  
+            background-color: #f1f1f1; /* Add hover effect */  
+            color:red;
+            border-radius:20px;
+        } 
+			        .close-button {  
+    cursor: pointer;  
+    color: red;  
+    height:40px;
+    width:100%;  
+    font-size:25px;
+    font-family:Arial;
+    text-decoration-color:palevioletred;
+    background:linear-gradient(cadetblue,silver);  
+    border: none; 
+    border-radius:5px; 
+    padding: 0;  
+    margin-bottom: 10px;  
+    align-self: flex-end; /* Align at the top right */  
+} 
+        .body-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 15px;
+            overflow: hidden;
+            height: auto;
+            width: auto ;
+        }
+
+        .body-column {
+            display: block;
+            justify-content: center;
+            margin:10px;
+            padding: 15px;
+            height: auto;
+            width: auto;
+            transform:scale(1.05);
+        }
+
+        .section1 {
+            background-color:transparent;
+            background-size: cover;
+            font-family: Times New Roman;
+            text-align: left;
+            margin: 0px 0px 0px 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        .section2 {
+            background-color: Transparent;
+            background-size: cover;
+            font-family: Times New Roman;
+            text-align: left;
+            margin: 0px 0px 0px 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        .section1 {
+            background-color:transparent;
+            animation-direction:alternate-reverse;
+            background-size: cover;
+            background-position: center;
+            font-family: Times New Roman;
+            text-align: center;
+            margin: 0px 0px 0px 0px;
+            padding:0;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        .section3{
+            background-color:transparent;
+            font-family: Times New Roman;
+            margin: 0px 0px 0px 0px;
+            padding: 1px 1px 1px 1px;
+            height: auto;
+            width: auto;
+        }
+
+        .section4 {
+            background-color:transparent;
+            background-size: cover;
+            font-family: Times New Roman;
+            text-align: left;
+            margin: 0px 0px 0px 0px;
+            padding: 3px 3px 3px 3px;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        .section2 {
+            font-family: Arial, sans-serif;
+            margin: 0px 0px 0px 0px;
+            padding: 3px 3px 3px 3px;
+            justify-content: center;
+            height: auto;
+            width: auto;
+        }
+
+        .section10 {
+            background-color: Silver;
+            background-size: cover;
+            font-family: Times New Roman;
+            text-align: left;
+            margin: 0 auto;
+            padding: 0;
+            justify-content: center;
+            height: auto ;
+            width: auto;
+            display: inline;
+        }
+        .section7{
+            display:flex;
+            margin:0;
+            padding:0;
+            height:auto;
+            width:auto;
+
+        }
+        .section7 ul li{
+            list-style-type:disc;
+            list-style:disc;
+            display:grid;
+            color:lightskyblue;
+        }
+        .section6{
+            display:block;
+            padding:0;
+            margin:0;
+            align-content:center;
+            text-align:left;
+            text-wrap:avoid;
+        }
+        .section6 ul li a{
+            display:block;
+            position:relative;
+        }
+        .product-grid {
+            display: flex;
+            padding: 10px;
+            margin: 0px 0px 0px 0px;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            background-color: transparent;
+            border: 2px solid blue;
+            border-radius: 15px;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            display: inline;
+        }
+
+            .product-card:hover {
+                transform: scale(1.01);
+            }
+
+            .product-card img {
+                height: 290px;
+                width: 270px;
+                border-radius: 5px;
+                margin:10px;
+                padding: 0px 0px 0px 0px;
+                transform:scale(1.0);
+            }
+            .product-card img:hover{
+                transform:scale(1.02);
+            }
+        .section {
+            height: auto;
+            display: flex;
+            font-size: 1rem;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(200px); /* Start below the view */
+            transition: opacity 1.0s ease-out, transform 1.0s ease-out; /* Transition effects */
+        }
+
+            .section.visible {
+                opacity: 1; /* Fade in */
+                transform: translateY(0); /* Move into view */
+            }
+
+        .button1 {
+            background-color:transparent;
+            background-size: cover;
+            height: auto;
+            width:auto;
+            padding:0px;
+            margin: 0px 0px 0px 0px;
+            display: block;
+        }
+
+        .button2 {
+            background-color:cornflowerblue;
+            background-size: cover;
+            height:auto;
+            width:auto;
+            border:5px solid black;
+            padding:0;
+            margin-top:20px;
+            display:flex;
+            justify-content:space-around;
+        }
+        .button2 .body-column{
+            display:inline;
+            padding:10px;
+            width:280px;
+            height:auto;
+            margin:10px;
+            margin-top:50px;
+            justify-content:center;
+        }
+        .slideshoww-container {
+            overflow: hidden;
+            height: 400px;
+            width: 400px; /* Width of slideshow */
+            position: relative;
+            display: block;
+            margin: auto;
+            padding:0;
+        }
+
+        .slide {
+            display: flex;
+            width: 300%; /* Adjust based on number of images */
+            animation: slide 30s infinite linear; /* Duration and repeat */
+        }
+
+            .slide img {
+                width: 33.33%; /* Adjust for number of images (e.g. 3 images) */
+                border-radius: 50px; /* Optional rounded corners for images */
+                padding: 15px;
+            }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            33.33% {
+                transform: translateX(-100%);
+            }
+
+            66.66% {
+                transform: translateX(-200%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .slideshow-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%; /* Ensure it takes full height of footer */
+            width: 100%;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .slides {
+            min-width: 100%; /* Each slide takes full width of the container */
+            height: 100%; /* Ensure full height of the footer */
+            display: flex;
+            justify-content: center; /* Center images */
+            align-items: center; /* Vertically center images */
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+            text-align:center;
+        }
+
+            .slides img {
+                max-width:80%; /* Make images smaller */
+                height:90%;
+            }
+
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .nav-button {
+            color: #00ff00;
+            background-color: blue;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        q {
+            font-family: Copper black;
+            font-size: 30px;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        a img:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            border-radius: 15px;
+        }
+
+        video {
+            margin: 0 auto;
+            padding: 0;
+            height: 85%;
+        }
+
+            video:hover {
+                transform: scale(1.05);
+            }
+
+        .search-container {
+            max-width: 400px;
+            margin: 0px 0px 0px 0px;
+            text-align: center;
+            display: flex;
+            padding: 15px;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: Purple;
+            border: none;
+            border-radius: 4px;
+            color: White;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: Purple;
+            }
+
+        h1 {
+            color: purple;
+            font-family: Times New Roman;
+            font-size: 40px;
+            text-align: center;
+        }
+
+            h1.heading {
+                color: white;
+                text-align: center;
+                font-family: Times New Roman;
+                font-size: 50px;
+                 text-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+       
+                    }
+
+        h2 {
+            font-family: Times New Roman;
+            color: #808000;
+            font-size: 30px;
+        }
+
+            h2.search {
+                color: Blue;
+                text-align: center;
+                text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+            }
+
+        h1.search {
+            color: Blue;
+            text-align: center;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+        }
+
+        h3 {
+            color: White;
+            font-family: Times New Roman;
+        }
+
+        h4 {
+            color: #ff00cc;
+            font-family: Times New Roman;
+        }
+
+        h5 {
+            color: Silver;
+            font-family: Copper Black;
+            font-size: 36px;
+        }
+
+        h6 {
+            color: Orange;
+            font-family: Times New Roman;
+            font-size: 16px;
+        }
+
+        h7 {
+            color: Blue;
+            font-family: Times New Roman;
+            font-size: 36px;
+        }
+
+        p {
+            color: white;
+            font-family: Times New Roman;
+            margin:auto;
+        }
+
+            p.follow {
+                color: Purple;
+            }
+
+        a {
+            color: #99ccff;
+            font-family: Times New Roman;
+        }
+
+            a:hover {
+                color: #00ff00;
+            }
+
+        li {
+            color:white;
+        }
+
+        header {
+            margin: 0;
+        }
+
+        .header-container {
+            background-color:dimgray;
+            margin: 0;
+            padding: 0px;
+            display: block;
+            height: auto;
+            width: auto;
+        }
+
+        .content {
+            margin-top: 0px 0px 0px 0px;
+            padding: 5px;
+        }
+        .footer {
+            position: relative;
+            height:300px;
+            width: auto;
+            background-image: url('KENYA.jpg');
+            background-repeat: repeat;
+            background-position: center;
+            margin:0;
+            padding: 0;
+            display:flex;
+            justify-content: center;
+        }
+
+        footer {
+            color:white;
+            background-color:dimgrey;
+            background-size: cover;
+            margin: 0px;
+            padding:0;
+            height: auto;
+            width: auto;
+            display:block;
+            justify-content:space-around;
+            text-align:start;
+
+        }
+        .footer-container {
+           display:flex;
+            justify-content:space-around;
+            height: auto;
+            width: auto ;
+            align-items:flex-start;
+            margin:15px;
+            padding:30px;
+            text-align:left;
+        }
+        .footer-column {
+            display:inline;
+            margin:0px;
+            padding:10px;
+            height: auto;
+            width: auto;
+            text-align:left;
+
+        }
+        footer.img{
+            border-radius:50px;
+        }
+        .whatsapp-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 50px;
+            background-color: #25D366; /* WhatsApp color */
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+
+            .whatsapp-icon:hover {
+                background-color: #128C7E; /* Darker green on hover */
+            }
+
+        .arrow-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF; /* Blue background */
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .arrow-link:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+            }
+
+            .arrow-link::before {
+                display: inline-block;
+                width: 10px; /* Width of the arrow */
+                height: 10px; /* Height of the arrow */
+                margin-right: 5px;
+                border-left: 2px solid white;
+                border-bottom: 2px solid white;
+                transform: rotate(45deg); /* Rotate to form an arrow */
+            }
+            .section8{
+                 background-color:transparent;
+                background-size:cover;
+                padding:0;
+                margin:0;
+            }
+            .section8a{
+                padding:0;
+                margin:0;
+            }
+            .button3{
+                background:linear-gradient(green,grey);
+                display:flex;
+                height:250px;
+                width:300px;
+                border:none;
+                border-radius:10px;
+                padding:3px;
+                margin:3px;
+                justify-content:space-around;
+            }
+            .button3 .fa-whatsapp{
+                font-size:50px;
+                color:white;
+                fill:white;
+            }
+            .button4 .fa-youtube{
+                font-size:50px;
+                color:red;
+                fill:red;
+            }
+            .button4{
+                background:linear-gradient(grey,red);
+                display:flex;
+                height:250px;
+                width:300px;
+                border:none;
+                border-radius:10px;
+                padding:3px;
+                margin:3px;
+                justify-content:space-around;
+            }
+            .button3 p{
+                font-family:'Arial Rounded MT';
+                color:white;
+                padding:5px;
+                margin:5px;
+                font-size:18px;
+                letter-spacing:2px;
+                line-height:23px;
+            }
+            .button3 svg{
+                rotation-point:bottom;
+                transform:rotate(-30deg);
+                fill:white;
+                color:white;
+                position:absolute;
+                right:20px;
+                top:40px;
+            }
+             .button4 svg{
+                rotation-point:bottom;
+                transform:rotate(-30deg);
+                fill:white;
+                color:white;
+                position:absolute;
+                right:15px;
+                top:30px;
+            }
+            .button4 p{
+                font-family:'Arial Rounded MT';
+                color:white;
+                padding:5px;
+                margin:5px;
+                font-size:18px;
+                letter-spacing:2px;
+                line-height:23px;
+            }
+            .button3 .arrow-link{
+                color: #fff;
+                background-color: #007BFF; /* Blue background */
+                padding:3px;
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                width:90px;
+                height:30px;
+                text-align:center;
+                text-align-last:center;
+                justify-content:center;
+            }
+            .button3 .arrow-link:hover{
+                background-color:silver;
+            }
+            .button4 .arrow-link:hover{
+                background-color:silver;
+                color:white;
+            }
+           .section8 .section8a .button5{
+                position:relative;
+                width:100%;
+                height:570px;
+                border-radius:0px;
+                margin-left:0;
+                display:inline-block;
+                margin-bottom:50px;
+                margin-top:0px;
+                justify-content:space-around;
+            }
+           .button5 .Instagram{
+               display:flex;
+               padding:3px;
+               margin-top:20px;
+               margin-bottom:20px;
+               width:40%;
+               margin-left:55%;
+               background:linear-gradient(orange,deeppink,purple);
+               height:70px;
+               border-radius:8px;
+           }
+           .button5 .Instagram .fa-instagram{
+               font-size:40px;
+               padding:3px;
+               align-self:center;
+           }
+            .button5 .Linkedin{
+               display:flex;
+               padding:3px;
+               margin-bottom:20px;
+               width:40%;
+               margin-left:55%;
+               background:linear-gradient(blue,lightblue);
+               height:70px;
+               border-radius:8px;
+           }
+           .button5 .Linkedin .fa-linkedin{
+               font-size:40px;
+               padding:3px;
+               align-self:center;
+           }
+            .button5 .Telegram{
+               display:flex;
+               padding:3px;
+               margin-bottom:20px;
+               width:40%;
+               margin-left:55%;
+               background-color:blue;
+               height:70px;
+               border-radius:8px;
+           }
+           .button5 .Telegram .fa-telegram{
+               font-size:40px;
+               padding:3px;
+               align-self:center;
+           }
+            .button5 .Tiktok{
+               display:flex;
+               padding:3px;
+               margin-bottom:20px;
+               width:40%;
+               margin-left:55%;
+               background:linear-gradient(white,grey,black);
+               height:70px;
+               border-radius:8px;
+           }
+           .button5 .Tiktok .fa-tiktok{
+               font-size:40px;
+               padding:3px;
+               align-self:center;
+           }
+           .Contact{
+               display:block;
+               padding:3px;
+               margin-bottom:20px;
+               width:40%;
+               margin-left:55%;
+               background-color:black;
+               height:auto;
+               border-radius:8px;
+           }
+    </style>
+</head>
+<body>
+    <div class="menu1" id="menu" align="left">
+        <a href="BlueTech Soft.htm"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M160-120v-480l320-240 320 240v480H560v-280H400v280H160Z" /></svg></a>
+        <a href="Company News.htm" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160ZM480-80q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM80-560q0-100 44.5-183.5T244-882l47 64q-60 44-95.5 111T160-560H80Zm720 0q0-80-35.5-147T669-818l47-64q75 55 119.5 138.5T880-560h-80Z" /></svg></a>
+        <a href="PDF downloads.htm" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M480-315.33 284.67-510.67l47.33-48L446.67-444v-356h66.66v356L628-558.67l47.33 48L480-315.33ZM226.67-160q-27 0-46.84-19.83Q160-199.67 160-226.67V-362h66.67v135.33h506.66V-362H800v135.33q0 27-19.83 46.84Q760.33-160 733.33-160H226.67Z" /></svg></a>
+        |
+        <a href="BlueTech Soft.htm">HOME</a>|
+        <a href="About Us.htm" target="_blank">ABOUT US</a>|
+        <a href="Login.html">LOGIN</a>|
+        <a href="Documentation.htm" target="_blank">DOCUMENTATION</a>|
+        <a href="Support.htm" target="_blank">SUPPORT</a>|
+        <a href="Support.htm" target="_blank">FAQS</a>|
+        <a href="https://chat.whatsapp.com/J3c5LY4EyGCEIBVwz9wbwD" target="_blank">GROUP</a>|
+        <a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" target="_blank">COMMUNITY</a>|
+        <a href="Marketplace.htm" target="_blank">MARKETPLACE</a>
+        <br />
+        <a href="SignUp.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M480.16-502Q395-502 336.5-561T278-704.5q0-84.5 58.34-142.5t143.5-58q85.16 0 143.66 57.89T682-704q0 84-58.34 143t-143.5 59ZM114-86v-159q0-46.77 23.79-84.47Q161.58-367.16 201-387q66-34 136.17-51 70.18-17 142.55-17Q554-455 624-438t135 50q39.42 19.69 63.21 57.11T846-245.05V-86H114Z" /></svg></a>
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M792-120.67 532.67-380q-30 25.33-69.64 39.67Q423.39-326 378.67-326q-108.44 0-183.56-75.17Q120-476.33 120-583.33t75.17-182.17q75.16-75.17 182.5-75.17 107.33 0 182.16 75.17 74.84 75.17 74.84 182.27 0 43.23-14 82.9-14 39.66-40.67 73l260 258.66-48 48Zm-414-272q79.17 0 134.58-55.83Q568-504.33 568-583.33q0-79-55.42-134.84Q457.17-774 378-774q-79.72 0-135.53 55.83-55.8 55.84-55.8 134.84t55.8 134.83q55.81 55.83 135.53 55.83Z" /></svg></a>|
+        <p class="follow"><b>Follow About Us And get more Resources From Us Here:</b></p>
+        <ul>
+            <li><a class="Whatsaap-link" href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" target="_blank"><i class="fab fa-whatsapp" style="color:yellowgreen"></i></a></li>
+            <li><a class="Instagram-link" href="https://www.instagram.com/ctrl_cench/? pwa=1# " target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a class="Youtube-link" href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a class="Tiktok-link" href="https://www.tiktok.com/@blue_tech05" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+            <li><a class="LinkedIn-link" href="https://www.linkedin.com/in/BlueTechsoft" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a class="GitHub-link" href="https://github.com/BlueTechSoft-coder" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a class="Twitter-link" href="https://www.x.com/BlueTechsoft" target="_blank"><i class="fab fa-x"></i></a></li>
+            <li><a class="Telegram-link" href="https://www.telegram.com/" target="_blank"><i class="fab fa-telegram"></i></a></li>       
+         </ul>
+        <br />
+    </div>
+    <div class="menu-container">
+        <div class="menu-icon" id="menuu"onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#75FBFD"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+        </div>
+        <div id="dropdownMenu" class="dropdown-menu" >
+            <button class="close-button" onclick="toggleMenu()">Close</button>
+            <a href="BlueTech%20Soft.htm">HOME</a>
+            <a href="SignUp.html">Sign Up</a>
+            <a href="Login.html">Log In</a>
+            <a href="PDF%20downloads.htm">Downloads</a>
+            <a href="Marketplace.htm">Marketplace</a>
+            <a href="Company%20News.htm">News and Updates</a>
+            <a href="FEEDBACK%20PAGE.htm">Feedback</a>
+            <p align="center">
+                <b><u>Services</u></b>
+                <ul>
+                    <li><a href="Software%20Services.htm">Software Development</a></li>
+                    <li><a href="Website%20Devp.htm">Web Development</a></li>
+                    <li><a href="Data%20Science.htm">Data Scinece</a></li>
+                    <li><a href="AI%20services.htm">AI And Data Annotation</a></li>
+                    <li><a href="#">Gaming</a></li>
+                    <li><a href="Programming%20Languages.htm" >Programming</a></li>
+                    <li><a href="Networking.htm">Networking</a></li>
+                    <li><a href="Computer%20Packages.htm">Computer Packages</a></li>
+                    <li><a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm">BlueTech Community</a></li>
+                    <li><a href="Documentation.htm">Documentation</a></li>
+                </ul>
+                <button class="close-button" id="close" onclick="toggleMenu()">Close</button>
+        </div>
+    </div> 
+    <div class="section1">
+        <div class="body-container">
+            <div class="body-column">
+                <h1 class="heading"><b><big>BlueTech Soft.cloud</big></b></h1>
+                <h1 style="font-family:Times New Roman" class="search"><b>Transforming Ideas into <br> Innovative Software Solutions</b></h1>
+            </div>
+            <div class="body-column">
+                <h1 class="search" style="font-family:Castellar"><small>Search our site<br>for Services and Products</small></h1>
+                <form action="search_results.html" method="get">
+                    <input type="text" name="q" placeholder="Type your search...">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="body-container">
+            <div class="footer">
+                <div class="slideshow-container">
+                    <div class="slides">
+                        <a href="Networking.htm" target="_blank"><img src="NETWORKING.JPG" width="400" height="400" alt="Image 2"></a>
+                        <palign="left" style="color:black"><p>
+                            <b><big>NETWORKING SERVICES</big></b></p><br />
+                            <a href="Networking.htm" target="_blank" class="arrow-link">&#8594 Read More</a>
+                    </div>
+                    <div class="slides">
+                        <a href="Website%20Devp.htm" target="_blank"><img src="1358310.png" width="400" height="400" alt="Image 2"></a>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>WEB DEVELOPMENT</big></b>
+                            </p><br>
+                            <a href="Website%20Devp.htm" class="arrow-link" target="_blank">&#8594 Read More</a>
+</div>
+                    <div class="slides">
+                        <a href="Computer%20Packages.htm" target="_blank"><img src="Packages.PNG" width="400" height="400" alt="Image 6"></a><br>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>COMPUTER PACKAGES</big></b>
+                            </p><br>
+                            <a href="Computer%20Packages.htm" target="_blank" class="arrow-link">&#8594 Read More</a>
+</div>
+                    <div class="slides">
+                        <a href="Data%20Science.htm" target="_blank"><img src="DATA%20SCIENCE.jpg" width="400" height="400" alt="Data Science"></a>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>DATA SCIENCE</big></b>
+                            </p><br>
+                            <a href="Data%20Science.htm" target="_blank" class="arrow-link">&#8594 Read More</a>
+</div>
+                    <div class="slides">
+                        <a href="Programming%20Languages.htm" target="_blank"><img src="GAMING1.JPG" width="400" height="400" alt="Image 5"></a>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>GAMING</big></b>
+                            </p><br>
+                            <a href="Programming%20Languages.htm" target="_blank" class="arrow-link">&#8594 Read More</a>
+</div>
+                    <div class="slides">
+                        <a href="AI%20services.htm" target="_blank"><img src="AI1.JPG" width="400" height="400" alt="Image 3"></a>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>AI LEARNING</big></b>
+                            </p><br>
+                            <a href="AI%20services.htm" target="_blank" class="arrow-link">&#8594 Read More</a>
+</div>
+                    <div class="slides">
+                        <a href="Software%20Services.htm" target="_blank"><img src="SOFTWARE.JPG" width="400" height="400" alt="Image 4"></a>
+                        <palign ="center" style="color:black">
+                            <p>
+                                <b><big>SOFTWARE DEVELOPMENT</big></b>
+                            </p><br>
+                                <a href="Software%20Services.htm" class="arrow-link" target="_blank">&#8594 Read More</a>
+</div>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="plusSlides(-1)">&#10094;</button>
+                    <button class="nav-button" onclick="plusSlides(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="section7">
+        <div class="body-container">
+            <div class="body-column">
+                <h1 align="center"><b><u>BlueTech soft.cloud</u></b></h1>
+                 <h2 align="center">Get Quality Services From Experts In<br>Different Fields.</h2>
+                <ul>
+                    <li>Software Development</li>
+                    <li>Website Development</li>
+                    <li>Networking And Internet</li>
+                    <li>AI And Data Annotation</li>
+                    <li>Programming Skills in (C++, html, <br>JavaScript, Python, Java and More)</li>
+                    <li>Data Science</li>
+                    <li>Cyber Security</li>
+                    <li>Gaming</li>
+                    <li>Ms Computer Packages</li>
+                </ul>
+                <h3 align="center">Click Below To:</h3>
+                <h3 align="center">
+                    <a href="#" class="arrow-link" target="_blank">&#8594 Learn More</a>OR
+                    <a href="Support.htm" class="arrow-link" target="_blank">&#8594 Get Help</a>
+                </h3>
+            </div>
+            <div class="body-column">
+                <div class="slideshoww-container">
+                    <div class="slide">
+                        <img src="babcff7e943f33a1c5934bf8f7d1cea9.jpg" width="400" height="400" alt="KENYA" />
+                        <img src="Packages.png" width="400" height="400" alt="Packages" />
+                        <img src="AI1.jpg" width="400" height="400" alt="AI1" />
+                        <img src="BEST.png" width="400" height="400" alt="BEST" />
+                        <img src="ICON1.png" width="400" height="400" alt="ICON1" />
+                        <img src="NEXT.png" width="400" height="400" alt="NEXT" />
+                    </div>
+                </div>
+                <h3 align="center">Project Samples The Company Has Found Best Solution</h3>
+                <h3 align="center"><a href="Support.htm" class="arrow-link" target="_blank">&#8594 See More</a></h3>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="section" id="section1">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="Software%20Services.htm" target="_blank">
+                        <img src="SOFTWARE.JPG" width="300" height="300" alt="1355025" />
+                    </a>
+                    <p align="center"><big><b>Software Development<br><a href="Software%20Services.htm" class="arrow-link" target="_blank">&#8594;Read More</a></b></big></p>
+                </div>
+
+                <div class="product-card">
+                    <a href="Website%20Devp.htm" target="_blank">
+                        <img src="1358310.PNG" width="300" height="300" alt="AI" />
+                    </a>
+                    <p align="center"><b><big>Web Development<br><a href="Website%20Devp.htm" class="arrow-link" target="_blank">&#8594;Read More</a></big></b></p>
+                </div>
+
+                <div class="product-card">
+                    <a href="Networking.htm" target="_blank"><img src="NETWORKING.JPG" width="300" height="300" alt="1358310" /></a>
+                    <p align="center"><b><big>Networking Services<br><a href="Networking.htm" class="arrow-link" target="_blank">&#8594;Read More</a></big></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="section" id="section1">
+        <div class="container">
+            <div class="product-grid">
+                <div class="product-card">
+                    <a href="Programming%20Languages.htm" target="_blank"><img src="GAMING1.JPG" width="300" height="300" alt="Image 5"></a>
+                    <p align="center"><big><b>Gaming<br><a href="Programming%20Languages.htm" class="arrow-link" target="_blank">&#8594;Read More</a></b></big></p>
+                </div>
+
+                <div class="product-card">
+                    <a href="AI%20services.htm" target="_blank">
+                        <img src="AI1.JPG" width="300" height="300" alt="AI" />
+                    </a>
+                    <p align="center"><b><big>AI And Machine Learning<br><a href="AI%20services.htm" class="arrow-link" target="_blank">&#8594;Read More</a></big></b>
+                </div>
+                <div class="product-card">
+                    <a href="Programming%20Languages.htm" target="_blank"><img src="PROGRAMMING2.PNG" width="300" height="300" alt="1358310" /></a>
+                    <p align="center"><b><big>Programming Languages<br><a href="Programming%20Languages.htm" class="arrow-link" target="_blank">&#8594;Read More</a></big></b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="section8">
+        <div class="section8a">
+            <div class="body-container">
+                <div class="body-column">
+                    <div class="button3">
+                        <div class="body-column">
+                            <big><p align="left">Join Us In Our <br /> Whatsapp <br />Channel</p></big>
+                            <p align="left"><small>Get Daily Updates</small></p>
+                            <a href="https://whatsapp.com/channel/0029Vaw8EJ77DAX0AokV8A1F" class="arrow-link" target="_blank">Join Now</a>
+                        </div>
+                        <div class="body-column">
+                            <p><a class="Whatsaap-link" href="https://whatsapp.com/channel/0029Vaw8EJ77DAX0AokV8A1F" target="_blank"><i class="fab fa-whatsapp" style="color:yellowgreen"></i></a></p>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M419-80q-28 0-52.5-12T325-126L107-403l19-20q20-21 48-25t52 11l74 45v-328q0-17 11.5-28.5T340-760q17 0 29 11.5t12 28.5v472l-97-60 104 133q6 7 14 11t17 4h221q33 0 56.5-23.5T720-240v-160q0-17-11.5-28.5T680-440H461v-80h219q50 0 85 35t35 85v160q0 66-47 113T640-80H419ZM167-620q-13-22-20-47.5t-7-52.5q0-83 58.5-141.5T340-920q83 0 141.5 58.5T540-720q0 27-7 52.5T513-620l-69-40q8-14 12-28.5t4-31.5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 17 4 31.5t12 28.5l-69 40Zm335 280Z" /></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-column">
+                    <div class="button4">
+                        <div class="body-column">
+                            <big><p align="left">Join Us In Our <br />Youtube Channel</p></big>
+                            <p align="left"><small>Get Daily Updates</small></p>
+                            <a href="#" class="arrow-link" target="_blank">Join Now</a>
+                        </div>
+                        <div class="body-column">
+                            <a class="Youtube-link" href="https://www.youtube.com/channel/YOUR_CHANNEL_ID" target="_blank"><i class="fab fa-youtube"></i></a>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M419-80q-28 0-52.5-12T325-126L107-403l19-20q20-21 48-25t52 11l74 45v-328q0-17 11.5-28.5T340-760q17 0 29 11.5t12 28.5v472l-97-60 104 133q6 7 14 11t17 4h221q33 0 56.5-23.5T720-240v-160q0-17-11.5-28.5T680-440H461v-80h219q50 0 85 35t35 85v160q0 66-47 113T640-80H419ZM167-620q-13-22-20-47.5t-7-52.5q0-83 58.5-141.5T340-920q83 0 141.5 58.5T540-720q0 27-7 52.5T513-620l-69-40q8-14 12-28.5t4-31.5q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 17 4 31.5t12 28.5l-69 40Zm335 280Z" /></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="button5">
+                <div class="Instagram">
+                    <div class="body-column">
+                        <a class="Instagram-link" href="https://www.instagram.com/ctrl_cench/? pwa=1# " target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="body-column">
+                        <p align="left"><big>Join Us On Instagram</big><br />@Bluetech_soft</p>
+                    </div>
+                </div>
+                <div class="Linkedin">
+                    <div class="body-column">
+                        <a class="LinkedIn-link" href="https://www.linkedin.com/in/BlueTechsoft" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="body-column">
+                        <p align="left"><big>Join Us On Linkedin</big>
+                        <br />@Bluetech soft.cloud</p>
+                    </div>
+                </div>
+                <div class="Telegram">
+                    <div class="body-column">
+                        <a class="Telegram-link" href="https://www.telegram.com/" target="_blank"><i class="fab fa-telegram"></i></a>
+                    </div>
+                    <div class="body-column">
+                        <p align="left"><big>Join Us On Telegram Channel</big><br />@Bluetech soft.cloud</p>
+                    </div>
+                </div>
+                <div class="Tiktok">
+                    <div class="body-column">
+                        <a class="Tiktok-link" href="https://www.tiktok.com/@blue_tech05" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <div class="body-column">
+                        <p align="left"><big>Join Us On Tiktok</big><br />@Blue_Tech</p>
+                    </div>
+                </div>
+                <div class="Contact">
+                    <p align="left"><big>Contact Us:</big></p>
+                    <p align="left"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" /></svg>
+                        +254 708909399</p><br />
+                    <p align="left">  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M170-114q-56.72 0-96.36-40.14Q34-194.27 34-250v-460q0-55.72 39.64-95.86T170-846h620q56.72 0 96.36 40.14T926-710v460q0 55.73-39.64 95.86Q846.72-114 790-114H170Zm310-274 310-200v-122L480-508 170-710v122l310 200Z" /></svg> <a href="#">  :bluetechsoft1@gmail.com  </a></p>
+                    <p align="left">  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M170-114q-56.72 0-96.36-40.14Q34-194.27 34-250v-460q0-55.72 39.64-95.86T170-846h620q56.72 0 96.36 40.14T926-710v460q0 55.73-39.64 95.86Q846.72-114 790-114H170Zm310-274 310-200v-122L480-508 170-710v122l310 200Z" /></svg> <a href="#">  :andrewbarasa412@gmail.com  </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="button1">
+        <h2 align="center">WHY CHOOSE US???</h2>
+        <div class="body-container">
+            <div class="body-column">
+                <p align="left" style="color:navajowhite">
+                    <b>
+                        <big><big>Customized Solutions:</big></big>
+                    </b><br /><br />
+                    <big>
+                        "Tailored software solutions that fit your unique needs <br />
+                        and challenges, ensuring maximum efficiency and effectiveness."
+                    </big><br /><br />
+                    <b>
+                        <big><big>Cutting-edge Technology:</big></big>
+                    </b><br /><br />
+                    <big>
+                        "Leverage the latest technologies and frameworks to build <br />
+                        innovative and future-proof software applications."
+                    </big>
+                    <br /><br />
+                    <b>
+                        <big>
+                            <big>
+                                Expert Team:
+                                <br /><br />
+                            </big>
+                        </big>
+                    </b>
+                    <big>
+                        "Work with industry-leading experts who bring decades of
+                        <br />
+                        experience in software development and project management."
+                    </big>
+                </p>
+                <br />
+                <br /><b><big><a href="https://chat.whatsapp.com/J3c5LY4EyGCElBVwz9wbwD" class="arrow-link" target="_blank">&#8594;Learn With Us</a></big></b><br /><br />
+            </div>
+            <div class="body-column">
+                <p align="center">
+                    <b>
+                        <big>
+                            Inquire For Any Service<br /><br />
+                            <a href="https://chat.whatsapp.com/J3c5LY4EyGCElBVwz9wbwD" class="arrow-link" target="_blank">&#8594;Inquire</a> OR
+                            <a href="https://www.google.com/maps/place/Murang'a/Murang'a University of Technology/Manyota" class="arrow-link" target="_blank">&#8594;Locate Us</a>
+                            <br /><br />
+                            <img src="ICON1.png" width="200" height="200" />
+                        </big>
+                    </b>
+                </p>
+                <h1 align="middle">BlueTech soft.cloud</h1>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="section4">
+        <div class="body-container">
+            <div class="body-column">
+                <a href="FEEDBACK%20PAGE.htm" target="_blank">
+                    <img src="FEEDBACK.PNG" width="450" height="450" alt="FEEDBACK" />
+                </a>
+                <p align="center">
+                    <b>
+                        <big>
+                            Give Us Feedback<br>
+                            <a href="FEEDBACK%20PAGE.htm" class="arrow-link" target="_blank">&#8594;HERE</a>
+                        </big>
+                    </b>
+                </p>
+            </div>
+            <div class="body-column">
+                <a href="Company%20News.htm" target="_blank">
+                    <img src="NEWS.PNG" width="450" height="450" alt="NEWS" />
+                </a>
+                <p align="center">
+                    <b>
+                        <big>
+                            Get News and Updates<br>
+                            <a href="Company%20News.htm" class="arrow-link" target="_blank">&#8594;HERE</a>
+                        </big>
+                    </b>
+                </p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="section5">
+        <h2 align="center">BEST QUOTES<br>FOR YOU!!!</h2>
+        <div class="body-container">
+            <div class="body-column">
+                <h1>Joel Spolsky</h1>
+                <q><br>Great software is not just about writing code, it's about solving problems.<br></q>
+            </div>
+            <div class="body-column">
+                <h1>Martin Fowler</h1>
+                <q><br>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.<br></q>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <h2 align="center" color="white" font-family="Times New Roman">TESTIMONIALS<br>What People Say About Us</h2>
+    <div class="button2">
+        <div class="body-container">
+            <div class="body-column">
+                <img src="PERSONAL.jpg" width="250" height="270" alt="PERSONAL" />
+                <h5 align="center">W. Andrew- Startup Founder</h5>
+                <q><br />
+                    Working with BlueTech soft.cloud has been a game changer for our startup.
+                    Their team is incredibly knowledgeable and responsive.I can't recommend them enough!
+                <br /></q>
+            </div>
+            <div class="body-column">
+                <img src="AI1.jpg" width="250" height="270" alt="AI1" />
+                <h5 align="center">S. Kingssoft- Project Manager</h5>
+                <q><br />
+                    The custom software solution provided by BlueTech soft.cloud exceeded our expectations.
+                    They listened to our needs and delivered a product that fits perfectly with our workflow.
+                    I can't recommend them enough!
+                <br /></q>
+            </div>
+            <div class="body-column">
+                <img src="AI1.jpg" width="250" height="270" alt="AI1" />
+                <h5 align="center">Michael R.<br />IT Director</h5>
+                <q><br />
+                    We were struggling with outdated systems, and BlueTech soft.cloud came to our rescue.
+                    Their expertise in software integration transformed our processes.
+                    The support team has been fantastic, always available to assist when needed.
+                <br /></q>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="section6">
+            <h3 align="center"><b><u>BlueTech soft.cloud</u></b></h3>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4 align="left"><b>BLUETECH STORE</b></h4>
+                    <ul>
+                        <li><a href="PDF%20downloads.htm" target="_blank">Downloads Center</a> </li><br />
+                        <li><a href="Marketplace.htm" target="_blank">Computer Hardware</a></li><br />
+                        <li><a href="Marketplace.htm" target="_blank">MarketPlace</a></li><br />
+                        <li><a href="Computer%20Packages.htm" target="_blank">Computer Packages</a></li><br />
+                        <li><a href="Documentation.htm" target="_blank">Documentation</a></li><br />
+                        <li><a href="Programming%20Languages.htm" target="_blank">Programming Languages</a></li>
+                        <li><a href="Video%20Tutorials.htm" class="menu-item" target="_blank">Video Tutorials</a></li><br />
+                        <li><a href="PDF%20downloads.htm" target="_blank">BlueTech Apps</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 align="left"><b>BLUETECH SERVICES</b></h4>
+                    <ul>
+                        <li><a href="Website%20Devp.htm" target="_blank">Web Development</a></li><br />
+                        <li><a href="Software%20Services.htm" target="_blank">Cloud Computing</a></li><br />
+                        <li><a href="Software%20Services.htm" target="_blank">Mobile App Development</a></li>
+                        <li><a href="AI%20services.htm" target="_blank">AI And Machine Learning</a></li><br />
+                        <li><a href="Registration.htm" target="_blank">Developer Center</a></li><br />
+                        <li><a href="Networking.htm" target="_blank">Networking Services</a></li><br />
+                        <li><a href="Documentation.htm" target="_blank">BlueTechSoft Learn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 align="left"><b>COMPANY</b></h4>
+                    <ul>
+                        <li><a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" target="_blank">BlueTechSoft Community</a></li><br />
+                        <li><a href="About%20Us.htm" target="_blank">About BlueTech soft.cloud</a></li><br />
+                        <li><a href="Company%20News.htm" target="_blank">BlueTech News</a></li><br />
+                        <li><a href="Terms%20Of%20Services.htm" target="_blank">Terms Of Services</a></li>
+                        <li><a href="Privacy%20Terms.htm" target="_blank">Privacy Terms</a></li><br />
+                        <li><a href="Documentation.htm" target="_blank">Accessibility</a></li><br />
+                        <li><a href="Support.htm" target="_blank">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 align="left"><b>CONTACT US:</b></h4>
+                    <u>
+                        Send Email To:<br /><a href="mailto:bluetechsoft1@gmail.com?subject=Hello%20there&body=I%20hope%20this%20message%20finds%20you%20well.">bluetechsoft1@gmail.com</a><br>
+                    </u>
+                    <ul>
+                        <li><a href="Privacy%20Terms.htm">Privacy Policy</a></li>
+                        <li><a href="Terms%20Of%20Services.htm">Terms of Service</a></li><br />
+                        <li><a href="/Tel:+254708909399">Contact Us</a></li><br />
+                        <li><a href="FEEDBACK%20PAGE.htm" target="_blank">Feedback</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4 align="left">CONTACT FOR HELP:</h4>
+                    <p align="left">
+                        <big>
+                            Call: <a href="#">+254 708909399</a><br>Email:<br /><a href="https://gmail.com/bluetechsoft1@gmail.com" target="_blank">bluetechsoft1@gmail.com</a><br />
+                            <a href="https://gmail.com/andrewbarasa412@gmail.com" target="_blank">andrewbarasa412@gmail.com</a>
+                        </big>
+                    </p>
+                    <img src="PERSONAL.jpg" width="50" height="50" alt="IMG_20240509_114224_724 (2)" />
+                    <p align="left"><big>Designed And Developed <br>By .W. Andrew</big></p>
+                </div>
+                <div class="footer-column">
+                    <h1 align="center">
+                        <img src="ICON1.png" width="100" height="100" alt="ICON1" />
+                    </h1>
+                    <h3 align="center">BLUETECH SOFT.CLOUD</h3>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/ctrl_cench/" target="_blank">Instagram</a>
+                        <a href="https://tiktok.com/blue_tech05" target="_blank">Tiktok</a>
+                        <a href="https://twitter.com/BlueTechsoft" target="_blank">Twitter</a>
+                        <a href="https://linkedin.com/in/BlueTechsoft" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/in/BlueTechSoft-coder" target="_blank">GitHub</a>
+                    </div><br>
+                    <p align="right"><b>&copy; 2025 <a href="BlueTech%20Soft.htm">BlueTech Soft.cloud.</a> | All Rights Reserved</b></p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="BlueTech soft.js"></script>
+   </body>
+</html>
+<a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"><i class="fab fa-whatsapp" /></a>
