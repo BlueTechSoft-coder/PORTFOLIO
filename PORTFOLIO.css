@@ -136,6 +136,12 @@
         margin:3rem 1.5rem 3rem 0;
         transition:.5s;
     }
+    @media (max-width:500px) {
+        .social-media a{
+            width:8rem;
+            height:8rem;
+        }
+    }
     .social-media a .fa-instagram{
         color:pink;
         fill:pink;
