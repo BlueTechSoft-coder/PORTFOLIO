@@ -10,7 +10,7 @@
     font-family:'Poppins', sans-serif;
 }
     html{
-        font-size:62.5%;
+        font-size:100%;
         margin:4rem;
         }
     body{
@@ -410,7 +410,7 @@ body p{
 
 @media (max-width: 1200px){
     html{
-        font-size:55%;
+        font-size:100%;
     }
 }
 @media (max-width: 991px){
