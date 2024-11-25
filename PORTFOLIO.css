@@ -9,6 +9,12 @@
     scrollbar-arrow-color:red;
     font-family:'Poppins', sans-serif;
 }
+ @media (max-width:500px) {
+        .social-media a{
+            width:8rem;
+            height:8rem;
+        }
+    }
     html{
         font-size:100%;
         margin:4rem;
