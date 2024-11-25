@@ -410,11 +410,9 @@ body p{
 
 @media (max-width: 1200px){
     html{
-        font-size:100%;
+        font-size:55%;
     }
-    p{
-        font-size:2rem;
-}
+   
 @media (max-width: 991px){
     .header{
         padding:2rem 3%;
