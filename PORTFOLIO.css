@@ -425,10 +425,7 @@ body p{
     .footer{
         padding:2rem 3%;
     }
-   .about btn{
-        width:7rem;
-        height:3rem;
-}
+  
 @media (max-width:768px){
     .home{
         flex-direction:column;
