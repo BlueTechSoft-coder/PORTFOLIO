@@ -32,6 +32,25 @@
         margin-top:10rem;
         margin-bottom:20rem;
     }
+   .whatsapp-icon {
+            position: fixed;
+            font-family:'Times New Roman';
+            bottom: 20px;
+            right: 50px;
+            background-color: #25D366; /* WhatsApp color */
+            border-radius:10px;
+            padding: 10px;
+            font-size: 15px;
+            color: white;
+            text-align:right;
+            cursor: pointer;
+            justify-content:space-around;
+            width:200px;
+            padding-left:20px;
+        }
+            .whatsapp-icon:hover {
+                background-color: #128C7E; /* Darker green on hover */
+            }
     .header{
         position:fixed;
         top:0;
