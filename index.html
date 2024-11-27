@@ -1,36 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>PORTFOLIO</title>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="PORTFOLIO.css" />
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        const typed = new Typed('.multiple-text', {
-            strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
-            loop: true,
-        });
-    </script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-        ScrollReveal({
-            //reset: true,
-            distance: '200px',
-            duration: 2000,
-            delay: 200
-        });
-        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-        ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
-        ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-        ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
-        ScrollReveal().reveal('.about, .skills,', { origin: 'right' });
-    </script>
     <style>
    .whatsapp-icon {
             position: fixed;
@@ -45,8 +23,8 @@
             text-align:right;
             cursor: pointer;
             justify-content:space-around;
-            width:300px;
-            padding-left:20px;
+            width:200px;
+            padding-left:0px;
         }
             .whatsapp-icon:hover {
                 background-color: #128C7E; /* Darker green on hover */
@@ -55,10 +33,9 @@
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo">Portfolio </a>
 
-        <i class="menu" id="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
-</i>
+        <i class="bx bx-menu" id="menu-icon"></i>
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
@@ -151,6 +128,7 @@
                         Web Security Services,
                         Custom API Development
                     </p>
+                    <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px;">Read More</a>
                 </div>
             <div class="services-box">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M344-296 160-480l184-184 56 58-126 126 126 126-56 58Zm-144 16h80v40h400v-40h80v160q0 33-23.5 56.5T680-40H280q-33 0-56.5-23.5T200-120v-160Zm80-400h-80v-160q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v160h-80v-40H280v40Zm0 520v40h400v-40H280Zm0-640h400v-40H280v40Zm336 504-56-58 126-126-126-126 56-58 184 184-184 184ZM280-800v-40 40Zm0 640v40-40Z" /></svg>
@@ -165,6 +143,7 @@
                     Desktop Applications,
                     Quality Assurance and Testing
                 </p>
+                <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px; margin-top: 10.5rem;">Read More</a>
             </div>
             <div class="services-box">
                 <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" /></svg>  
@@ -180,17 +159,7 @@
                     C#,
                     TypeScript and Ruby
                 </p>
-            </div>
-        </div>
-        <div class="button">
-            <div class="button1">
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="button1">
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="button1">
-                <a href="#" class="btn">Read More</a>
+                <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px; margin-top: 17rem;">Read More</a>
             </div>
         </div>
     </section>
@@ -286,24 +255,69 @@
     </footer>
     <script src="https://utpkg.com/scrollreveal"></script>
     <script src="PORTFOLIO.js">
-        ScrollReveal({
-            resetS: true,
-            distance: '100px',
-            duration: 2000,
-            delay: 100
-        });
+       let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-        ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = set.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-        const Typed = new typed('.multiple-text', {
-            strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 1000,
-            loop: true,
-        });
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
+ScrollReveal({
+    resetS: true,
+    distance: '100px',
+    duration: 2000,
+    delay: 100
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+
+const Typed = new typed('.multiple-text', {
+    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
+
+ScrollReveal({
+    //reset: true,
+    distance: '200px',
+    duration: 2000,
+    delay: 200
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+ScrollReveal().reveal('.about, .skills,', { origin: 'right' });
+
+let header = document.querySelector('header');
+
+header.classList.toggle('sticky', window.scrollY > 100);
+
+menubar.icon.classList.remove('bx-x');
+navbar.classList.remove('active');
     </script>
-    <a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"><i class="fab fa-whatsapp" />Click Here For Help...</a>
-
 </body>
 </html>
+<a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"><i class="fab fa-whatsapp" />Click Here For Help...</a>
+
