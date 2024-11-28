@@ -461,7 +461,7 @@ body p{
         padding-bottom: 7rem;
     }
 }
-@media (max-width:768px ){
+@media (min-width: 320px) and (max-width: 767px) {
     #menu-icon{
         display: block;
         color:black;
