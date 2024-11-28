@@ -429,10 +429,10 @@ body p{
 }
 @media (max-width:768px ){
     html{
-        font-size:70%;
+        font-size:100%;
     }
     body{
-        font-size:70%;
+        font-size:100%;
     }
     #menu-icon{
         display: block;
