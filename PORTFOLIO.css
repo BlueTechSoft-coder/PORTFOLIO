@@ -11,7 +11,8 @@
 }
     html{
         font-size:100%;
-        margin:4rem;
+        margin:0;
+        padding: 0;
         }
     body{
         background-color:black;
@@ -19,8 +20,10 @@
         display:block;
         margin:0;
         padding:0;
+        min-width: 767px;
     }
     section{
+        margin-left: 2rem;
         min-height:30vh;
         padding:2rem;
         margin-top:10rem;
@@ -428,12 +431,6 @@ body p{
     }
 }
 @media (max-width:768px ){
-    html{
-        font-size:100%;
-    }
-    body{
-        font-size:100%;
-    }
     #menu-icon{
         display: block;
         color:black;
@@ -449,7 +446,7 @@ body p{
     }
     section{
         margin-left:2rem;
-        margin-right: 2rem;
+        margin-right: 0rem;
         min-width: 760px;
     }
     .navbar{
@@ -488,6 +485,7 @@ body p{
     }
     .home-img img{
         margin-top: 4rem;
+        margin-left: 0rem;
     }
     .home-content h3{
         font-size: 2.6rem;
