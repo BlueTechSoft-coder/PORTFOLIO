@@ -407,7 +407,7 @@ body p{
 
 @media (max-width: 1200px){
     html{
-        font-size:65%;
+        font-size:55%;
     }
 }
 @media (max-width: 991px){
@@ -420,23 +420,22 @@ body p{
     .footer{
         padding:2rem 3%;
     }
-    .html{
-        font-size: 55%;
+    .services{
+        padding-bottom: 7rem;
+    }
+    .portfolio{
+        padding-bottom: 7rem;
     }
 }
 @media (max-width:768px){
-    .html{
-        font-size: 100%;
-    }
-    body{
-        width:50%;
-        font-size: 100%;
-    }
     #menu-icon{
         display: block;
         color:black;
         fill: black;
         font-size: 4rem;
+    }
+    section{
+        margin-left:35rem;
     }
     .navbar{
         position: absolute;
@@ -459,6 +458,7 @@ body p{
         display: block;
         font-size: 3rem;
         margin: 3rem 0;
+        color: aqua;
     }
     .navbar a:hover{
         text-decoration: none;
@@ -467,92 +467,84 @@ body p{
         margin: 0 0 0 0;
         background-color:transparent;
         color:aliceblue;
-
     }
     .home{
-        margin-left:100%;
-        font-size: 100%;
         flex-direction: column;
-        padding: 0rem;
     }
-    .home p{
-        font-size:2.2rem;
+    .home-img img{
+        margin-top: 4rem;
     }
-    .home .btn{
-        width: 50%;
-        margin-top: 2rem;
-    }
-    .home .home-img{
-        margin-top: 5rem;
-        width: 70vw;
-        margin-right: 7rem;
+    .home-content h3{
+        font-size: 2.6rem;
     }
     .home-content h1{
         font-size: 5rem;
     }
-    .home-content h3{
-        font-size: 3rem;
+    .home-content{
+        min-width: 70rem;
+    }
+    .home-content p{
+        font-size: 2rem;
+    }
+    .home .btn{
+        margin-right: 2rem ;
     }
     .about{
         flex-direction: column;
-        margin-top: 0rem;
+    }
+    .about .about-content{
+        min-width: 70rem;
     }
     .about p{
-        font-size:2.2rem;
-    }
-    .Skills{
-        margin-top: 4rem;
-    }
-    .services{
-        padding-left: 12rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .services-container{
-        flex-direction: column;
-    }
-    .services-container .services-box{
-        width: 150%;
-        margin-top: 4rem;
-    }
-    .services h2{
-        font-size: 6rem;
-        margin-top: 3rem;
-    }
-    .portfolio-container{
-        grid-template-columns: repeat(2, 1fr);
-        flex-wrap: wrap;
-    }
-    .portfolio h2{
-        font-size: 6rem;
-    }
-    .portfolio-box{
-        min-width: 400px;
-    }
-    .portfolio-box img{
-        min-width: 400px;
-    }
-    .contact .btn{
         font-size: 2rem;
     }
-    .contact h2{
-        font-size: 6rem;
+    .Skills{
+        margin-top: 5rem;
+        min-width: 70rem;
     }
-    .footer a{
-        margin-bottom: 4rem;
+    .services{
+        justify-content: center;
     }
-    .Whatsaap-icon{
-        font-size: 30rem;
-        position: fixed;
-        bottom: 3rem;
-        right: 2rem;
-        width: 10rem;
-        font-family: 'Times New Roman', Times, serif;
-        margin-left: 0rem;
-        padding-left: 0rem;
+    .services h2{
+        margin-bottom: 5rem;
+        text-align: center;
+        margin-left: 50%;
     }
+    .services p{
+        font-size: 2rem;
+    }
+    .services-container{
+        display: grid;
+
+    }
+   .services-box{
+        min-width: 70rem;
+        margin-bottom: 10rem;
+   }
+   .portfolio h2{
+    margin-bottom: 3rem;
+   }
+   .portfolio-container{
+    grid-template-columns: repeat(2, 2fr);
+    overflow-x:visible;
+}
+.portfolio-box{
+    width: 230px;
+}
+.portfolio-layer{
+    width: 200px;
+}
+.portfolio-box img{
+    width: 200px;
+}
+.contact{
+    min-width: 70rem;
+    margin-left: 2rem;
+}
+.footer p{
+    margin-top: 3rem;
+    line-height: 3rem;
+}
 }
 .Skills h2{
     color:white;
