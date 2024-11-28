@@ -428,6 +428,12 @@ body p{
     }
 }
 @media (max-width:768px ){
+    html{
+        font-size:70%;
+    }
+    body{
+        font-size:70%;
+    }
     #menu-icon{
         display: block;
         color:black;
