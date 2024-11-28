@@ -1,597 +1,330 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    text-decoration:none;
-    border:none;
-    outline:none;
-    scrollbar-arrow-color:red;
-    font-family:'Poppins', sans-serif;
-}
-    html{
-        font-size:100%;
-        margin:4rem;
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <title>PORTFOLIO</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="PORTFOLIO.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+    .services-box{
+        width: 60%; /* Full width on all screens */  
+  margin-bottom: 10px;  
+  box-sizing: border-box;  
+    }
+    
+   .whatsapp-icon {
+            position: fixed;
+            font-family:'Times New Roman';
+            bottom: 20px;
+            right: 80px;
+            background-color: #25D366; /* WhatsApp color */
+            border-radius:10px;
+            padding: 10px;
+            font-size: 2rem;
+            color: white;
+            text-align:right;
+            cursor: pointer;
+            justify-content:space-around;
+            width:30rem;
+            padding-left:0px;
         }
-    body{
-        background-color:black;
-        background-size:cover;
-        display:block;
-        margin:0;
-        padding:0;
-    }
-    section{
-        min-height:30vh;
-        padding:2rem;
-        margin-top:10rem;
-        margin-bottom:20rem;
-    }
-    .header{
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        padding:2rem 9%;
-        background:linear-gradient(#75FBFD,grey);
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        z-index:100;
-    }
-    .services{
-        margin:0;
-        padding:0;
-        width:auto;
-        height:auto;
-        margin:0;
-        padding:0;
-        font-size:1rem;
-    }
-    .logo{
-        font-size:2.5rem;
-        color:blueviolet;
-        font-weight:600;
-        cursor:default;
-    }
-     .navbar a{
-        font-size:1.7rem;
-        color:black;
-        margin-left:4rem;
-        transition:.3s;
-    }
-    .navbar a:hover, .navbar a:active{
-        color:aliceblue;
-        text-decoration:underline;
-    }
-    #menu-icon{
-        font-size:3.6rem;
-        color:#75FBFD;
-        display:none;
-    }
-    .home{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-    .home-img img{
-        border:solid 2px #75FBFD;
-        border-radius:35%;
-        animation:floatimage 4s ease-in-out infinite;
-    }
-    @keyframes floatimage{
-        0%{
-            transform:translateY(0);
-        }
-        50%{
-            transform:translateY(-2.4rem);
-        }
-        100%{
-            transform:translateY(0);
-        }
-    }
-    .home-img img:hover{
-        transform:scaleY(1.05);
-    }
-   .home-content h3{
-        font-size:3.2rem;
-        font-weight:700;
-        color:white;
-   }
-   .home-content h3:nth-of-type(2){
-       margin-bottom:2rem;
-   }
-   span{
-       color:#75FBFD;
-   }
-    .home-content h1{
-        font-size:5.6rem;
-        font-weight:700;
-        color:#75FBFD;
-        padding:1rem;
-        width:36rem;
-        box-shadow:0 0 .8rem ;
-        border-radius:10px;
-        line-height:1.3;
-        outline-width:initial;
-        border:none;
-    }
-    .home-content p{
-        color:white;
-        font-size:1.6rem;
-    }
-    .social-media a{
-        display:inline-flex;
-        justify-content:center;
-        align-items:center;
-        width:4rem;
-        height:4rem;
-        background-color:transparent;
-        border:.2rem solid #75FBFD;
-        border-radius:35%;
-        font-size:2rem;
-        margin:3rem 1.5rem 3rem 0;
-        transition:.5s;
-    }
-    .social-media a .fa-instagram{
-        color:pink;
-        fill:pink;
-    }
-    .social-media a:hover{
-        transform:scale(1.05);
-        background-color:grey;
-        box-shadow:0 0 1rem  #75FBFD;
-    }
-    .btn{
-        display:inline-block;
-        padding:1rem 2.8rem;
-        background-color:silver;
-        border:none;
-        border-radius:1rem;
-        transition:.5s;
-        font-size:1.6rem;
-        color:black;
-        font-weight:600;
-    }
-    .btn:hover{
-        box-shadow:0 0 1rem  #75FBFD;
-    }
-    .about{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        column-gap:2rem;
-        background-color:transparent;
-    }
-    .about-img img{
-        border:solid 2px #75FBFD;
-        border-radius:35%;
-        animation:floatimageS 4s ease-in-out infinite;
-    }
-    @keyframes floatimageS{
-        0%{
-            transform:translateX(0);
-        }
-        50%{
-            transform:translateX(-2.4rem);
-        }
-        100%{
-            transform:translateX(0);
-        }
-    }
-    .about-img img:hover{
-        transform:scaleY(1.05);
-    }
-    .about-content p{
-        color:white;
-        font-size:1.6rem;
-        margin:2rem 0 3rem;
-    }
-    .about h2{
-        color:white;
-        line-height:1.2rem;
-    }
-    .about-content h3{
-        color:white;
-        font-size:2.6rem
-    }
-    .heading{
-         text-align:center;
-         font-size:4.5rem;
-     }
-    .about-content h2{
-        text-align:left;
-        line-height:1.2;
-    }
-    .services-container{
-        display:flex;
-        padding:10px;
-        margin:0;
-        justify-content:space-around;
-    }
-    .services-container p{
-        color:white;
-    }
-    .services-container .services-box{
-       border-radius:2rem;
-       border:.2rem solid  #75FBFD;
-       background-color:transparent;
-       margin:10px;
-       padding:10px;
-       text-align:center;
-       display:inline;
-       width:40rem;
-       height:auto;
-       flex-wrap:wrap;
-       transition:3s;
-    }
-    .services h2{
-        color:white;
-        margin-bottom:5rem;
-    }
-    .services-box h3{
-        color:white;
-        font-size:2.6rem;
-        font-weight:600;
-    }
-    .services-box .btn{
-        left:50%;
-        transform:translateX(-50%);
-        margin-bottom: 0rem;
-    }
-    .services-box p{
-        font-size:1.6rem;
-        margin:1rem 0 3rem;
-    }
-    .services-container .services-box:hover{
-        transform:scale(1.05);
-        box-shadow:0 0 3rem  #75FBFD;
-        background:linear-gradient(transparent,grey, #75FBFD);
-        background-image:url('TECH.jpg');
-        background-repeat:repeat-y;
-        background-size:contain;
-        transition:3s;
-        text-decoration-color:#75FBFD;
-        cursor:pointer;
-    }
-    .button{
-        display:flex;
-        padding:10px;
-        margin:0;
-        justify-content:space-around;
-    }
-    .button .button1{
-        display:inline;
-        margin:10px;
-        padding:10px;
-    }
-    .portfolio h2{
-        color:white;
-        margin-bottom:4rem;
-    }
-    .portfolio-container{
-        display:flex;
-        align-items:center;
-        padding:10px;
-        margin:10px;
-        justify-content:center;
-        position:relative;
-    }
-    .portfolio-box{
-        display:inline;
-        margin:15px;
-        padding:9px;
-        border-radius:2rem;
-        border:.2rem solid  #75FBFD;
-        justify-content:center;
-        align-items:center;
-        align-content:center;
-        transition:.9s;
-        height:100%;
-        position:relative;
-    }
-    .portfolio-box:hover{
-        transform:scale(1.05);
-        box-shadow:0 0 10rem  #75FBFD;
-    }
-    .portfolio-box img{
-        border-radius:10px;
-    }
-    .portfolio-box .btn{
-        align-self:center;
-        margin-left:25%;
-    }
-    .portfolio h4{
-        color:black;
-        font-size:2.5rem;
-        font-weight:600;
-        text-align:center;
-        color:cadetblue;
-    }
-body p{
-    line-height:30px;
-    color:white;
-}
-.portfolio-layer svg{
-    margin-left:10%;
-}
-.portfolio-container .portfolio-box .portfolio-layer{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:linear-gradient(#75FBFD,grey,transparent);
-    display:flex;
-    opacity:0;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:0 4rem;
-    transform:translateY(50%);
-    transition:.9s ease;
-    border-radius:2rem;
-}
-.portfolio-box:hover .portfolio-layer{
-    transform:translateY(0);
-    border-radius:2rem;
-    opacity:1;
-}
-.portfolio-layer h4{
-    color:orangered;
-    font-size:2.6rem;
-    font-weight:700;
-}
-.portfolio-layer p{
-    line-height:25px;
-    color:antiquewhite;
-    font-size:2rem;
-    font-weight:300;
-    font-weight:bold;
-}
-.contact h2{
-    color:white;
-    margin-bottom:3rem;
-}
-.contact form{
-    max-width:72rem;
-    margin:1rem auto;
-    text-align:center;
-    margin-bottom:3rem;
-    border-radius:15px;
-}
-.contact form .input-box{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
-.contact form .input-box input, 
-.contact form textarea{
-    width:100%;
-    padding:1.5rem;
-    font-size:1.6rem;
-    color:black;
-    background-color:#75FBFD;
-    border-radius:.8rem;
-    margin:.7rem 0 1rem 0;
-}
-.contact form .input-box input{
-    width:49%;
-}
-.contact form textarea{
-    resize:none;
-}
-.contact form .btn{
-    margin-top:2rem;
-    cursor:pointer;
-}
-.footer{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:2rem 9%;
-}
-.footer-text  p{
-    font-size:2rem;
-    line-height:10px;
-}
-.footer-iconTop a{
-    font-size:2rem;
-    line-height:10px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    color:#75FBFD;
-}
+            .whatsapp-icon:hover {
+                background-color: #128C7E; /* Darker green on hover */
+            }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio </a>
 
-@media (max-width: 1200px){
-    html{
-        font-size:55%;
-    }
-}
-@media (max-width: 991px){
-    .header{
-        padding:2rem 3%;
-    }
-    section{
-        padding:10rem 3% 2rem;
-    }
-    .footer{
-        padding:2rem 3%;
-    }
-    .services{
-        padding-bottom: 7rem;
-    }
-    .portfolio{
-        padding-bottom: 7rem;
-    }
-}
-@media (max-width:768px){
-    #menu-icon{
-        display: block;
-        color:black;
-        fill: black;
-        font-size: 4rem;
-    }
-    section{
-        margin-left:35rem;
-    }
-    .navbar{
-        position: absolute;
-        display: none;
-        top: 100%;
-        right: 0;
-        width: 30%;
-        color: whitesmoke;
-        padding: 1rem 3%;
-        background-color:#75FBFD;
-        border-top:.1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    }
-    .navbar.active{
-        display: block;
-        background-color:darkslategray;
+        <i class="bx bx-menu" id="menu-icon"></i>
 
-    }
-    .navbar a{
-        display: block;
-        font-size: 3rem;
-        margin: 3rem 0;
-        color: aqua;
-    }
-    .navbar a:hover{
-        text-decoration: none;
-        text-transform: none;
-        padding: 0;
-        margin: 0 0 0 0;
-        background-color:transparent;
-        color:aliceblue;
-    }
-    .home{
-        flex-direction: column;
-    }
-    .home-img img{
-        margin-top: 4rem;
-    }
-    .home-content h3{
-        font-size: 2.6rem;
-    }
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-content{
-        min-width: 70rem;
-    }
-    .home-content p{
-        font-size: 2rem;
-    }
-    .home .btn{
-        margin-right: 2rem ;
-    }
-    .about{
-        flex-direction: column;
-    }
-    .about .about-content{
-        min-width: 70rem;
-    }
-    .about p{
-        font-size: 2rem;
-    }
-    .Skills{
-        margin-top: 5rem;
-        min-width: 70rem;
-    }
-    .services{
-        justify-content: center;
-    }
-    .services h2{
-        margin-bottom: 5rem;
-        text-align: center;
-        margin-left: 50%;
-    }
-    .services p{
-        font-size: 2rem;
-    }
-    .services-container{
-        display: grid;
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>.W. Andrew</h1><h3>From <span>  Nairobi, Kenya <img src="KENYA.png" height="50" width="50" alt="me" style="border-radius:50%; margin-top:5px; margin-bottom:0;" /> </span></h3>
+            <h3>And I'm a <span>Fullstack Software Engineer</span></h3>
+            <p>
+                "
+                I am a passionate web developer and software engineer
+                with a strong focus on front-end and back-end technologies.
+                I love creating efficient, user-friendly applications
+                and contributing to open-source projects.
+                Welcome to my GitHub profile!
+                "
+            </p>
+                <div class="social-media">
+                    <a class="Whatsaap-link" href="https://chat.whatsapp.com/J3c5LY4EyGCEIBVwz9wbwD" target="_blank"><i class="fab fa-whatsapp" style="color:yellowgreen"></i></a>
+                    <a class="Instagram-link" href="https://www.instagram.com/ctrl_cench/? pwa=1# " target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a class="Twitter-link" href="https://www.x.com/BlueTechsoft" target="_blank"><i class="fab fa-x"></i></a>
+                    <a class="LinkedIn-link" href="https://www.linkedin.com/in/BlueTechsoft" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            <a href="https://www.google.com/maps/place/?q=place_id:Murang'a University of Technology'" target="_blank" class=" btn">Google Maps</a>
+            <a href="C:\Users\andre\OneDrive\Desktop\CODING\JAVAA.PDF" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="PERSONAL.jpg" height="300" width="330" alt="" />
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">
+                About <span>Me</span>
+            </h2>
+            <h3><span>Fullstack Software Engineer</span></h3>
+            <p>
+                I am a passionate web developer and software engineer
+                with a strong focus on front-end and back-end technologies.
+                I love creating efficient, user-friendly applications
+                and contributing to open-source projects.
+                Welcome to my GitHub profile!
+            </p>
+            <a href="#" class="btn">Read More &diams;</a>
+        </div>
+        <div class="Skills" id="skills">
+           <div class="heading">
+            <h2>My <span>Skills</span></h2>
+           </div>
+           <div class="skill">
+           <div class="btn" style="color:white">HTML5  <img src="HTML5.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">CSS3  <img src="CSS3.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">JAVASCRIPT  <img src="JAVASCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">JAVA  <img src="JAVA.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">KOTLIN  <img src="KOTLIN.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">PYTHON  <img src="PYTHON.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">C LANG      <img src="C.png" height="50" width="50" alt="C++" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">PHP  <img src="PHP.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">MYSQL  <img src="SQL.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">GITHUB  <img src="GITHUB.png" height="50" width="50" alt="HTML" style="border-radius:30%; background-color:aquamarine" /> </div>
+           <div class="btn" style="color:white">TYPESCRIPT  <img src="TYPESCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+           <div class="btn" style="color:white">APIs  <img src="API.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>   
+           </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h2 class="heading" style="text-align: center;">
+            Our <span>Services</span>
+        </h2>
+        <div class="services-container">
+            <div class="services-box" id="web">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#75FBFD"><path d="M320-242 80-482l242-242 43 43-199 199 197 197-43 43Zm318 2-43-43 199-199-197-197 43-43 240 240-242 242Z" /></svg>
+                 <h3>Web <br />Development</h3>
+                    <p class="web">
+                        Website Design,
+                        Front-End Development,
+                        Back-End Development,
+                        E-commerce Development,
+                        Website Maintenance and Support,
+                        Search Engine Optimization (SEO),
+                        Web Hosting and Domain Registration,
+                        Social Media Integration,
+                        Web Security Services,
+                        Custom API Development
+                    </p>
+                    <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px;">Read More</a>
+                </div>
+            <div class="services-box">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="24px" fill="#75FBFD"><path d="M344-296 160-480l184-184 56 58-126 126 126 126-56 58Zm-144 16h80v40h400v-40h80v160q0 33-23.5 56.5T680-40H280q-33 0-56.5-23.5T200-120v-160Zm80-400h-80v-160q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v160h-80v-40H280v40Zm0 520v40h400v-40H280Zm0-640h400v-40H280v40Zm336 504-56-58 126-126-126-126 56-58 184 184-184 184ZM280-800v-40 40Zm0 640v40-40Z" /></svg>
+                <h3>Software Development</h3>
+                <p>
+                    Mobile Application Development,
+                    Enterprise Software Development,
+                    Gaming Software,
+                    E-commerce Platforms,
+                    Web Applications,
+                    Mobile Apps,
+                    Desktop Applications,
+                    Quality Assurance and Testing
+                </p>
+                <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px; margin-top: 10.5rem;">Read More</a>
+            </div>
+            <div class="services-box">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" /></svg>  
+               <h3>Programming Languages Skills</h3>
+                <p>
+                    Python,
+                    JavaScript,
+                    Java,
+                    C,
+                    C++,
+                    PHP,
+                    Kotlin,
+                    C#,
+                    TypeScript and Ruby
+                </p>
+                <a href="#" class="btn" style="margin-left: 50%; margin-right: 50%; width: 150px; margin-top: 17rem;">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="HotelResorts.png" height="250" width="270" alt="" />
+                <div class="portfolio-layer">
+                    <h4>Hotel & Resort</h4>
+                    <p>Web Development<br />Click Below To See More</p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Hotel1Resorts.jpeg" height="250" width="270" alt="" />
+                <div class="portfolio-layer">
+                    <h4>Royal Hotel</h4>
+                    <p>Web Development<br />Click Below To See More</p>
+                    <<a href="#">
+    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+</a>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="App.jpeg" height="250" width="270" alt="" />
+                <div class="portfolio-layer">
+                    <h4>Bus Booking App</h4>
+                    <p>Mobile App Development<br />Click Below To See More</p>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+            <br />
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="Enterprise.jpeg" height="250" width="270" alt="" />
+                    <div class="portfolio-layer">
+                        <h4>Enterprise Software</h4>
+                        <p>Enterprise Software Development<br />Click Below To See More</p>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+</a>
+                      </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="Hotel2Resorts.png" height="250" width="270" alt="" />
+                    <div class="portfolio-layer">
+                        <h4>Hotel & Resort</h4>
+                        <p>Web Development<br />Click Below To See More</p>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                        </a> 
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="BlueTech.PNG" height="250" width="270" alt="" />
+                    <div class="portfolio-layer">
+                        <h4>BlueTech soft.cloud</h4>
+                        <p>Web Development<br />Click Below To See More</p>
+                        <a href="BlueTech Soft.htm">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name"  required/>
+                <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number" required />
+                <input type="text" placeholder="Email Subject" required />
+            </div>
+            <textarea name="" cols="30" rows="10" placeholder="Type Your Message Here..."></textarea> 
+            <input type="submit" value="Send Message" class="btn" />
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-iconTop">
+            <a href="#home">Back To Home</a>
+        </div>
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by .W. Andrew | All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="https://utpkg.com/scrollreveal"></script>
+    <script src="PORTFOLIO.js">
+       let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-    }
-   .services-box{
-        min-width: 70rem;
-        margin-bottom: 10rem;
-   }
-   .portfolio h2{
-    margin-bottom: 3rem;
-   }
-   .portfolio-container{
-    grid-template-columns: repeat(2, 2fr);
-    overflow-x:visible;
-}
-.portfolio-box{
-    width: 230px;
-}
-.portfolio-layer{
-    width: 200px;
-}
-.portfolio-box img{
-    width: 200px;
-}
-.contact{
-    min-width: 70rem;
-    margin-left: 2rem;
-}
-.footer p{
-    margin-top: 3rem;
-    line-height: 3rem;
-}
-}
-.Skills h2{
-    color:white;
-    line-height:10rem;
-}
-.Skills .heading{
-    display: block;
-    margin-bottom: 2rem;
-    text-align: center;
-    align-self:center;
-    justify-content:center;
-    padding-left:20%;
-    padding-right:20%;
-}
-.Skills .btn{
-    display: inline-block;
-    margin: 5px;
-    width:120px;
-    text-align:center;
-    color:aqua;
-    background-color:transparent;
-}
-.about .Skills{
-    margin-left:3rem;
-}
-.Skills .btn:hover{
-    cursor: pointer;
-    box-shadow: #75FBFD 0 0 10rem;
-    transform: scale(1.05);
-}
-.Skills .skill{
-    background-color:transparent;
-    border:aqua solid 2px;
-    border-radius: 7px;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding:1rem;
-    min-width:400px;
-    text-align:center;
-    color:black;
-}
-body a:hover{
-    cursor: pointer;
-}
-.services-box p .web{
-    background-image:url('WEB.jpg');
-    background-size:cover;
-}
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = set.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
+ScrollReveal({
+    resetS: true,
+    distance: '100px',
+    duration: 2000,
+    delay: 100
+});
+
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+
+const Typed = new typed('.multiple-text', {
+    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true,
+});
+
+ScrollReveal({
+    //reset: true,
+    distance: '200px',
+    duration: 2000,
+    delay: 200
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+ScrollReveal().reveal('.about, .skills,', { origin: 'right' });
+
+let header = document.querySelector('header');
+
+header.classList.toggle('sticky', window.scrollY > 100);
+
+menubar.icon.classList.remove('bx-x');
+navbar.classList.remove('active');
+    </script>
+</body>
+</html>
+<a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"> <i class="fab fa-whatsapp"></i> Click here for more assistance...</a>
 
