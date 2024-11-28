@@ -418,6 +418,32 @@ body p{
         font-size:55%;
     }
 }
+@media (min-width: 1000px) {
+    .services-container{
+        display: flex;  
+        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */  
+        width: 100%; 
+        padding:10px;
+        margin:0;
+    }
+    .services-container .services-box{
+        box-sizing: border-box; /* Include padding and border in width calculation */  
+        width: 45%; /* Default to full width on smaller screens */  
+        margin-bottom: 2rem;  
+       margin-left: 5rem;
+       border-radius:2rem;
+       border:.2rem solid  #75FBFD;
+       background-color:transparent;
+    
+       padding:10px;
+       text-align:center;
+       
+      
+       height:auto;
+       
+       transition:3s;
+    }
+}
 @media (max-width: 991px){
     .header{
         padding:2rem 3%;
