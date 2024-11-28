@@ -255,8 +255,11 @@
         box-shadow:0 0 3rem  #75FBFD;
         background:linear-gradient(transparent,grey, #75FBFD);
         background-image:url('TECH.jpg');
+        background-color: rgba(11, 11, 11, 0.5);
         background-repeat:repeat-y;
         background-size:contain;
+        color: #75FBFD;
+        text-decoration-color: #75FBFD;
         transition:3s;
         text-decoration-color:#75FBFD;
         cursor:pointer;
@@ -529,7 +532,8 @@ body p{
         min-width: 70rem;
     }
     .home-content p{
-        font-size: 2rem;
+        font-size: 200%;
+        line-height: 1.6;
     }
     .home .btn{
         margin-right: 2rem ;
@@ -543,7 +547,8 @@ body p{
         min-width: 70rem;
     }
     .about p{
-        font-size: 2rem;
+        font-size: 200%;
+        line-height: 1.6;
     }
     .Skills{
         margin-top: 5rem;
@@ -559,7 +564,8 @@ body p{
         margin-right: 30%
     }
     .services p{
-        font-size: 2rem;
+        font-size: 200%;
+        line-height: 1.6;
     }
     .services-container{
         display: flex;  
