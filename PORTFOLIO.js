@@ -19,7 +19,6 @@ window.onscroll = () => {
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-
         if(top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
@@ -27,57 +26,19 @@ window.onscroll = () => {
             });
         };
     });
-
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
-
     /*removing the navbar after a click on the link*/
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
-
-
-
-
-
-const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true,
-});
-ScrollReveal({
-    resetS: true,
-    distance: '100px',
-    duration: 2000,
-    delay: 100
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-
-const Typed = new typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Back-end Developer', 'System Developer'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true,
-});
-
-ScrollReveal({
-    //reset: true,
+ScrollReveal({ 
+    //reset: true, 
     distance: '200px',
     duration: 2000,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
-ScrollReveal().reveal('.about, .skills,', { origin: 'right' });
-
-let header = document.querySelector('header');
-header.classList.toggle('sticky', window.scrollY > 100);
-
-menubar.icon.classList.remove('bx-x');
-navbar.classList.remove('active');
+ScrollReveal().reveal('.heading, .home-content', { origin: 'top'});
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .skill, ', { origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content, ', { origin: 'right'});
