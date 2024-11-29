@@ -680,10 +680,14 @@ body p{
     }
     .portfolio{
         background: transparent;
+        margin-left:2rem;
     }
    .portfolio h2{
     margin-bottom: 3rem;
    }
+    .portfolio-container{
+    margin-left:2rem;
+    }
 .portfolio-box{
     width: 230px;
 }
