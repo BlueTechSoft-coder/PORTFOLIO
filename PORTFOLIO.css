@@ -6,40 +6,53 @@
     text-decoration:none;
     border:none;
     outline:none;
-    scrollbar-arrow-color:red;
+    scroll-behavior: smooth;
     font-family:'Poppins', sans-serif;
 }
+:root{
+    --bg-color:#0f295a;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+}
     html{
-        font-size:100%;
+        font-size:62.5%;
+        overflow-x: hidden;
         margin:0;
         padding: 0;
         }
     body{
-        background-color:black;
+        background: var(--bg-color) ;
         background-size:cover;
+        color: var(--text-color);
         display:block;
         margin:0;
         padding:0;
         min-width: 767px;
     }
     section{
-        margin-left: 2rem;
-        min-height:30vh;
-        padding:2rem;
-        margin-top:10rem;
-        margin-bottom:20rem;
+        min-height:100vh;
+        padding:5rem;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15rem;
     }
     .header{
         position:fixed;
         top:0;
         left:0;
+        margin-left: 0;
+        margin-right: 0;
         width:100%;
         padding:2rem 9%;
-        background:linear-gradient(#75FBFD,grey);
+        background:var(--bg-color);
         display:flex;
         justify-content:space-between;
         align-items:center;
         z-index:100;
+    }
+    .header.sticky{
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
     }
     .services{
         margin:0;
@@ -52,29 +65,32 @@
     }
     .logo{
         font-size:2.5rem;
-        color:blueviolet;
+        color: var(--text-color);
         font-weight:600;
         cursor:default;
     }
      .navbar a{
-        font-size:1.7rem;
-        color:black;
+        font-size:2rem;
+        color: var(--text-color);
         margin-left:4rem;
         transition:.3s;
     }
-    .navbar a:hover, .navbar a:active, a::after{
-        color:aliceblue;
+    .navbar a:hover, .navbar a.active, a::after{
+       color: var(--main-color);
         text-decoration:underline;
     }
     #menu-icon{
         font-size:3.6rem;
-        color:#75FBFD;
+        fill: var(--text-color);
+        color: var(--text-color);
         display:none;
     }
     .home{
         display:flex;
         justify-content:center;
         align-items:center;
+        margin-left: 0;
+        margin-right: 0;
     }
     .home-img img{
         border:solid 2px #75FBFD;
@@ -119,8 +135,8 @@
         border:none;
     }
     .home-content p{
-        color:white;
-        font-size:1.6rem;
+        color:var(--text-color);
+        font-size:2rem;
     }
     .social-media a{
         display:inline-flex;
@@ -129,11 +145,11 @@
         width:4rem;
         height:4rem;
         background-color:transparent;
-        border:.2rem solid #75FBFD;
+        border:.2rem solid var(--main-color);
         border-radius:35%;
         font-size:2rem;
         margin:3rem 1.5rem 3rem 0;
-        transition:.5s;
+        transition:.5s ease;
     }
     .social-media a .fa-instagram{
         color:pink;
@@ -141,7 +157,7 @@
     }
     .social-media a:hover{
         transform:scale(1.05);
-        background-color:grey;
+        background-color: #034546 ;
         box-shadow:0 0 1rem  #75FBFD;
     }
     .btn{
@@ -149,21 +165,26 @@
         padding:1rem 2.8rem;
         background-color:silver;
         border:none;
-        border-radius:1rem;
-        transition:.5s;
+        border-radius:2rem;
+        transition:1s;
         font-size:1.6rem;
         color:black;
         font-weight:600;
+        margin-right: 2rem;
     }
     .btn:hover{
         box-shadow:0 0 1rem  #75FBFD;
+        color:rgb(3, 245, 245);
+        background-color: var(--bg-color);
     }
     .about{
         display:flex;
         justify-content:center;
         align-items:center;
-        column-gap:2rem;
-        background-color:transparent;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 2rem;
+        background-color:rgb(27, 61, 124);
     }
     .about-img img{
         border:solid 2px #75FBFD;
@@ -184,9 +205,13 @@
     .about-img img:hover{
         transform:scaleY(1.05);
     }
+    .about-content{
+        max-width: 45%;
+        margin-right: 0;
+    }
     .about-content p{
         color:white;
-        font-size:1.6rem;
+        font-size:2rem;
         margin:2rem 0 3rem;
     }
     .about h2{
@@ -211,22 +236,21 @@
         width: 100%; 
         padding:10px;
         margin:0;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10rem;
+        margin-left: 2rem;
     }
     .services-container .services-box{
         box-sizing: border-box; /* Include padding and border in width calculation */  
         width: 45%; /* Default to full width on smaller screens */  
         margin-bottom: 2rem;  
-       margin-left: 5rem;
        border-radius:2rem;
        border:.2rem solid  #75FBFD;
        background-color:transparent;
-    
        padding:10px;
        text-align:center;
-       
-      
        height:auto;
-       
        transition:3s;
     }
     .services-container p{
@@ -247,8 +271,9 @@
         margin-bottom: 0rem;
     }
     .services-box p{
-        font-size:1.6rem;
+        font-size:2rem;
         margin:1rem 0 3rem;
+        line-height: 3.5rem;
     }
     .services-container .services-box:hover{
         transform:scale(1.05);
@@ -260,7 +285,7 @@
         background-size:contain;
         color: #75FBFD;
         text-decoration-color: #75FBFD;
-        transition:3s;
+        transition:1s;
         text-decoration-color:#75FBFD;
         cursor:pointer;
     }
@@ -274,6 +299,9 @@
         display:inline;
         margin:10px;
         padding:10px;
+    }
+    .portfolio{
+        background-color:rgb(27, 61, 124);
     }
     .portfolio h2{
         color:white;
@@ -402,6 +430,9 @@ body p{
     align-items:center;
     flex-wrap:wrap;
     padding:2rem 9%;
+    background: rgb(6, 8, 10);
+    margin-right: 0;
+    width: 100%;
 }
 .footer-text  p{
     font-size:2rem;
@@ -419,6 +450,8 @@ body p{
 @media (max-width: 1200px){
     html{
         font-size:55%;
+        margin: 0;
+        padding: 0;
     }
 }
 @media (min-width: 1000px) {
@@ -464,22 +497,46 @@ body p{
         padding-bottom: 7rem;
     }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width:617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+@media (max-width:365px){
+    .home-img img{
+        width: 90vw;
+    }
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+}
+@media (max-width: 767px) {
     #menu-icon{
         display: block;
-        color:black;
-        fill: black;
+        fill: var(--text-color);
+        color: var(--text-color);
         font-size: 4rem;
         right: 0rem;
         position: absolute;
     }
     .header{
         min-width: 768px;
-        margin-right: 0;
-        margin-left:0rem;
+        margin: 0;
     }
     section{
-        margin-left:2rem;
+        margin-left:0rem;
         margin-right: 0rem;
         min-width: 760px;
     }
@@ -516,6 +573,7 @@ body p{
     }
     .home{
         flex-direction: column;
+        margin: 0;
     }
     .home-img img{
         margin-top: 4rem;
@@ -538,10 +596,14 @@ body p{
     .home .btn{
         margin-right: 2rem ;
     }
-    .about{
+     .about{
         flex-direction: column;
         margin-bottom: 2rem;
         margin-top: 0rem;
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+        background: transparent;
     }
     .about .about-content{
         min-width: 70rem;
@@ -552,11 +614,11 @@ body p{
     }
     .Skills{
         margin-top: 5rem;
-        min-width: 70rem;
+        width: 100%;
     }
     .services{
         justify-content: center;
-        margin-left: 10rem;
+        margin-left: 0rem;
     }
     .services h2{
         margin-bottom: 5rem;
@@ -593,6 +655,9 @@ body p{
     .services-box:nth-child(2n){
         margin-left: 5rem;
     }
+    .portfolio{
+        background: transparent;
+    }
    .portfolio h2{
     margin-bottom: 3rem;
    }
@@ -612,6 +677,9 @@ body p{
 .contact{
     min-width: 70rem;
     margin-left: 2rem;
+}
+.footer{
+    width: 100%;
 }
 .footer p{
     margin-top: 0rem;
@@ -641,6 +709,7 @@ body p{
 }
 .about .Skills{
     margin-left:3rem;
+    margin-right: 0;
 }
 .Skills .btn:hover{
     cursor: pointer;
