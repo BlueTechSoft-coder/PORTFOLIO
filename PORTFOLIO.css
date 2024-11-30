@@ -548,7 +548,7 @@ body p{
     }
 }
 }
-@media (max-width: 767px) and (orientation: potrait) {
+@media (max-width: 767px)  {
     #menu-icon{
         display: block;
         fill: var(--text-color);
