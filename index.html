@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.3">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
@@ -190,7 +190,7 @@
                 <div class="portfolio-layer">
                     <h4>Royal Hotel</h4>
                     <p>Web Development<br />Click Below To See More</p>
-                    <<a href="#">
+                    <a href="#">
     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
 </a>
                 </div>
@@ -240,17 +240,25 @@
             </div>
     </section>
     <section class="contact" id="contact">
+        <h4 style="text-align: left; font-size: 8rem; line-height: 15rem;">
+            Do You Need A<br>
+            <span style="color: rgba(red, green, blue, alpha);" >Secure & <br>
+            Proffessional</span>
+            <br>
+            Website?
+        </h4>
+
         <h2 class="heading">Contact <span>Me!</span></h2>
-        <form action="#">
+        <form action="submit.php" method="post" >
             <div class="input-box">
-                <input type="text" placeholder="Full Name"  required/>
-                <input type="email" placeholder="Email Address" required />
+                <input type="text" id="name" name="name" placeholder="Full Name"  />
+                <input type="email" id="email" name="email" placeholder="Email Address"  />
             </div>
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number" required />
-                <input type="text" placeholder="Email Subject" required />
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number"  />
+                <input type="text" id="subject" name="subject" placeholder="Email Subject"  />
             </div>
-            <textarea name="" cols="30" rows="10" placeholder="Type Your Message Here..."></textarea> 
+            <textarea name="" cols="30" rows="10" id="message" name="message" placeholder="Type Your Message Here..."></textarea> 
             <input type="submit" value="Send Message" class="btn" />
         </form>
     </section>
@@ -259,7 +267,7 @@
             <a href="#home"> <i class="bx bx-up-arrow-alt" style="color:#04ffe6; height: ;"></i> Back To Home</a>
         </div>
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by .W. Andrew <span><b><big> | </big></b></span> All Rights Reserved.</p>
+            <p>Copyright &copy; 2024 by .W. Andrew <span><b><big> | </big></b></span> All Rights Reserved.</p>
         </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
