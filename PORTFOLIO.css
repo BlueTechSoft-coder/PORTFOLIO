@@ -37,6 +37,38 @@
         margin-right: 0;
         margin-top: 15rem;
     }
+    .body{
+        display: flex;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        color: whitesmoke;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h6{
+        font-size: 3.5em;
+        color: whitesmoke;
+    }
+    h6 > span{
+        position: relative;
+        display: inline-block;
+        color: aqua;
+        height: 1.25em;
+        vertical-align: bottom;
+        overflow: hidden;
+    }
+    h6 > span > span{
+        display: block;
+        animation: animateWords 15s infinite ease;
+    }
+    @keyframes animateWords {
+        10% {transform: translateY(0%);}
+        25% {transform: translateY(-100%);}
+        50% {transform: translateY(-200%);}
+        75% {transform: translateY(-300%);}
+        100% {transform: translateY(-400%);}
+    }
     .header{
         position:fixed;
         top:0;
@@ -506,18 +538,23 @@ body p{
 @media (max-width: 991px){
     .header{
         padding:2rem 3%;
+        margin: 0;
     }
     section{
         padding:10rem 3% 2rem;
+        margin: 0;
     }
     .footer{
         padding:2rem 3%;
+        margin: 0;
     }
     .services{
         padding-bottom: 7rem;
+        margin: 0;
     }
     .portfolio{
         padding-bottom: 7rem;
+        margin: 0;
     }
 }
 @media (max-width:617px){
@@ -528,9 +565,54 @@ body p{
     html{
         font-size: 50%;
         margin: 0 0 0 0;
+        padding: 0;
     }
     .contact form .input-box input{
         width: 100%;
+    }
+    .services-container{
+        display: block;
+    }
+    #web{
+        min-width: 60%;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 5rem;
+    }
+    #soft{
+        min-width: 60%;
+        margin-left: 0%;
+        margin-right: 15%;
+        margin-bottom: 5rem;
+    }
+    #pro{
+        min-width: 60%;
+        margin-left: -20%;
+        margin-right: 50%;
+        margin-bottom: 5rem;
+    }
+    @media (max-width:713px){
+        .services-container{
+            display: block;
+        }
+        #web{
+            min-width: 60%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-bottom: 5rem;
+        }
+        #soft{
+            min-width: 60%;
+            margin-left: 0%;
+            margin-right: 15%;
+            margin-bottom: 5rem;
+        }
+        #pro{
+            min-width: 60%;
+            margin-left: -20%;
+            margin-right: 50%;
+            margin-bottom: 5rem;
+        }
     }
 
 }
@@ -660,30 +742,21 @@ body p{
         line-height: 1.6;
     }
     .services-container{
-        display: flex;  
-        flex-wrap: wrap; /* Allow items to wrap onto multiple lines */  
-        min-width: 100%; 
-        padding:10px;
-        margin-left: 2rem;
-        margin:0;
-        margin-bottom: 0;
+        display: block;
     }
-    .services-container .services-box{
-        box-sizing: border-box; /* Include padding and border in width calculation */  
-        min-width:45%; /* Default to full width on smaller screens */  
-        margin-bottom: 0rem;  
-       margin-left:4rem;
-       border-radius:2rem;
-       border:.2rem solid  #75FBFD;
-       background-color:transparent;
-       padding:10px;
-       text-align:center;
-       max-width: 30rem;
-       transition:3s;
+    #web{
+        min-width: 80%;
+        margin-left: 70%;
+        margin-right: 15%;
+        margin-bottom: 5rem;
     }
-    .services-box:nth-child(2n){
-        margin-left: 5rem;
+    #soft{
+        min-width: 80%;
+        margin-left: 7%;
+        margin-right: 3%;
+        margin-bottom: 5rem;
     }
+   
     .portfolio{
         background: transparent;
     }
