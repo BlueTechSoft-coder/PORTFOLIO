@@ -6,7 +6,7 @@ function downloadFile(fileUrl, fileName) {
     document.body.appendChild(link);  
     link.click();  
     document.body.removeChild(link);
-
+};
 
 /* toggle icon navbar */
 
@@ -41,13 +41,24 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
-ScrollReveal({ 
-    //reset: true, 
-    distance: '200px',
+ScrollReveal({
+    reset: true,
+    distance: '100px',
     duration: 2000,
     delay: 200
 });
-ScrollReveal().reveal('.heading, .home-content', { origin: 'top'});
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom'});
-ScrollReveal().reveal('.home-content h1, .skill, ', { origin: 'left'});
-ScrollReveal().reveal('.home-content p, .about-content, ', { origin: 'right'});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+
+ScrollReveal({
+    reset: true,
+    distance: '100px',
+    duration: 2000,
+    delay: 200
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
