@@ -42,9 +42,9 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 ScrollReveal({
-    reset: true,
+    //reset: true,
     distance: '100px',
-    duration: 2000,
+    duration: 1000,
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
@@ -53,9 +53,9 @@ ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
 
 ScrollReveal({
-    reset: true,
+    //reset: true,
     distance: '100px',
-    duration: 2000,
+    duration: 1000,
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
