@@ -248,6 +248,7 @@ span{
 @media(max-width:770px){
     .home{
         display: block;
+        min-width: 770px;
     }
     .home-img img{
         margin-top: 70px;
@@ -255,6 +256,12 @@ span{
     .body h6 > span{
         font-size: 20px;
         height: 30px;
+    }
+    .home-content{
+        min-width: 770px;
+    }
+    .home-content p{
+        min-width: 750px;
     }
 }
 
@@ -355,9 +362,16 @@ span{
 @media(max-width:770px){
     .about{
         display: block;
+        min-width: 770px;
     }
     .Skills .heading{
         margin-top: 20px;
+    }
+    .about-content{
+        min-width: 770px;
+    }
+    .Skills{
+        min-width: 770px;
     }
 }
 
@@ -426,17 +440,21 @@ span{
     cursor: pointer;
 }
 @media(max-width:770px){
+    .services{
+        min-width: 770px;
+    }
     .services-container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         padding-right: 0px;
+        min-width: 770px;
     }
     .services h2{
         text-align: center;
     }
     .services-box{
         height: auto;
-        min-width: 100%;
+        min-width: 770px;
         margin-bottom: 50px;
     }
 }
@@ -517,9 +535,16 @@ span{
     cursor: pointer;
 }
 @media(max-width:770px){
+    .portfolio{
+        min-width: 770px;
+    }
     .portfolio-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
+        min-width: 770px;
+    }
+    .portfolio-box{
+        width: 100%;
     }
 }
 .contact{
@@ -586,7 +611,17 @@ span{
     background-color: #000000;
     color: #0ef;
 }
-
+@media(max-width:770px){
+    .contact{
+        min-width: 770px;
+    }
+    .contact h4{
+        min-width: 770px;
+    }
+    .contact form{
+        min-width: 770px;
+    }
+}
 .footer{
     padding-left: 20px;
     padding-right: 20px;
@@ -604,6 +639,17 @@ span{
     color: #0ef;
     font-size: 25px;
     font-weight: 700;
+}
+@media(max-width:770px){
+    .html{
+        font-size: 250%;
+    }
+}
+@media(max-width:770px){
+    .footer{
+        display: block;
+        min-width: 770px;
+    }
 }
 .whatsapp-icon {
     position: fixed;
