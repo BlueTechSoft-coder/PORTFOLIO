@@ -264,7 +264,14 @@ span{
         min-width: 750px;
     }
 }
-
+@media(max-width:365px){
+    .home{
+        min-width: 365px;
+    }
+    .home-content{
+        min-width: 365px;
+    }
+}
 .about{
     display:flex;
     justify-content:center;
@@ -374,7 +381,17 @@ span{
         min-width: 770px;
     }
 }
-
+@media(max-width:365px){
+    .about{
+        min-width: 700px;
+    }
+    .about-content{
+        min-width: 700px;
+    }
+    .Skills{
+        min-width: 700px;
+    }
+}
 .services{
     margin-top: 200px;
     margin: 0 0 0 0;
@@ -456,6 +473,17 @@ span{
         height: auto;
         min-width: 770px;
         margin-bottom: 50px;
+    }
+}
+@media(max-width:365px){
+    .services{
+        min-width: 700px;
+    }
+    .services-container{
+        min-width: 700px;
+    }
+    .services-box{
+        min-width: 700px;
     }
 }
 .portfolio{
@@ -547,6 +575,17 @@ span{
         width: 100%;
     }
 }
+@media(max-width:365px){
+    .portfolio{
+        min-width: 700px;
+    }
+    .portfolio-container{
+        min-width:700px;
+    }
+    .portfolio-box{
+        min-width: 700px;
+    }
+}
 .contact{
     padding-left: 20px;
     padding-right: 20px;
@@ -622,6 +661,14 @@ span{
         min-width: 770px;
     }
 }
+@media(max-width:365px){
+    .contact{
+        min-width: 700px;
+    }
+    .contact form{
+        min-width: 700px;
+    }
+}
 .footer{
     padding-left: 20px;
     padding-right: 20px;
@@ -640,9 +687,12 @@ span{
     font-size: 25px;
     font-weight: 700;
 }
-@media(max-width:770px){
-    .html{
-        font-size: 250%;
+@media(max-width:365px){
+    .footer{
+        min-width: 365px;
+    }
+    .footer-text{
+        min-width: 365px;
     }
 }
 @media(max-width:770px){
