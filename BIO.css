@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *{
     margin:0;
@@ -410,7 +409,12 @@ span{
     text-align:center;
     color:black;
 }
-
+@media (min-width:771px){
+    .about .about-content{
+        width: 100%;
+        margin-right: 20px;
+    }
+}
 @media(max-width:770px){
     .about{
         display: block;
@@ -466,6 +470,8 @@ span{
         min-width: 110%;
         display: grid;
         grid-template-columns: repeat(2,2fr);
+        text-align: center;
+        padding-left: 60px;
     }
     .Skills .skill .btn{
         font-size: 200%;
@@ -513,6 +519,7 @@ span{
 .services-box svg{
     margin-left: 40%;
     margin-right: 40%;
+    font-size: 80px;
 }
 .services-box h3{
     text-align: center;
@@ -568,6 +575,9 @@ span{
     }
     .services-container{
         min-width: 700px;
+    }
+    .services-box svg{
+        font-size: 100px;
     }
     .services-box{
         min-width: 700px;
