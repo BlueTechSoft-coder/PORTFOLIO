@@ -131,17 +131,6 @@ body{
     border-radius:35%;
     animation:floatimage 4s ease-in-out infinite;
 }
-@keyframes floatimage{
-    0%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-2.4rem);
-    }
-    100%{
-        transform:translateY(0);
-    }
-}
 .home-img img:hover{
     transform:scaleY(1.05);
 }
