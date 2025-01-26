@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow-x: visible;">
+<html lang="en" style="overflow-x: hidden; width: 100%">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,1017 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="BIO.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    border:none;
+    outline:none;
+    scroll-behavior: smooth;
+    font-family:'Poppins', sans-serif;
+}
+:root{
+    --bg-color:#0f295a;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+}
+body{
+    background: var(--bg-color) ;
+    background-size:cover;
+    color: var(--text-color);
+    margin:0;
+    padding:0;
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    margin: 0;
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding:25px;
+    background:var(--bg-color);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+.logo{
+    font-size:40px;
+    color:#75FBFD;
+    font-weight:600;
+    cursor:default;
+    margin-top: 0;
+}
+@media (max-width:365px){
+    .logo{
+        font-size: 80px;
+    }
+}
+.navbar{
+    margin-right: 15px;
+    margin-top: 0;
+}
+ .navbar a{
+    font-size:19px;
+    color: var(--text-color);
+    margin-left:18px;
+    transition:.3s;
+}
+.navbar a:hover, .navbar a.active, a::after{
+   color: var(--main-color);
+    text-decoration:underline;
+}
+#menu-icon{
+    font-size:30px;
+    fill: var(--text-color);
+    color: var(--text-color);
+    display:none;
+    margin-bottom: 20px;
+}
+@media(max-width:770px){
+    #menu-icon{
+        display: block;
+        fill: var(--text-color);
+        color: var(--text-color);
+        font-size: 80px;
+        right: 0rem;
+        top: 20px;
+        position: absolute;
+    }
+    .navbar{
+        position: absolute;
+        display: none;
+        margin-top: 100px;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        padding: 10px;
+        background-color:#75FBFD;
+        border-top:.1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+    .navbar.active{
+        display: block;
+        background-color:darkslategray;
+        margin-top: -40px;
+        margin-right: 0;
+    }
+    .navbar a{
+        display: block;
+        font-size: 40px;
+        margin: 17px;
+        color: aqua;
+    }
+    .navbar a:hover{
+        text-decoration: none;
+        text-transform: none;
+        padding: 0;
+        margin: 0 0 0 0;
+        background-color:transparent;
+        color:aliceblue;
+    }
+
+}
+.home{
+    display:flex;
+    margin-top: 200px;
+    padding-left: 30px;
+    padding: 30px;
+}
+.home-img img{
+    border:solid 2px #75FBFD;
+    display: inline;
+    border-radius:35%;
+    animation:floatimage 4s ease-in-out infinite;
+}
+@keyframes floatimage{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-2.4rem);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+.home-img img:hover{
+    transform:scaleY(1.05);
+}
+.home-content h3{
+    font-size:30px;
+    font-weight:700;
+    color:white;
+    margin-bottom: 10px;
+}
+span{
+   color:#75FBFD;
+}
+.home-content h1{
+    font-size:40px;
+    font-weight:700;
+    color:#75FBFD;
+    padding:12px;
+    width:320px;
+    box-shadow:0 0 .8rem ;
+    border-radius:10px;
+    line-height:50px;
+    outline-width:initial;
+    border:none;
+}
+.body{
+    display: flex;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.body h6{
+    font-size: 30px;
+    color: whitesmoke;
+}
+.body h6 > span{
+    position: relative;
+    display: inline-block;
+    color: aqua;
+    height: 40px;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+.body h6 > span > span{
+    display: block;
+    animation: animateWords 15s infinite ease;
+}
+@keyframes animateWords {
+    10% {transform: translateY(0%);}
+    25% {transform: translateY(-100%);}
+    50% {transform: translateY(-200%);}
+    75% {transform: translateY(-300%);}
+    100% {transform: translateY(-400%);}
+}
+.home-content p{
+    color:var(--text-color);
+    font-size:20px;
+    font-family:'Poppins', sans-serif;
+    font-weight:0;
+    line-height: 25px;
+}
+.social-media a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:33px;
+    height:33px;
+    background-color:transparent;
+    border:1.5px solid var(--main-color);
+    border-radius:35%;
+    font-size:25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition:.5s ease;
+    padding: 17px;
+    margin-right: 7px;
+}
+.social-media a .fa-instagram{
+    color:pink;
+    fill:pink;
+}
+.social-media a:hover{
+    transform:scale(1.05);
+    background-color: #034546 ;
+    box-shadow:0 0 1rem  #75FBFD;
+}
+.btn button{
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 180px;
+    color: #0f295a;
+    background-color: #0ef;
+    transition: .8s;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    height: 45px;
+    font-weight: 700;
+    border-style: outset;
+    border: 0px solid #0f295a;
+}
+.btn button:hover{
+    color:#0ef;
+    background-color: #000000;
+    border: #0ef;
+    box-shadow:0 0 20px  #75FBFD;
+    cursor: pointer;
+}
+@media(max-width:770px){
+    .home{
+        display: block;
+        min-width: 770px;
+    }
+    .home-img img{
+        margin-top: 70px;
+    }
+    .body h6{
+        font-size: 60px;
+    }
+    .body h6 > span{
+        font-size: 40px;
+        height: 55px;
+        min-width: 700px;
+    }
+    .home button{
+        height: 100px;
+    }
+    .home-content{
+        min-width: 770px;
+    }
+    .home p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content button{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content .btn{
+    min-width: 700px;
+    }
+    .social-media a{
+        font-size: 40px;
+        padding: 20px;
+        border: none;
+    }
+    .home-img{
+        min-width: 700px;
+    }
+    .home-img img{
+        min-width: 80%;
+    }
+    .home-content p{
+        min-width: 750px;
+    }
+}
+@media(max-width:365px){
+    .home{
+        min-width: 365px;
+    }
+    .home-content{
+        min-width: 365px;
+    }
+    .home-img img{
+        height: 450px;
+    }
+    .home-content button{
+        height: 100px;
+    }
+}
+.about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 0;
+    margin-top: 100px;
+    background-color:rgb(27, 61, 124);
+}
+.about-content{
+    padding: 0;
+    display: inline;
+}
+.about-content p{
+    color:white;
+    font-size:20px;
+    line-height: 25px;
+}
+.about h2{
+    color:white;
+    font-size: 40px;
+    text-align: left;
+}
+.about-content h3{
+    color:white;
+    font-size: 30px;
+}
+.about-content button{
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 150px;
+    color: #0f295a;
+    background-color: #0ef;
+    transition: .8s;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    height: 35px;
+    font-weight: 700;
+    border-style: outset;
+    border: 0px solid #0f295a;
+}
+.about-content button:hover{
+    color:#0ef;
+    background-color: #000000;
+    border: #0ef;
+    box-shadow:0 0 20px  #75FBFD;
+    cursor: pointer;
+}
+.about .Skills{
+    display: inline;
+}
+.Skills .heading h2{
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    align-self:center;
+    justify-content:center;
+}
+.Skills .btn{
+    display: inline-block;
+    margin: 5px;
+    width:120px;
+    text-align:center;
+    color:aqua;
+    background-color:transparent;
+}
+.Skills .btn{
+    padding-right: 0;
+    padding: 17px;
+}
+.Skills .btn:hover{
+    cursor: pointer;
+    box-shadow: #75FBFD 0 0 10rem;
+    transform: scale(1.05);
+    border-radius: 12px;
+    padding: 15px;
+}
+.Skills .skill{
+    background-color:transparent;
+    border:aqua solid 2px;
+    border-radius: 7px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding:1rem;
+    min-width:400px;
+    text-align:center;
+    color:black;
+}
+
+@media(max-width:770px){
+    .about{
+        display: block;
+        min-width: 770px;
+    }
+    .about-content p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about button{
+        font-size: 30px;
+        height: 100px;
+        min-width: 35%;
+    }
+    .Skills .heading{
+        margin-top: 20px;
+    }
+    .about-content{
+        min-width: 770px;
+    }
+    .Skills{
+        min-width: 770px;
+    }
+    .skill .btn{
+        font-size: 30px;
+    }
+}
+@media(max-width:365px){
+    .about{
+        min-width: 700px;
+    }
+    .about-content h2 {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    .about-content h3{
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .about-content{
+        min-width: 700px;
+        font-size: 300%;
+    }
+    .Skills{
+        min-width: 700px;
+    }
+    .Skills h2{
+        font-size: 70px;
+        margin-bottom: 20px;
+        margin-top: 200px;
+    }
+    .Skills .skill{
+        min-width: 110%;
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+    }
+    .Skills .skill .btn{
+        font-size: 200%;
+    }
+    .Skills .skill .btn img{
+        width: 150%;
+        height: 150%;
+    }
+}
+.services{
+    margin-top: 200px;
+    margin: 0 0 0 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.services h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.services p{
+    font-size: 17px;
+    line-height: 30px;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.services-box{
+    align-items: center;
+    text-align: center;
+    width: 320px;
+    min-height: 500px;
+    display: inline;
+    margin-right: 20px;
+    border: #0ef solid 2px;
+    border-radius: 20px;
+    padding: 12px;
+    transition: .6s;
+}
+.services-box:hover{
+    cursor: pointer;
+    box-shadow:0 0 3rem  #4d9e9f;
+    background:linear-gradient(transparent,grey, #328385);
+}
+.services-box svg{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.services-box h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.services-box button{
+    width: 160px;
+    color: #0f295a;
+    background-color: #0ef;
+    transition: .8s;
+    padding: 3px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 12px;
+    height: 40px;
+    font-weight: 500;
+    border-style: outset;
+    border: 0px solid #0f295a;
+}
+.services-box button:hover{
+    color:#0ef;
+    background-color: #000000;
+    border: #0ef;
+    box-shadow:0 0 20px  #75FBFD;
+    cursor: pointer;
+}
+@media(max-width:770px){
+    .services{
+        min-width: 770px;
+    }
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 0px;
+        min-width: 770px;
+    }
+    .services h2{
+        text-align: center;
+    }
+    .services-box{
+        height: auto;
+        min-width: 770px;
+        margin-bottom: 50px;
+    }
+    .services-box button{
+        height: 100px;
+        font-size: 40px;
+    }
+}
+@media(max-width:365px){
+    .services{
+        min-width: 700px;
+    }
+    .services-container{
+        min-width: 700px;
+    }
+    .services-box{
+        min-width: 700px;
+        font-size: 200%;
+    }
+    .services h2{
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    .services button{
+        height: 100px;
+        font-size: 30px;
+    }
+}
+.portfolio{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 200px;
+}
+.portfolio h2{
+    color:white;
+    margin-bottom:20px;
+    text-align: center;
+    font-size: 45px;
+}
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 0 0;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.portfolio-box{
+    padding: 12px;
+    text-align: center;
+    align-self: center;
+    border-radius:2rem;
+    border:1.5px solid  #75FBFD;
+    transition: .6s;
+    margin-bottom: 40px;
+}
+.portfolio-box:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 10rem  #75FBFD;
+}
+.portfolio-box img{
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+.portfolio h4{
+    font-size:30px;
+    font-weight:600;
+    text-align:center;
+    color:orangered;
+}
+.portfolio-box p{
+    font-size: 17px;
+    line-height: 20px;
+}
+.portfolio-box svg:hover{
+    cursor: pointer;
+}
+@media (max-width:365px){
+    .portfolio-box .portfolio-layer svg{
+    height: 80px;
+    width: 80px;
+}
+}
+.portfolio-box svg{
+    height: 40px;
+    width: 40px;
+}
+.portfolio-container .portfolio-box .portfolio-layer{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(#75FBFD,grey,transparent);
+    display:flex;
+    opacity:0;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:0 4rem;
+    transform:translateY(50%);
+    transition:.9s ease;
+    border-radius:2rem;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform:translateY(0);
+    border-radius:2rem;
+    opacity:1;
+    cursor: pointer;
+}
+@media(max-width:770px){
+    .portfolio{
+        min-width: 770px;
+    }
+    .portfolio-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        min-width: 770px;
+    }
+    .portfolio-box{
+        width: 100%;
+        height: 500px;
+    }
+    .portfolio h4{
+        font-size: 50px;
+    }
+    .portfolio p{
+        font-size: 20px;
+    }
+    .portfolio-layer{
+        height: 100%;
+    }
+    .portfolio-box img{
+        height: 100%;
+    }
+    .portfolio-box .portfolio-layer svg{
+        font-size: 50px;
+        height: 80px;
+    }
+}
+@media(max-width:365px){
+    .portfolio{
+        min-width: 700px;
+    }
+    .portfolio h2{
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    .portfolio-container{
+        min-width:700px;
+    }
+    .portfolio-box{
+        min-width: 700px;
+        height: 500px;
+        padding: 20px;
+    }
+    .portfolio-layer{
+        height: 100%;
+    }
+    .portfolio-box img{
+        height: 100%;
+    }
+    .portfolio h4{
+        font-size: 50px;
+    }
+    .portfolio p{
+        font-size: 20px;
+    }
+    .portfolio-box .portfolio-layer svg{
+        font-size: 50px;
+        height: 80px;
+    }
+}
+.contact{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 200px;
+}
+.contact h2{
+    color:white;
+    margin-bottom:3rem;
+    font-size: 50px;
+    text-align: center;
+}
+.contact h4{
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+.contact h4 span{
+    color: rgb(90, 90, 208);
+    text-shadow: 12px 12px 0px rgba(55, 7, 83, 0.2);
+    text-shadow: 0 1px 0 #c3acac, 0 2px 0 #cbb2b2, 0 3px 0 #cdb4b4, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+.contact form{
+    width: 80%;
+    margin: auto;
+    text-align:center;
+    margin-bottom:30px;
+    border-radius:15px;
+}
+.contact form .input-box{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+@media (max-width:365px){
+    .contact form .input-box{
+        display: grid;
+    }
+    .contact form .input-box input, 
+.contact form textarea{
+    min-width: 100%;
+}
+}
+.contact form .input-box input, 
+.contact form textarea{
+    width:100%;
+    padding:10px;
+    font-size:18px;
+    color:black;
+    background-color:#75FBFD;
+    border-radius:7px;
+    margin:.7rem 0 1rem 0;
+}
+.contact form .input-box input{
+    width:49%;
+}
+.contact form textarea{
+    resize:none;
+}
+.contact form .btn{
+    margin-top:2rem;
+    cursor:pointer;
+    background-color: #0ef;
+    color: #0f295a;
+    transition: .6s;
+    font-size: 20px;
+    padding: 9px;
+    width: 250px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+.contact form .btn:hover{
+    background-color: #000000;
+    color: #0ef;
+}
+@media(max-width:770px){
+    .contact{
+        min-width: 770px;
+    }
+    .contact h4{
+        min-width: 770px;
+    }
+    .contact form{
+        min-width: 770px;
+    }
+    .contact form input::placeholder, textarea::placeholder{
+        font-size: 30px;
+    } 
+    .contact form .btn{
+        font-size: 30px;
+    }
+}
+@media(max-width:365px){
+    .contact{
+        min-width: 700px;
+    }
+    .contact h2{
+        font-size: 70px;
+        margin-bottom: 20px;
+        margin-top: 50px;
+    }
+    .contact form{
+        min-width: 700px;
+    }
+    .contact h4{
+        line-height: 90px;
+        min-width: 100%;
+        font-size: 80px;
+    }
+    .contact form input[type="text"],  .contact form input[type="email"],  .contact form input[type="tel"]{
+        font-size: 50px;
+        line-height: 100px;
+    }
+    .contact form input[type="submit"]{
+        font-size: 200%;
+        width: 80%;
+    }
+    .contact form textarea{
+        font-size: 50px;
+    }
+    .contact form input::placeholder, textarea::placeholder{
+        font-size: 40px;
+        line-height: 50px;
+    } 
+    .contact form input{
+        height: 70px;
+    }
+}
+.footer{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 50px;
+    display: flex;
+}
+.footer-text p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.footer-iconTop a{
+    position: fixed;
+    bottom: 35px;
+    left: 20px;
+    color: #0ef;
+    font-size: 25px;
+    font-weight: 700;
+}
+@media(max-width:365px){
+    .footer{
+        min-width: 365px;
+    }
+    .footer-text{
+        min-width: 365px;
+    }
+}
+@media(max-width:770px){
+    .footer{
+        display: block;
+        min-width: 770px;
+    }
+    .whatsapp-icon i{
+        font-size: 80px;
+    }
+}
+.whatsapp-icon {
+    position: fixed;
+    font-family:'Times New Roman';
+    bottom: 40px;
+    right: 80px;
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: 900;
+    justify-content:space-around;
+    width: auto;
+    padding-left:0px;
+}
+.whatsapp-icon i{
+    margin: 15px;
+    font-size: 40px;
+    color: rgb(25, 218, 25);
+}
+.whatsapp-icon i:hover{
+    text-decoration-color: none;
+}
+    @media(max-width:365px){
+        html{
+            font-size: 162.5%;
+        }
+    .whatsapp-icon i{
+            font-size: 80px;
+            font-weight: 900;
+    }
+    .home p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about-content p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .services-box p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .portfolio-box p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer-iconTop  a{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer-text p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content button{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content .btn{
+    min-width: 700px;
+    }
+    .social-media a{
+        font-size: 40px;
+        padding: 20px;
+        border: none;
+    }
+    .contact form input{
+        width: 100%;
+    }
+    }
+        @media(max-width:770px){
+            .home p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about-content p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .services-box p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .portfolio-box p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer-iconTop  a{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer-text p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content button{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .home-content .btn{
+    min-width: 700px;
+    }
+    .social-media a{
+        font-size: 40px;
+        padding: 20px;
+        border: none;
+    }
+    .contact form input{
+        width: 100%;
+    }
+        }
+    </style>
 </head>
     <body style="overflow-x: visible;">
         <header class="header">
-            <a href="#" class="logo">Portfolio </a>
+            <a href="#" class="logo">.W. Andrew </a>
     
             <i class="bx bx-menu" id="menu-icon"></i>
     
@@ -45,7 +1052,7 @@
                  </div>
                  <br>
                  <br>
-                 <p class="bio" >
+                 <p>
                     "
                     I am a passionate web developer and software engineer
                     with a strong focus on front-end and back-end technologies.
@@ -90,18 +1097,18 @@
                         <h2>My <span>Skills</span></h2>
                        </div>
                        <div class="skill">
-                       <div class="btn" style="color:white">HTML5  <img src="HTML5.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">CSS3  <img src="CSS3.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">JAVASCRIPT  <img src="JAVASCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">JAVA  <img src="JAVA.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">KOTLIN  <img src="KOTLIN.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">PYTHON  <img src="PYTHON.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">C LANG      <img src="C.png" height="50" width="50" alt="C++" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">PHP  <img src="PHP.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">MYSQL  <img src="SQL.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">GITHUB  <img src="GITHUB.png" height="50" width="50" alt="HTML" style="border-radius:30%; background-color:aquamarine" /> </div>
-                       <div class="btn" style="color:white">TYPESCRIPT  <img src="TYPESCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
-                       <div class="btn" style="color:white">APIs  <img src="API.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>   
+                       <div class="btn" style=" color: #04ffe6;">HTML5  <img src="HTML5.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">CSS3  <img src="CSS3.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">JAVA<br> SCRIPT  <img src="JAVASCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">JAVA  <img src="JAVA.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">KOTLIN  <img src="KOTLIN.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">PYTHON  <img src="PYTHON.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">C LANG      <img src="C.png" height="50" width="50" alt="C++" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">PHP  <img src="PHP.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">MYSQL  <img src="SQL.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">GITHUB  <img src="GITHUB.png" height="50" width="50" alt="HTML" style="border-radius:30%; background-color:aquamarine" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">TYPE<br>SCRIPT  <img src="TYPESCRIPT.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>
+                       <div class="btn" style=" color: #04ffe6;">APIs  <img src="API.png" height="50" width="50" alt="HTML" style="border-radius:50%" /> </div>   
                        </div>
                     </div>
                 </section>
@@ -169,7 +1176,7 @@
                                 <h4>Hotel & Resort</h4>
                                 <p>Web Development<br />Click Below To See More</p>
                                 <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
                                 </a>
                             </div>
                         </div>
@@ -179,7 +1186,7 @@
                                 <h4>Royal Hotel</h4>
                                 <p>Web Development<br />Click Below To See More</p>
                                 <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
             </a>
                             </div>
                         </div>
@@ -189,7 +1196,7 @@
                                 <h4>Bus Booking App</h4>
                                 <p>Mobile App Development<br />Click Below To See More</p>
                                 <a href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
                                 </a>
                             </div>
                         </div>
@@ -201,7 +1208,7 @@
                                 <div class="portfolio-layer">
                                     <h4>Enterprise Software</h4>
                                     <p>Enterprise Software Development<br />Click Below To See More</p>
-                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
             </a>
                                   </div>
                             </div>
@@ -211,7 +1218,7 @@
                                     <h4>Hotel & Resort</h4>
                                     <p>Web Development<br />Click Below To See More</p>
                                     <a href="#">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
                                     </a> 
                                 </div>
                             </div>
@@ -221,7 +1228,7 @@
                                     <h4>BlueTech soft.cloud</h4>
                                     <p>Web Development<br />Click Below To See More</p>
                                     <a href="BlueTech Soft.htm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840H466v66.67H186.67v586.66h586.66V-466H840v279.33q0 27-19.83 46.84Q800.33-120 773.33-120H186.67ZM384-336.67 337.33-384l389.34-389.33h-194V-840H840v307.33h-66.67V-726L384-336.67Z" /></svg>
                                     </a>
                                 </div>
                             </div>
@@ -258,7 +1265,73 @@
                 <div class="footer-iconTop">
                     <a href="#home"> <i class="bx bx-up-arrow-alt" style="color:#04ffe6;"></i> Back To Home</a>
                 </div>
-                <a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"> <i class="fab fa-whatsapp"></i> Click here for more assistance...</a>
+                <a href="https://chat.whatsapp.com/CQEQWbEJPacLxVBQa7NOYm" class="whatsapp-icon" target="_blank"> <i class="fab fa-whatsapp"></i></a>
                 <script src="BIO.js"></script>
+                <script>
+                    /* DOWNLODING THE CV */
+function downloadFile(fileUrl, fileName) {  
+    const link = document.createElement('a');  
+    link.href = fileUrl;  
+    link.download = fileName;  
+    document.body.appendChild(link);  
+    link.click();  
+    document.body.removeChild(link);
+};
+
+/* toggle icon navbar */
+
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+    menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
+
+
+/* scroll events */
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 100);
+    /*removing the navbar after a click on the link*/
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
+ScrollReveal({
+    //reset: true,
+    distance: '100px',
+    duration: 1000,
+    delay: 200
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+
+ScrollReveal({
+    //reset: true,
+    distance: '100px',
+    duration: 1000,
+    delay: 200
+});
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box,', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+                </script>
 </body>
 </html>
