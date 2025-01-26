@@ -1,5 +1,5 @@
-/* DOWNLODING THE CV */
-function downloadFile(fileUrl, fileName) {  
+  /* DOWNLODING THE CV */
+  function downloadFile(fileUrl, fileName) {  
     const link = document.createElement('a');  
     link.href = fileUrl;  
     link.download = fileName;  
@@ -48,9 +48,9 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, ', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content, .contact h4,', { origin: 'right' });
 
 ScrollReveal({
     //reset: true,
@@ -59,6 +59,6 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box,', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content, .contact h4,', { origin: 'right' });
