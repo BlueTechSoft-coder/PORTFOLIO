@@ -47,10 +47,10 @@ ScrollReveal({
     duration: 1000,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-content, .heading,  .contact h4,', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, ', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content, .contact h4,', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
 
 ScrollReveal({
     //reset: true,
@@ -58,7 +58,7 @@ ScrollReveal({
     duration: 1000,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-content, .heading,  .contact h4,', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box,', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content, .contact h4,', { origin: 'right' });
+ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
