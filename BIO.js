@@ -43,22 +43,11 @@ window.onscroll = () => {
 };
 ScrollReveal({
     //reset: true,
-    distance: '100px',
-    duration: 1000,
+    distance: '200px',
+    duration: 2000,
     delay: 200
 });
-ScrollReveal().reveal('.home-content, .heading,  .contact h4,', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, ', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
-
-ScrollReveal({
-    //reset: true,
-    distance: '100px',
-    duration: 1000,
-    delay: 200
-});
-ScrollReveal().reveal('.home-content, .heading,  .contact h4,', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .portfolio-box,', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img,', { origin: 'left' });
+ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1,.contact h4, .about-img, .about-contect,', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
