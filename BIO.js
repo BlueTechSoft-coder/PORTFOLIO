@@ -48,6 +48,6 @@ ScrollReveal({
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img img, .services-container, .portfolio-box, ', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1,.contact h4, .about-img, .about-contect,', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content,', { origin: 'right' });
+ScrollReveal().reveal('.home-img, .services-container, .contact form, .portfolio-box ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content p, .home-content h1, .about-img, .contact h4, .about-content', { origin: 'left' });
+ScrollReveal().reveal(' .skill', { origin: 'right' });
