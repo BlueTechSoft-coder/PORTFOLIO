@@ -44,10 +44,10 @@ window.onscroll = () => {
 ScrollReveal({
     //reset: true,
     distance: '200px',
-    duration: 2000,
+    duration: 1500,
     delay: 200
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .contact form, .portfolio-box ', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content p, .home-content h1, .about-img, .contact h4, .about-content', { origin: 'left' });
-ScrollReveal().reveal(' .skill', { origin: 'right' });
+ScrollReveal().reveal('.about-img, .about-content', { origin: 'left' });
+ScrollReveal().reveal('.contact h4, .skill', { origin: 'right' });
