@@ -102,15 +102,14 @@ body{
     .navbar.active{
         display: block;
         background-color:darkslategray;
-        margin-top: -40px;
+        margin-top: 0px;
         margin-right: 0;
     }
     .navbar a{
         display: block;
-        font-size: 70px;
-        margin: 17px;
+        font-size: 60px;
         color: aqua;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
     }
     .navbar a:hover{
         text-decoration: none;
@@ -204,7 +203,6 @@ span{
     align-items:center;
     width:33px;
     height:33px;
-    background-color:transparent;
     border:1.5px solid var(--main-color);
     border-radius:35%;
     font-size:25px;
@@ -517,16 +515,19 @@ span{
     min-height: 500px;
     display: inline;
     margin-right: 20px;
-    border: #0ef solid 1px;
+    border: none;
     border-radius: 20px;
     padding: 12px;
-    transition: .6s;
+    transition: .5s;
+    box-shadow: 0 .5rem .5rem #00191a;
+    background-color: #016769;
 }
 .services-box:hover{
     cursor: pointer;
     transform: scale(1.05);
     background-color: #016769;
     border: none;
+    box-shadow: none;
 }
 .services-box svg{
     margin-left: 40%;
@@ -541,7 +542,7 @@ span{
     width: 160px;
     color: #0f295a;
     background-color: #0ef;
-    transition: .8s;
+    transition: .5s;
     padding: 3px;
     text-align: center;
     font-size: 20px;
@@ -626,17 +627,18 @@ span{
     justify-content: center;
 }
 .portfolio-box{
-    padding: 12px;
+    padding: 15px;
     text-align: center;
     align-self: center;
     border-radius:2rem;
-    border:1.5px solid  #75FBFD;
+    background-color: #016769;
     transition: .6s;
     margin-bottom: 40px;
+    box-shadow: 0 .5rem .5rem #00191a;
 }
 .portfolio-box:hover{
     transform:scale(1.05);
-    box-shadow:0 0 10rem  #40fcff;
+    box-shadow:0 0 10rem  #045f60;
     border: none;
 }
 .portfolio-box img{
@@ -822,6 +824,7 @@ span{
     width: 250px;
     border-radius: 12px;
     font-weight: 500;
+    box-shadow: 0 .5rem .5rem #00191a;
 }
 .contact form .btn:hover{
     background-color: #000000;
