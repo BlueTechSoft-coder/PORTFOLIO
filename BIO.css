@@ -275,7 +275,7 @@ span{
         line-height: 40px;
     }
     .home-content .btn{
-    min-width: 700px;
+        min-width: 700px;
     }
     .social-media a{
         font-size: 40px;
@@ -559,6 +559,15 @@ span{
     box-shadow:0 0 20px  #75FBFD;
     cursor: pointer;
 }
+@media (max-width:990px){
+    .services-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .services-box{
+        margin-bottom: 50px;
+    }
+}
 @media(max-width:770px){
     .services{
         min-width: 770px;
@@ -692,6 +701,12 @@ span{
     border-radius:2rem;
     opacity:1;
     cursor: pointer;
+}
+@media (max-width:990px){
+    .portfolio-container{
+        display: grid;
+        grid-template-columns:repeat(2,2fr);
+    }
 }
 @media(max-width:770px){
     .portfolio{
