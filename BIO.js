@@ -1,4 +1,4 @@
-  /* DOWNLODING THE CV */
+/* DOWNLODING THE CV */
   function downloadFile(fileUrl, fileName) {  
     const link = document.createElement('a');  
     link.href = fileUrl;  
