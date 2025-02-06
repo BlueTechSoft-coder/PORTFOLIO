@@ -21,7 +21,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#services">Services</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
@@ -236,17 +236,17 @@
                     </h4>
             
                     <h2 class="heading" >Contact <span>Me!</span></h2>
-                    <form action="submit.php" method="post" >
-                        <div class="input-box">
-                            <input type="text" id="name" name="name" placeholder="Full Name"  style="background-color:#04ffe6;" />
-                            <input type="email" id="email" name="email" placeholder="Email Address" style="background-color:#04ffe6;"  />
-                        </div>
-                        <div class="input-box">
-                            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number"  style="background-color:#04ffe6;" />
-                            <input type="text" id="subject" name="subject" placeholder="Email Subject" style="background-color:#04ffe6;"  />
-                        </div>
-                        <textarea name="" cols="30" rows="10" id="message" name="message" placeholder="Type Your Message Here..." style="background-color:#04ffe6;"></textarea> 
-                        <input type="submit" value="Send Message" class="btn" />
+                    <form action="submit.php" method="post">  
+                        <div class="input-box">  
+                            <input type="text" id="name" name="name" placeholder="Full Name" style="background-color:#04ffe6;" required />  
+                            <input type="email" id="email" name="email" placeholder="Email Address" style="background-color:#04ffe6;" required />  
+                        </div>  
+                        <div class="input-box">  
+                            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" style="background-color:#04ffe6;" required />  
+                            <input type="text" id="subject" name="subject" placeholder="Email Subject" style="background-color:#04ffe6;" required />  
+                        </div>  
+                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Type Your Message Here..." style="background-color:#04ffe6;" required></textarea>   
+                        <input type="submit" value="Send Message" class="btn" />  
                     </form>
                 </section>
                 <footer class="footer" style="background-color: transparent;">
