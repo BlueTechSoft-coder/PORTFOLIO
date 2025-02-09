@@ -40,17 +40,11 @@ body{
 .header.sticky{
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
-.logo{
-    font-size:40px;
+.logoo{
     color:#75FBFD;
     font-weight:600;
     cursor:default;
     margin-top: 0;
-}
-@media (max-width:365px){
-    .logo{
-        font-size: 80px;
-    }
 }
 .navbar{
     margin-right: 15px;
@@ -147,16 +141,8 @@ span{
    color:#75FBFD;
 }
 .home-content h1{
-    font-size:40px;
     font-weight:700;
     color:#75FBFD;
-    padding:12px;
-    width:320px;
-    box-shadow:0 0 .8rem ;
-    border-radius:10px;
-    line-height:50px;
-    outline-width:initial;
-    border:none;
 }
 .body{
     display: flex;
@@ -192,10 +178,9 @@ span{
 }
 .home-content p{
     color:var(--text-color);
-    font-size:20px;
     font-family:'Poppins', sans-serif;
     font-weight:0;
-    line-height: 25px;
+    width: 80%;
 }
 .social-media a{
     display:inline-flex;
@@ -312,6 +297,7 @@ span{
     .home-content h1{
         margin-bottom: 30px;
         font-size: 50px;
+        width: 200%;
     }
     .home-content h3{
         width: 200%;
@@ -343,8 +329,6 @@ span{
 }
 .about-content p{
     color:white;
-    font-size:20px;
-    line-height: 25px;
 }
 .about h2{
     color:white;
@@ -429,10 +413,6 @@ span{
         display: block;
         min-width: 770px;
     }
-    .about-content p{
-        font-size: 32px;
-        line-height: 40px;
-    }
     .about button{
         font-size: 30px;
         height: 100px;
@@ -496,13 +476,9 @@ span{
     padding-left: 20px;
     padding-right: 20px;
 }
-.services h2{
-    font-size: 45px;
-    margin-bottom: 20px;
-}
-.services p{
-    font-size: 17px;
-    line-height: 30px;
+.services .heading{
+    margin-bottom: 50px;
+    font-size: 1.8em;
 }
 .services-container{
     display: grid;
@@ -534,7 +510,7 @@ span{
     margin-right: 40%;
     font-size: 80px;
 }
-.services-box h3{
+.services-box h1{
     text-align: center;
     margin-bottom: 20px;
 }
@@ -851,6 +827,7 @@ span{
     }
     .contact h4{
         min-width: 770px;
+        font-size: 120px;
     }
     .contact form{
         min-width: 770px;
@@ -875,9 +852,9 @@ span{
         min-width: 700px;
     }
     .contact h4{
-        line-height: 90px;
+        line-height: 200px;
         min-width: 100%;
-        font-size: 80px;
+        font-size: 100px;
     }
     .contact form input[type="text"],  .contact form input[type="email"],  .contact form input[type="tel"]{
         font-size: 50px;
@@ -934,7 +911,7 @@ span{
         min-width: 770px;
     }
     .whatsapp-icon i{
-        font-size: 80px;
+        font-size: 120px;
     }
 }
 .whatsapp-icon {
@@ -960,12 +937,12 @@ span{
 .whatsapp-icon i:hover{
     text-decoration-color: none;
 }
-    @media(max-width:365px){
+    @media(max-width:770px){
         html{
             font-size: 162.5%;
         }
     .whatsapp-icon i{
-            font-size: 80px;
+            font-size: 120px;
             font-weight: 900;
     }
     .home p{
