@@ -43,9 +43,9 @@ window.onscroll = () => {
 };
 ScrollReveal({
     //reset: true,
-    distance: '75px',
-    duration: 1000,
-    delay: 100
+    distance: '50px',
+    duration: 500,
+    delay: 75
 });
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
 ScrollReveal().reveal('.home-img, .services-container, .portfolio-box ', { origin: 'bottom' });
