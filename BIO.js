@@ -47,7 +47,7 @@ ScrollReveal({
     duration: 1000,
     delay: 100
 });
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .contact form, .portfolio-box ', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content, .heading, .contact form', { origin: 'top' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box ', { origin: 'bottom' });
 ScrollReveal().reveal('.about-img, .about-content', { origin: 'left' });
 ScrollReveal().reveal('.contact h4, .skill', { origin: 'right' });
