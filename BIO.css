@@ -103,7 +103,7 @@ body{
         display: block;
         font-size: 80px;
         color: aqua;
-        margin-bottom: 0px;
+        margin-bottom: 20px;
     }
     .navbar a:hover{
         text-decoration: none;
@@ -130,6 +130,10 @@ body{
 }
 .home-img img:hover{
     transform:scaleY(1.05);
+}
+#person{
+    font-size: 19px;
+    margin-top: 20px;
 }
 .home-content h3{
     font-size:30px;
@@ -197,6 +201,12 @@ span{
     padding: 17px;
     margin-right: 7px;
 }
+@media (max-width: 770px){
+    #sociall{
+        font-size: 2em;
+        margin-right: .5em;
+    }
+}
 .social-media a .fa-instagram{
     color:pink;
     fill:pink;
@@ -251,9 +261,9 @@ span{
     .home-content{
         min-width: 770px;
     }
-    .home p{
-        font-size: 32px;
-        line-height: 40px;
+    #person{
+        font-size: 50px;
+        line-height: 60px;
     }
     .home-content button{
         font-size: 32px;
@@ -427,13 +437,29 @@ span{
     .Skills{
         min-width: 770px;
     }
-    .skill .btn{
-        font-size: 30px;
+    .Skills h2{
+        font-size: 70px;
+        margin-bottom: 20px;
+        margin-top: 200px;
+    }
+    .Skills .skill{
+        min-width: 110%;
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        text-align: center;
+        padding-left: 60px;
+    }
+    .Skills .skill .btn{
+        font-size: 200%;
+    }
+    .Skills .skill .btn img{
+        width: 150%;
+        height: 150%;
     }
 }
-@media(max-width:365px){
+@media(max-width:770px){
     .about{
-        min-width: 700px;
+        min-width: 770px;
     }
     .about-content h2 {
         font-size: 70px;
@@ -456,11 +482,11 @@ span{
         margin-top: 200px;
     }
     .Skills .skill{
-        min-width: 110%;
+        min-width: 100%;
         display: grid;
         grid-template-columns: repeat(2,2fr);
         text-align: center;
-        padding-left: 60px;
+        padding-left: 40px;
     }
     .Skills .skill .btn{
         font-size: 200%;
@@ -553,18 +579,21 @@ span{
         grid-template-columns: repeat(1, 1fr);
         padding-right: 0px;
         min-width: 770px;
-    }
-    .services h2{
-        text-align: center;
+        margin: 0;
+        padding: 0;
     }
     .services-box{
         height: auto;
-        min-width: 770px;
+        min-width: 100%;
         margin-bottom: 50px;
+        margin-right: 0;
     }
     .services-box button{
         height: 100px;
         font-size: 40px;
+    }
+    #serve{
+        font-size: 80px;
     }
 }
 @media(max-width:365px){
@@ -573,15 +602,20 @@ span{
     }
     .services-container{
         min-width: 700px;
+        margin: 0;
+        padding: 0;
     }
     .services-box svg{
         font-size: 100px;
     }
     .services-box{
-        min-width: 700px;
         font-size: 200%;
+        height: auto;
+        min-width: 105%;
+        margin-bottom: 50px;
+        margin-right: 0;
     }
-    .services h2{
+    .services h1{
         font-size: 70px;
         margin-bottom: 20px;
     }
@@ -761,6 +795,7 @@ span{
 .contact h4{
     font-size: 70px;
     margin-bottom: 40px;
+    line-height: 120px;
 }
 .contact h4 span{
     color: rgb(90, 90, 208);
@@ -828,13 +863,30 @@ span{
     .contact h4{
         min-width: 770px;
         font-size: 120px;
+        line-height: 200px;
     }
     .contact form{
         min-width: 770px;
     }
+    .contact form input[type="text"],  .contact form input[type="email"],  .contact form input[type="tel"]{
+        font-size: 50px;
+        line-height: 100px;
+    }
+    .contact form input[type="submit"]{
+        font-size: 200%;
+        width: 80%;
+        height: 100px;
+    }
+    .contact form textarea{
+        font-size: 50px;
+    }
     .contact form input::placeholder, textarea::placeholder{
-        font-size: 30px;
+        font-size: 40px;
+        line-height: 50px;
     } 
+    .contact form input{
+        height: 70px;
+    }
     .contact form .btn{
         font-size: 30px;
     }
@@ -1003,11 +1055,11 @@ span{
         line-height: 40px;
     }
     .footer-iconTop  a{
-        font-size: 32px;
+        font-size: 60px;
         line-height: 40px;
     }
     .footer-text p{
-        font-size: 32px;
+        font-size: 45px;
         line-height: 40px;
     }
     .home-content button{
