@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="BIO.css">
 </head>
-    <body style="overflow-x: visible;">
+    <body style="overflow-x: hidden">
         <header class="header">
             <h1><a href="#" class="logoo">.W. Andrew </a></h1>
     
@@ -27,8 +27,8 @@
         </header>
         <section class="home" id="home">
             <div class="home-content">
-                <big><h1>Hello, It's Me</h1></big>
-                <big><big><h1 style="color: aliceblue;">.W.    Andrew</h1> </big> </big>
+                <big><h1 id="hello">Hello, It's Me</h1></big>
+                <big><big><h1 style="color: aliceblue;" id="andy">.W.    Andrew</h1> </big> </big>
                 <h1>From <span>  Nairobi, Kenya <img src="KENYA.png" height="50" width="50" alt="me" style="border-radius:50%; margin-top: 20px; margin-bottom: -20px;" /> </span></h1>
                  
                  <div class="body">
@@ -55,7 +55,7 @@
                     "
                 </p>
                     <div class="social-media">
-                        <a class="Whatsaap-link" id="sociall" href="https://wa.me/+254708909399?text=Hello%20I%20would%20like%20to%20know%20more!" target="_blank"><i class="fab fa-whatsapp" style="color:yellowgreen"></i></a>
+                        <a class="WhatsApp-link" id="sociall" href="#" onclick="openWhatsApp()" target="_blank"><i class="fab fa-whatsapp" style="color: yellowgreen"></i></a> 
                         <a class="Instagram-link" id="sociall" href="https://www.instagram.com/ctrl_cench/? pwa=1# " target="_blank"><i class="fab fa-instagram"></i></a>  
                         <a class="LinkedIn-link" id="sociall" href="https://www.linkedin.com/in/AndrewBarasa" target="_blank"><i class="fab fa-linkedin" style="color:rgb(125, 125, 230)"></i></a>
                         <a class="Twitter-link" id="sociall" href="https://www.x.com/BlueTechsoft" target="_blank"><i class="fab fa-twitter" style="color: rgb(120, 120, 255);"></i></a>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                     <div class="home-img">
-                        <img src="PERSONAL.jpg" height="350" width="350" alt="" />
+                        <img src="PERSONAL.jpg" alt="" />
                     </div>
                 </section>
                 <section class="about" id="about" style="background-color: transparent;">
@@ -257,7 +257,7 @@
                 <div class="footer-iconTop">
                     <a href="#home"> <i class="bx bx-up-arrow-alt" style="color:#04ffe6;"></i> Back To Home</a>
                 </div>
-                <a href="https://wa.me/+254708909399?text=Hello%20I%20would%20like%20to%20know%20more!" class="whatsapp-icon" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+            <a class="whatsapp-icon" id="sociall" href="#" onclick="openWhatsApp()" target="_blank"><i class="fab fa-whatsapp"></i></a> 
                 <script src="BIO.js"></script>
 </body>
 </html>
