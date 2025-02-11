@@ -85,9 +85,9 @@ function adjustScrollRevealForResponsive() {
 
     // Reveal elements with adjusted settings  
     ScrollReveal().reveal('.home-content, .heading', { origin: 'top', distance: distance });  
-    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box', { origin: 'bottom', distance: distance });  
-    ScrollReveal().reveal('.about-img, .about-content', { origin: 'left', distance: distance });  
-    ScrollReveal().reveal('.contact h4, .skill', { origin: 'right', distance: distance });  
+    ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom', distance: distance });  
+    ScrollReveal().reveal('.about-img', { origin: 'left', distance: distance });  
+    ScrollReveal().reveal('.skill', { origin: 'right', distance: distance });  
 }  
 
 // Initial call  
