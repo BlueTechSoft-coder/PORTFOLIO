@@ -250,7 +250,7 @@ span{
         margin-top: 130px;
         border-radius: 10%;
         width: 110%;
-        min-height: 200vh;
+        height: 90vh;
         margin-right: 0;
     }
     #hello{
