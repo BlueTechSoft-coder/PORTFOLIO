@@ -1,19 +1,14 @@
-//FUNCTON TO OPEN WHATSAAP IN ALL DEVICES
+//WHATSAAP ICON MESSAGE
+const whatsap = document.getElementById('whatsap');
+const click = document.getElementById('icon');
 
-function openWhatsApp() {  
-    const message = "Hello, I would like to know more!";  
-    const phone = "+254708909399"; // The phone number to send the message to  
-    const encodedMessage = encodeURIComponent(message);  
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);  
-    
-    if (isMobile) {  
-        // Open WhatsApp on mobile devices  
-        window.location.href = `whatsapp://send?phone=${phone}&text=${encodedMessage}`;  
-    } else {  
-        // Open WhatsApp Web on desktop  
-        window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');  
-    }  
-}  
+click.onclick = function() {
+    if (whatsap.style.display === "block") {
+        whatsap.style.display = "none";
+    } else {
+        whatsap.style.display = "block";
+    }
+}
 
 
 /* DOWNLODING THE CV */
@@ -84,7 +79,7 @@ function adjustScrollRevealForResponsive() {
     }  
 
     // Reveal elements with adjusted settings  
-    ScrollReveal().reveal('.home-content, .heading', { origin: 'top', distance: distance });  
+    ScrollReveal().reveal('.home-content, .heading, .resume h1', { origin: 'top', distance: distance });  
     ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom', distance: distance });  
     ScrollReveal().reveal('.about-img', { origin: 'left', distance: distance });  
     ScrollReveal().reveal('.skill', { origin: 'right', distance: distance });  
@@ -95,3 +90,48 @@ adjustScrollRevealForResponsive();
 
 // Event listener to adjust on window resize  
 window.addEventListener('resize', adjustScrollRevealForResponsive);
+
+//CERTIFICATION SECTION
+
+//DISPLAY BUTTON EVENT
+const header = document.getElementById("headd");
+const certfication = document.getElementById("certfication");
+const show = document.getElementById("show");
+
+show.onclick = function() {
+    if (certfication.style.display === "none") {
+        certfication.style.display = "block";
+        show.textContent = "Hide Certification";
+        show.style.marginTop = "10vh";
+        header.style.height = "20px";
+    } else {
+        certfication.style.display = "none";
+        show.textContent = "See Certifications";
+        show.style.marginTop = "40vh";
+        header.style.height = "auto";
+    }
+}
+
+
+
+let slideIndex = 0;  
+const slides = document.querySelectorAll(".slides");  
+const totalSlides = slides.length;  
+
+function updateSlidePosition() {  
+    const slideWidth = document.querySelector(".body-container").offsetWidth; // Get container width  
+    const offset = slideIndex * slideWidth; // Calculate offset  
+    document.querySelector(".slideshow-container").style.transform = `translateX(-${offset}px)`;  
+} 
+function showSlides(n) {  
+    slideIndex += n;  
+    if (slideIndex < 0) {  
+        slideIndex = totalSlides - 1;  
+    } else if (slideIndex >= totalSlides) {  
+        slideIndex = 0;  
+    }  
+    updateSlidePosition();  
+}  
+function plusSlides(n) {  
+    showSlides(n);  
+}  
