@@ -22,6 +22,7 @@ body{
     margin:0;
     padding:0;
 }
+/*HEADER SECTION*/
 .header{
     position:fixed;
     top:0;
@@ -115,6 +116,7 @@ body{
     }
 
 }
+/*HOME SECTION*/
 .home{
     display:flex;
     margin-top: 200px;
@@ -342,6 +344,7 @@ span{
         width: 200%;
     }
 }
+/*ABOUT SECTION*/
 .about{
     display:flex;
     justify-content:center;
@@ -392,6 +395,7 @@ span{
     box-shadow:0 0 20px  #75FBFD;
     cursor: pointer;
 }
+/*SKILLS SECTION*/
 .about .Skills{
     display: inline;
 }
@@ -505,6 +509,129 @@ span{
         height: 150%;
     }
 }
+
+/*CERTIFICATION SECTION*/
+.showw{
+    text-align: center;
+}
+#show{
+    margin-top: 40vh;
+    width:auto;
+    min-width: 30%;
+    height: auto;
+    padding: 6px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: #00102d;
+    background-color: #00fbff;
+    transition: .5s;
+}
+#show:hover{
+    color: #00fbff;
+    background-color: #00102d;
+    cursor: pointer;
+    box-shadow:0 0 20px  #75FBFD;
+}
+#certfication{
+    margin-top: 50vh;
+    display: none;
+}
+ .sectionn {
+    font-family: Arial, sans-serif;
+    margin-bottom: 5rem;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    justify-content: center;
+    height: auto;
+    max-width: 100%;
+}
+.footerr {
+    position: relative;
+    height:auto;
+    max-width: 100%;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    display:flex;
+    justify-content: center;
+    background: transparent;  
+    background-size: cover;
+    background-position: center;
+}
+ .body-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    overflow: hidden;
+    height: auto;
+    width: auto ;
+}
+.slideshow-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%; /* Ensure it takes full height of footer */
+    width: 100%;
+    margin: 0 0 0 0;
+    padding:  0 0 0 0;
+}
+
+.slides {
+    min-width: 100%; /* Each slide takes full width of the container */
+    height: 100%; /* Ensure full height of the footer */
+    display: block;
+    justify-content: center; /* Center images */
+    align-items: center; /* Vertically center images */
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align:center;
+}
+
+    .slides img {
+       width: 80%;
+       height: 120vh;
+       border-radius: 10%;
+    }
+.slides p{
+    text-align: center;
+    font-size: 3rem;
+    color: #00ffff;
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.nav-button {
+    color: black;
+    background-color: rgb(0, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*RESUME SECTION*/
+.resume{
+    margin-top: 40vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+.resume h1{
+    text-align: center;
+    font-size: 43px;
+    margin-bottom: 10vh;
+}
+/*SERVICES SECTION*/
 .services{
     margin-top: 200px;
     margin: 0 0 0 0;
@@ -631,6 +758,7 @@ span{
         font-size: 30px;
     }
 }
+/*PORTFOLIO OR PROJECTS SECTION*/
 .portfolio{
     padding-left: 20px;
     padding-right: 20px;
@@ -792,6 +920,7 @@ span{
         height: 80px;
     }
 }
+/*CONTACTS SECTION*/
 .contact{
     padding-left: 20px;
     padding-right: 20px;
@@ -977,6 +1106,32 @@ span{
         font-size: 120px;
     }
 }
+#whatsap{
+    position: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    bottom: 110px;
+    right: 100px;
+    color: white;
+    font-size: 22px;
+    background-color: green;
+    padding: 8px;
+    border-radius: 7px;
+    display: none;
+    transition: 2s;
+}
+@media (max-width:768px){
+    #whatsap{
+        position: fixed;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        bottom: 180px;
+        right: 130px;
+        font-size: 65px;
+        padding: 8px;
+        border-radius: 7px;
+        display: none;
+        transition: 2s;
+    }
+}
 .whatsapp-icon {
     position: fixed;
     font-family:'Times New Roman';
@@ -995,7 +1150,7 @@ span{
 .whatsapp-icon i{
     margin: 15px;
     font-size: 40px;
-    color: rgb(25, 218, 25);
+    color: rgb(5, 255, 5)
 }
 .whatsapp-icon i:hover{
     text-decoration-color: none;
