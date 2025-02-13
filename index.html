@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="BIO.css">
 </head>
     <body style="overflow-x: hidden">
-        <header class="header">
+        <!--NAVIGATION BAR-->
+        <header class="header" id="headd">
             <h1><a href="#" class="logoo">.W. Andrew </a></h1>
     
             <i class="bx bx-menu" id="menu-icon"></i>
@@ -25,6 +26,7 @@
                 <a href="#contact">Contact</a>
             </nav>
         </header>
+        <!--HOME SECTION-->
         <section class="home" id="home">
             <div class="home-content">
                 <big><h1 id="hello">Hello, It's Me</h1></big>
@@ -69,6 +71,8 @@
                         <img src="PERSONAL.jpg" alt="" />
                     </div>
                 </section>
+
+                <!--ABOUT SECTION-->
                 <section class="about" id="about" style="background-color: transparent;">
                     <div class="about-content">
                         <h2 class="heading">
@@ -84,6 +88,8 @@
                         </p>
                         <a href="#"><button>Read More &diams;</button></a>
                     </div>
+
+                    <!--SKILLS SECTION-->
                     <div class="Skills" id="skills" style="height: 600px;">
                        <div class="heading">
                         <h2>My <span>Skills</span></h2>
@@ -104,6 +110,8 @@
                        </div>
                     </div>
                 </section>
+
+                <!--SERVICES SECTION-->
                 <section class="services" id="services" style="margin-top: 10rem;">
                     <big><bi><big> <h1 class="heading" style="text-align: center;">
                         Our <span>Services</span>
@@ -159,6 +167,8 @@
                         </div>
                     </div>
                 </section>
+
+                <!--PROJECTS SECTION-->
                 <section class="portfolio" id="portfolio" style="background-color: transparent;">
                     <h2 class="heading">Latest <span>Projects</span></h2>
                     <div class="portfolio-container">
@@ -234,9 +244,9 @@
                         <br>
                         Website?
                     </h4>
-            
+                    <!--CONTACTS SECTION-->
                     <h2 class="heading" >Contact <span>Me!</span></h2>
-                    <form action="submit.php" method="post">  
+                    <form action="submit" method="post">  
                         <div class="input-box">  
                             <input type="text" id="name" name="name" placeholder="Full Name" style="background-color:#04ffe6;" required />  
                             <input type="email" id="email" name="email" placeholder="Email Address" style="background-color:#04ffe6;" required />  
@@ -257,7 +267,12 @@
                 <div class="footer-iconTop">
                     <a href="#home"> <i class="bx bx-up-arrow-alt" style="color:#04ffe6;"></i> Back To Home</a>
                 </div>
-            <a class="whatsapp-icon" id="sociall" href="#" onclick="openWhatsApp()" target="_blank"><i class="fab fa-whatsapp"></i></a> 
+            <p class="whatsapp-icon" id="icon"><i class="fab fa-whatsapp"></i></p> 
+            <a href="https://wa.me/+254708909399?text=Hello%20I%20would%20like%20to%20know%20more!" target="_blank">
+                <p id="whatsap">
+                    Click here for help
+                </p>
+            </a>
                 <script src="BIO.js"></script>
 </body>
 </html>
