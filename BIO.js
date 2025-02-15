@@ -61,19 +61,13 @@ ScrollReveal({
     //reset: true, // Uncomment if you want elements to animate again when scrolled back into view  
     distance: '50px', // Default distance  
     duration: 1000,  
-    delay: 100,  
-});  
+    delay: 100 
+}); 
     // Reveal elements with adjusted settings  
-    ScrollReveal().reveal('.home-content, .heading, .resume h1', { origin: 'top', distance: distance });  
-    ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom', distance: distance });  
-    ScrollReveal().reveal('.about-img', { origin: 'left', distance: distance });  
-    ScrollReveal().reveal('.skill', { origin: 'right', distance: distance });   
-
-// Initial call  
-adjustScrollRevealForResponsive();  
-
-// Event listener to adjust on window resize  
-window.addEventListener('resize', adjustScrollRevealForResponsive);
+    ScrollReveal().reveal('.home-content, .heading, .resume h1', { origin: 'top' });  
+    ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom' });  
+    ScrollReveal().reveal('.about-img', { origin: 'left' });  
+    ScrollReveal().reveal('.skill', { origin: 'right' });  
 
 //CERTIFICATION SECTION
 
