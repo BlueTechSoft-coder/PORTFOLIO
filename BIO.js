@@ -63,27 +63,11 @@ ScrollReveal({
     duration: 1000,  
     delay: 100,  
 });  
-
-// Function to adjust ScrollReveal settings based on window width  
-function adjustScrollRevealForResponsive() {  
-    const width = window.innerWidth;  
-
-    // Adjust distance based on device size  
-    let distance;  
-    if (width < 768) { // For mobile devices  
-        distance = '20px';  
-    } else if (width < 992) { // For tablets  
-        distance = '40px';  
-    } else { // For laptops/desktops  
-        distance = '100px';  
-    }  
-
     // Reveal elements with adjusted settings  
     ScrollReveal().reveal('.home-content, .heading, .resume h1', { origin: 'top', distance: distance });  
     ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom', distance: distance });  
     ScrollReveal().reveal('.about-img', { origin: 'left', distance: distance });  
-    ScrollReveal().reveal('.skill', { origin: 'right', distance: distance });  
-}  
+    ScrollReveal().reveal('.skill', { origin: 'right', distance: distance });   
 
 // Initial call  
 adjustScrollRevealForResponsive();  
@@ -101,7 +85,7 @@ const show = document.getElementById("show");
 show.onclick = function() {
     if (certfication.style.display === "none") {
         certfication.style.display = "block";
-        show.textContent = "Hide Certification";
+        show.textContent = "Hide Certifications";
         show.style.marginTop = "10vh";
         header.style.height = "20px";
     } else {
