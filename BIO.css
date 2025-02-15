@@ -251,9 +251,10 @@ span{
     .home-img img{
         margin-top: 130px;
         border-radius: 10%;
-        width: 110%;
-        height: 180vh;
-        margin-right: 0;
+        width: 108%;
+        height: 130vh;
+        margin-right: auto;
+        margin-left: auto;
     }
     #hello{
         font-size: 80px;
@@ -1114,7 +1115,7 @@ span{
     color: white;
     font-size: 22px;
     background-color: green;
-    padding: 8px;
+    padding: 5px;
     border-radius: 7px;
     display: none;
     transition: 2s;
