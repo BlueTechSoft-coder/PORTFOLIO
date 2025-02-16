@@ -136,8 +136,9 @@ body{
     transform:scaleY(1.05);
 }
 #person{
-    font-size: 19px;
+    font-size:medium;
     margin-top: 20px;
+    line-height: 25px;
 }
 .home-content h3{
     font-size:30px;
@@ -280,6 +281,16 @@ span{
     #person{
         font-size: 50px;
         line-height: 60px;
+        text-align: center;
+        margin-left: 0px;
+    }
+    @media (max-width:365px){
+        .home-content{
+            margin-top: -80px;
+        }
+        #person{
+            margin-top: 100px;
+        }
     }
     .home-content button{
         font-size: 32px;
@@ -302,6 +313,7 @@ span{
     }
     .home-img img{
         min-width: 80%;
+        height: 190vh;
     }
     .home-content p{
         min-width: 750px;
@@ -363,6 +375,7 @@ span{
 }
 .about-content p{
     color:white;
+    margin-right: 20px;
 }
 .about h2{
     color:white;
