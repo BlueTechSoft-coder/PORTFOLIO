@@ -64,8 +64,8 @@ ScrollReveal({
     delay: 100 
 }); 
     // Reveal elements with adjusted settings  
-    ScrollReveal().reveal('.home-content, .heading, .resume h1', { origin: 'top' });  
-    ScrollReveal().reveal('.home-img, .services-box, .portfolio-container, .contact', { origin: 'bottom' });  
+    ScrollReveal().reveal(' .heading, .resume h1,.about-content h3, .home-content .hc', { origin: 'top' });  
+    ScrollReveal().reveal('.home-img, .home-content p, .about-content p, .services-box, .portfolio-container, .contact', { origin: 'bottom' });  
     ScrollReveal().reveal('.about-img', { origin: 'left' });  
     ScrollReveal().reveal('.skill', { origin: 'right' });  
 
