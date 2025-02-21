@@ -200,24 +200,26 @@ span{
     align-items:center;
     width:33px;
     height:33px;
-    border:1.5px solid var(--main-color);
     border-radius:35%;
-    font-size:25px;
+    border: solid 2px #0ff;
+    font-size:35px;
     margin-bottom: 20px;
     margin-top: 20px;
     transition:.5s ease;
-    padding: 17px;
-    margin-right: 7px;
+    padding: 22px;
+    margin-right: 12px;
 }
 @media (max-width: 770px){
     #sociall{
         font-size: 3.5em;
         margin-right: .8em;
     }
+    .social-media a{
+        border: none;
+    }
 }
 .social-media a .fa-instagram{
-    color:pink;
-    fill:pink;
+    color:rgb(239, 72, 100);
 }
 .social-media a:hover{
     transform:scale(1.05);
@@ -1052,7 +1054,7 @@ span{
     padding:10px;
     font-size:18px;
     color:black;
-    background-color:#75FBFD;
+    background-color:#04ffe6;
     border-radius:7px;
     margin:.7rem 0 1rem 0;
 }
@@ -1342,5 +1344,8 @@ span{
     }
     .contact form input{
         width: 100%;
+    }
+    .more{
+        display: none;
     }
         }
