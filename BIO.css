@@ -322,7 +322,7 @@ span{
     }
     .home-img img{
         min-width: 80%;
-        height: 190vh;
+        height: 150vh;
     }
     .home-content p{
         min-width: 750px;
@@ -514,7 +514,7 @@ span{
         margin-left: 0px;
         margin-right: 0;
         padding: 0;
-        margin-bottom: 400vh;
+        margin-bottom: 350vh;
     }
     .Skills h2{
         font-size: 80px;
@@ -774,7 +774,7 @@ span{
     }
     .services .heading{
         font-size: 4em;
-        margin-top: 400px;
+        margin-top: 0px;
     }
 }
 @media(max-width:770px) {
@@ -789,9 +789,10 @@ span{
         min-width: 770px;
         margin: 0;
         padding: 0;
+        height: auto;
     }
     .services-box{
-        height: auto;
+        min-height: 200vh;
         width: 100%;
         margin-bottom: 50px;
         margin-right: 0;
@@ -808,18 +809,19 @@ span{
     .services{
         min-width: 700px;
         margin: 0;
+        height: auto;
     }
     .services-container{
         min-width: 700px;
         margin: 0;
         padding: 0;
+        height: auto;
     }
     .services-box svg{
         font-size: 100px;
     }
     .services-box{
         font-size: 200%;
-        height: auto;
         min-width: 105%;
         margin-bottom: 50px;
         margin-right: 0;
@@ -1162,6 +1164,7 @@ span{
 @media(max-width:365px){
     .footer{
         min-width: 365px;
+        margin-bottom: 0;
     }
     .footer-text{
         min-width: 365px;
@@ -1268,7 +1271,7 @@ span{
     }
     .footer-text p{
         font-size: 32px;
-        line-height: 40px;
+        line-height: 50px;
     }
     .home-content button{
         font-size: 32px;
@@ -1323,7 +1326,7 @@ span{
     }
     .footer-text p{
         font-size: 45px;
-        line-height: 40px;
+        line-height: 60px;
     }
     .home-content button{
         font-size: 32px;
