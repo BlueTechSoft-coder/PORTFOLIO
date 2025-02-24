@@ -62,12 +62,13 @@ ScrollReveal({
     distance: '50px', // Default distance  
     duration: 1000,  
     delay: 100 
+
 }); 
     // Reveal elements with adjusted settings  
-    ScrollReveal().reveal(' .heading, .resume h1,.about-content h3, .home-content .hc', { origin: 'top' });  
-    ScrollReveal().reveal('.home-img, .home-content p, .about-content p, .services-box, .portfolio-container, .contact', { origin: 'bottom' });  
-    ScrollReveal().reveal('.about-img', { origin: 'left' });  
-    ScrollReveal().reveal('.skill', { origin: 'right' });  
+    ScrollReveal().reveal(' .heading,.home-content', { origin: 'topp' });  
+    ScrollReveal().reveal('.home-img, .about-content, .skill, .services-box, .portfolio-container, .contact', { origin: 'bottomm' });  
+    ScrollReveal().reveal('.about-imgg', { origin: 'leftt' });  
+    ScrollReveal().reveal('.skilll', { origin: 'rightt' });  
 
 //CERTIFICATION SECTION
 
