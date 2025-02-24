@@ -1009,6 +1009,13 @@ span{
     background-color: #000000;
     color: #0ef;
 }
+@media (max-width: 460px){
+    .contact h4{
+        width: 100%;
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+}
 @media(max-width:770px){
     .contact{
         width: 100%;
@@ -1021,15 +1028,9 @@ span{
         font-size: 4rem;
         line-height: 7rem;
     }
-    @media (max-width: 460px){
-        .contact h4{
-            width: 100%;
-            font-size: 2.5rem;
-            line-height: 4rem;
-        }
-    }
     .contact form{
         width: 100%;
+        height: 60vh;
     }
     .contact form input[type="text"],  .contact form input[type="email"],  .contact form input[type="tel"]{
         font-size: 1.5rem;
