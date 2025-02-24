@@ -1,25 +1,16 @@
-//WHATSAAP ICON MESSAGE
-const whatsap = document.getElementById('whatsap');
-const click = document.getElementById('icon');
-
-click.onclick = function() {
-    if (whatsap.style.display === "block") {
-        whatsap.style.display = "none";
+//WHATSAPP ICON & TEXT
+const text = document.getElementById('text');
+const iconn = document.getElementById('iconn');
+iconn.onclick = function () {
+    if (text.innerText === ""){
+        text.innerText = "Hi, how may I help You?";
     } else {
-        whatsap.style.display = "block";
+        text.innerText = "";
     }
 }
-
-
-/* DOWNLODING THE CV */
-  function downloadFile(fileUrl, fileName) {  
-    const link = document.createElement('a');  
-    link.href = fileUrl;  
-    link.download = fileName;  
-    document.body.appendChild(link);  
-    link.click();  
-    document.body.removeChild(link);
-};
+text.onclick = function () {
+    window.location.href = "https://wa.me/+254708909399?text=Hello%20Andrew!";
+}
 
 /* toggle icon navbar */
 
@@ -56,6 +47,7 @@ window.onscroll = () => {
 };
 
 
+
 // Initialize ScrollReveal with options  
 ScrollReveal({  
     //reset: true, // Uncomment if you want elements to animate again when scrolled back into view  
@@ -64,15 +56,17 @@ ScrollReveal({
     delay: 100 
 
 }); 
-    // Reveal elements with adjusted settings  
-    ScrollReveal().reveal(' .heading,.home-content', { origin: 'topp' });  
-    ScrollReveal().reveal('.home-img, .about-content, .skill, .services-box, .portfolio-container, .contact', { origin: 'bottomm' });  
-    ScrollReveal().reveal('.about-imgg', { origin: 'leftt' });  
-    ScrollReveal().reveal('.skilll', { origin: 'rightt' });  
+    //Reveal elements with adjusted settings  
+    ScrollReveal().reveal('.home-content,', { origin: 'top' });  
+    //ScrollReveal().reveal('.home-img, .about-content, .skill, .services-container, .portfolio-container, .contact', { origin: 'bottom' });  
+    //ScrollReveal().reveal('.about-imgg', { origin: 'leftt' });  
+    //ScrollReveal().reveal('.skilll', { origin: 'rightt' });  
+
 
 //CERTIFICATION SECTION
 
 //DISPLAY BUTTON EVENT
+/*
 const header = document.getElementById("headd");
 const certfication = document.getElementById("certfication");
 const show = document.getElementById("show");
@@ -90,9 +84,11 @@ show.onclick = function() {
         header.style.height = "auto";
     }
 }
+*/
 
 
 
+/*
 let slideIndex = 0;  
 const slides = document.querySelectorAll(".slides");  
 const totalSlides = slides.length;  
@@ -114,3 +110,4 @@ function showSlides(n) {
 function plusSlides(n) {  
     showSlides(n);  
 }  
+*/
