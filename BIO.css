@@ -31,6 +31,41 @@ body{
     max-width: 200vw;
     overflow-x: visible;
 }
+/*LOADING PAGE*/
+.loading-container {  
+    text-align: center; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20%;
+}  
+
+.loader {  
+    border: 10px solid #f3f3f3; /* Light grey */  
+    border-top: 10px  solid #3498db; /* Blue */  
+    /*border-bottom: 10px solid #3498db;*/
+    border-radius: 50%;  
+    width: 60px;  
+    height: 60px;  
+    animation: spin 1s linear infinite;  
+}  
+
+@keyframes spin {  
+    0% { transform: rotate(0deg); }  
+    100% { transform: rotate(360deg); }  
+}  
+#loading h1{
+    font-size: 1.5rem;
+}
+.content {  
+    text-align: center;  
+    margin-top: 20px;  
+}
+#content{
+    display: none;
+}
 /*HEADER SECTION*/
 .header{
     position:fixed;
@@ -93,6 +128,7 @@ body{
     .header{
         width: 100%;
         margin: 0;
+        padding: 10px;
     }
     .logoo{
         font-size: 2.0rem;
@@ -110,10 +146,12 @@ body{
     .navbar{
         position: absolute;
         display: none;
+        transition: right 5s ease;
         margin-top: 100px 0 0 0;
         top: 100%;
         right: 0;
         width: 100%;
+        height: auto;
         overflow-y: scroll;
         text-align: center;
         color: whitesmoke;
@@ -121,7 +159,7 @@ body{
         background-color:#75FBFD;
         border-top:.1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    }
+}
     .navbar.active{
         display: block;
         background-color:darkslategray;
@@ -132,7 +170,7 @@ body{
         display: block;
         font-size: 2rem;
         color: aqua;
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
     .navbar a:hover{
         text-decoration: none;
@@ -226,7 +264,7 @@ span{
     width:33px;
     height:33px;
     border-radius:35%;
-    border: solid 2px #0ff;
+    border: none;
     font-size:35px;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -338,7 +376,8 @@ span{
     }
     #btn{
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
+        padding: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -501,7 +540,7 @@ span{
         display: block;
         justify-content: center;
         align-items: center;
-        margin: 100px 0 750px 0;
+        margin: 100px 0 680px 0;
         padding: 0;
     }
     .Skills h2{
@@ -509,16 +548,15 @@ span{
     }
     #skills .skill{
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,2fr);
+        justify-content: center;
         margin: 0;
+        gap: 0px;
         text-align: center;
         padding: 0px;
         min-width: 50%;
     }
     #skills .skill .btn{
         margin: 0;
-        margin-right: 0;
         width: 40%;
         font-size: 1.0rem;
     }
@@ -530,126 +568,9 @@ span{
 }
 
 /*CERTIFICATION SECTION*/
-.showw{
-    text-align: center;
-}
-#show{
-    margin-top: 40vh;
-    width:auto;
-    min-width: 30%;
-    height: auto;
-    padding: 6px;
-    font-size: 30px;
-    border: none;
-    border-radius: 10px;
-    font-weight: 700;
-    color: #00102d;
-    background-color: #00fbff;
-    transition: .5s;
-}
-#show:hover{
-    color: #00fbff;
-    background-color: #00102d;
-    cursor: pointer;
-    box-shadow:0 0 20px  #75FBFD;
-}
-#certfication{
-    margin-top: 50vh;
-    display: none;
-}
- .sectionn {
-    font-family: Arial, sans-serif;
-    margin-bottom: 5rem;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    justify-content: center;
-    height: auto;
-    max-width: 100%;
-}
-.footerr {
-    position: relative;
-    height:auto;
-    max-width: 100%;
-    margin:0 0 0 0;
-    padding: 0 0 0 0;
-    display:flex;
-    justify-content: center;
-    background: transparent;  
-    background-size: cover;
-    background-position: center;
-}
- .body-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    overflow: hidden;
-    height: auto;
-    width: auto ;
-}
-.slideshow-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    height: 100%; /* Ensure it takes full height of footer */
-    width: 100%;
-    margin: 0 0 0 0;
-    padding:  0 0 0 0;
-}
 
-.slides {
-    min-width: 100%; /* Each slide takes full width of the container */
-    height: 100%; /* Ensure full height of the footer */
-    display: block;
-    justify-content: center; /* Center images */
-    align-items: center; /* Vertically center images */
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    text-align:center;
-}
 
-    .slides img {
-       width: 80%;
-       height: 120vh;
-       border-radius: 10%;
-    }
-.slides p{
-    text-align: center;
-    font-size: 3rem;
-    color: #00ffff;
-    font-weight: 500;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.nav-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
 
-.nav-button {
-    color: black;
-    background-color: rgb(0, 255, 255);
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/*RESUME SECTION*/
-.resume{
-    margin-top: 40vh;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 0;
-    margin-right: 0;
-}
-.resume h1{
-    text-align: center;
-    font-size: 43px;
-    margin-bottom: 10vh;
-}
 /*SERVICES SECTION*/
 .services{
     margin: 0;
@@ -666,7 +587,7 @@ span{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
 }
 .services .heading{
     margin-top: 300px;
@@ -674,7 +595,7 @@ span{
 .services-box{
     align-items: baseline;
     text-align: center;
-    width: 40%;
+    width: 30%;
     max-height: 100vh;
     height: auto;
     margin-bottom: 50px;
@@ -748,7 +669,7 @@ span{
         width: 45%;
     }
     .services .heading{
-        font-size: 4em;
+        font-size: 2em;
         margin-top: 0px;
         margin-left: 50px;
     }
@@ -764,8 +685,6 @@ span{
         margin-left: 0;
     }
     .services-container{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-items: center;
         padding: 0;
@@ -791,6 +710,47 @@ span{
         height: auto;
         font-size: 1.5rem;
     }
+}
+
+/*CLIENTS SECTION*/
+.portfolio-section {  
+    text-align: center;  
+    padding: 50px 0;  
+    background-color: transparent;  
+    box-shadow: 0  5px 10px rgba(0, 0, 0);  
+    border-radius: 10px;  
+    margin-bottom: 50px;
+    margin-top: 80px;  
+    transition: all 0.3s ease;  
+}  
+.portfolio-section h1{
+    font-size: 2.2rem;
+    flex-wrap: wrap;
+}
+.stats {  
+    display: flex; 
+    justify-content: space-around;  
+    margin-top: 50px;  
+}  
+@media (max-width: 500px){
+    .stats{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+.stat-item {  
+    text-align: center;  
+}  
+
+.counter {  
+    font-size: 40px;  
+    font-weight: 600;  
+    color: #0ef;  
+}  
+.add{
+    font-size: 40px;  
+    font-weight: 600;  
+    color: white; 
 }
 /*PORTFOLIO OR PROJECTS SECTION*/
 .portfolio{
@@ -1062,7 +1022,8 @@ span{
     display: flex;
 }
 .footer-text p{
-    font-size: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
     margin-bottom: 15px;
     position: relative;
     bottom: 0;
@@ -1081,7 +1042,7 @@ span{
         width: 100%;
     }
     .footer-text #copy{
-        bottom: -450px;
+        bottom: -390px;
     }
 }
 .footer-iconTop a{
@@ -1092,12 +1053,6 @@ span{
     font-size: 25px;
     font-weight: 700;
 }
-    @media (max-width:768px) and (orientation: landscape) {
-        .footer-iconTop a{
-            display: none;
-        }
-    }
-
 /*WHATSAPP ICON*/
     #whatsapp{
         position: fixed;
