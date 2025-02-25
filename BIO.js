@@ -66,8 +66,9 @@ ScrollReveal({
     delay: 100 
 
 }); 
+
     //Reveal elements with adjusted settings  
-    ScrollReveal().reveal('.home-content,', { origin: 'top' });  
+    //ScrollReveal().reveal('.home-content,', { origin: 'top' });  
     //ScrollReveal().reveal('.home-img, .about-content, .skill, .services-container, .portfolio-container, .contact', { origin: 'bottom' });  
     //ScrollReveal().reveal('.about-imgg', { origin: 'leftt' });  
     //ScrollReveal().reveal('.skilll', { origin: 'rightt' });  
@@ -91,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!hasAnimated) {  
             hasAnimated = true;  
 
-            const clientCount = 10;   // Set your desired number of clients  
+            const clientCount = 13;   // Set your desired number of clients  
             const hourCount = 1500;      // Set your desired hours worked  
             const projectCount = 20;    // Set your desired number of projects  
-            const awardCount = 10;
+            const awardCount = 15;
 
             let clientCounter = 0;  
             let hourCounter = 0;  
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 clientCounter++;  
                 clients.textContent = clientCounter;  
                 if (clientCounter === clientCount) clearInterval(clientInterval);  
-            }, 40); // Speed of counting  
+            }, 200); // Speed of counting  
 
             const hourInterval = setInterval(() => {  
                 hourCounter++;  
@@ -117,13 +118,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 projectCounter++;  
                 projects.textContent = projectCounter;  
                 if (projectCounter === projectCount) clearInterval(projectInterval);  
-            }, 80); // Speed of counting  
+            }, 200); // Speed of counting  
 
             const awardInterval = setInterval(() => {  
                 awardCounter++;  
                 awards.textContent = awardCounter;  
                 if (awardCounter === awardCount) clearInterval(awardInterval);  
-            }, 40); // Speed of counting  
+            }, 200); // Speed of counting  
         }  
     }  
 
