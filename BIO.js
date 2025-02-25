@@ -1,3 +1,13 @@
+//LOADING PAGE
+window.onload = function() {  
+    // Hide the loading screen after 3 seconds  
+    setTimeout(() => {  
+        document.getElementById('loading').style.display = 'none';  
+        document.getElementById('content').style.display = 'block';  
+    }, 3000); // Change the duration as needed (3000 ms = 3 seconds)  
+};
+
+
 //WHATSAPP ICON & TEXT
 const text = document.getElementById('text');
 const iconn = document.getElementById('iconn');
@@ -65,49 +75,66 @@ ScrollReveal({
 
 //CERTIFICATION SECTION
 
-//DISPLAY BUTTON EVENT
-/*
-const header = document.getElementById("headd");
-const certfication = document.getElementById("certfication");
-const show = document.getElementById("show");
-
-show.onclick = function() {
-    if (certfication.style.display === "none") {
-        certfication.style.display = "block";
-        show.textContent = "Hide Certifications";
-        show.style.marginTop = "10vh";
-        header.style.height = "20px";
-    } else {
-        certfication.style.display = "none";
-        show.textContent = "See Certifications";
-        show.style.marginTop = "40vh";
-        header.style.height = "auto";
-    }
-}
-*/
 
 
+//CLIENTS
+document.addEventListener('DOMContentLoaded', function () {  
+    const statsSection = document.getElementById('stats');  
+    const clients = document.getElementById('clients');  
+    const hours = document.getElementById('hours');  
+    const projects = document.getElementById('projects');  
+    const awards = document.getElementById('awards'); 
+    
+    let hasAnimated = false;  
 
-/*
-let slideIndex = 0;  
-const slides = document.querySelectorAll(".slides");  
-const totalSlides = slides.length;  
+    function animateCounters() {  
+        if (!hasAnimated) {  
+            hasAnimated = true;  
 
-function updateSlidePosition() {  
-    const slideWidth = document.querySelector(".body-container").offsetWidth; // Get container width  
-    const offset = slideIndex * slideWidth; // Calculate offset  
-    document.querySelector(".slideshow-container").style.transform = `translateX(-${offset}px)`;  
-} 
-function showSlides(n) {  
-    slideIndex += n;  
-    if (slideIndex < 0) {  
-        slideIndex = totalSlides - 1;  
-    } else if (slideIndex >= totalSlides) {  
-        slideIndex = 0;  
+            const clientCount = 10;   // Set your desired number of clients  
+            const hourCount = 1500;      // Set your desired hours worked  
+            const projectCount = 20;    // Set your desired number of projects  
+            const awardCount = 10;
+
+            let clientCounter = 0;  
+            let hourCounter = 0;  
+            let projectCounter = 0;  
+            let awardCounter = 0;
+
+            const clientInterval = setInterval(() => {  
+                clientCounter++;  
+                clients.textContent = clientCounter;  
+                if (clientCounter === clientCount) clearInterval(clientInterval);  
+            }, 40); // Speed of counting  
+
+            const hourInterval = setInterval(() => {  
+                hourCounter++;  
+                hours.textContent = hourCounter;  
+                if (hourCounter === hourCount) clearInterval(hourInterval);  
+            }, 5); // Speed of counting  
+
+            const projectInterval = setInterval(() => {  
+                projectCounter++;  
+                projects.textContent = projectCounter;  
+                if (projectCounter === projectCount) clearInterval(projectInterval);  
+            }, 80); // Speed of counting  
+
+            const awardInterval = setInterval(() => {  
+                awardCounter++;  
+                awards.textContent = awardCounter;  
+                if (awardCounter === awardCount) clearInterval(awardInterval);  
+            }, 40); // Speed of counting  
+        }  
     }  
-    updateSlidePosition();  
-}  
-function plusSlides(n) {  
-    showSlides(n);  
-}  
-*/
+
+    // Function to check if the stats section is in view  
+    function checkScroll() {  
+        const rect = statsSection.getBoundingClientRect();  
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {  
+            animateCounters();  
+            window.removeEventListener('scroll', checkScroll); // Remove listener after counting  
+        }  
+    }  
+
+    window.addEventListener('scroll', checkScroll);  
+});
