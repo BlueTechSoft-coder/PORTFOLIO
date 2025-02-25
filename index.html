@@ -10,9 +10,15 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="BIO.css" />
 </head>
-    <body id="bdy">
-        <!--NAVIGATION BAR-->
-        <header class="header" id="headd">
+    <body>
+        <!--&#9776; menu icon-->
+        <div class="loading-container" id="loading">  
+            <div class="loader"></div>  
+            <h1>Please wait... </h1>  
+        </div>  
+       <div id="content">
+         <!--NAVIGATION BAR-->
+         <header class="header" id="headd">
             <h1><a href="#" class="logoo">.W. Andrew </a></h1>
     
             <i class="bx bx-menu" id="menu-icon"></i>
@@ -62,7 +68,7 @@
                         <a class="WhatsApp-link" id="sociall" href="https://wa.me/+254708909399?text=Hello%20Andrew!"  target="_blank"><i class="fab fa-whatsapp" style="color: yellowgreen"></i></a> 
                         <a class="Instagram-link" id="sociall" href="https://www.instagram.com/username_4th/? pwa=1# " target="_blank"><i class="fab fa-instagram"></i></a>  
                         <a class="LinkedIn-link" id="sociall" href="https://www.linkedin.com/in/andrew-barasa-09319a332" target="_blank"><i class="fab fa-linkedin" style="color:rgb(125, 125, 230)"></i></a>
-                        <a class="github" id="sociall" href="https://github.com/BlueTechSoft-coder" target="_blank"><i class="fab fa-github" style="color: rgb(0,0,0);"></i></a>
+                        <a class="github" id="sociall" href="https://github.com/BlueTechSoft-coder" target="_blank"><i class="fab fa-github" style="color: rgb(0, 0, 0);"></i></a>
                         </div>
                     <div class="btn" id="btn">
                         <a href="https://www.google.com/maps/place/?q=place_id:Murang'a University of Technology'" target="_blank"><button>Google Maps</button></a>
@@ -113,76 +119,27 @@
                     </div>
                 </section>
                 
-                <!--
-                CERTIFICATION SECTION
-                <section id="certfication">
-                    <div class="sectionn">
-                        <div class="body-container">
-                            <div class="footerr">
-                                <div class="slideshow-container">
-                                    <div class="slides">
-                                        <img src="PERSONAL.jpg" alt="" >
-                                        <p>RM 101</p>
-                                    </div>
-                                    <div class="slides" >
-                                        <img src="PERSONAL.jpg" alt="" >
-                                        <p>RM 201</p>
-                                    </div>
-                                    <div class="slides">
-                                        <img src="PERSONAL.jpg" alt="" >
-                                            <p>RM 301</p>
-                                    </div>
-                                        <div class="slides">
-                                            <img src="PERSONAL.jpg" alt="" >
-                                            <p>RM 401</p>
-                                            </div>
-                                            <div class="slides">
-                                                <img src="PERSONAL.jpg" alt="" >
-                                                <p>RM 501</p>
-                                            </div>
-                                                <div class="slides">
-                                                    <img src="PERSONAL.jpg" alt="" >
-                                                    <p>RM 601</p>
-                                                        </div>
-                                    <div class="slides">
-                                        <img src="PERSONAL.jpg" alt="" >
-                                        <p>RM 701</p>
-                                            </div>
-                                            <div class="slides">
-                                                <img src="PERSONAL.jpg" alt="" >
-                                                <p>RM 801</p>
-                                                    </div>
-                                                    <div class="slides">
-                                                        <img src="PERSONAL.jpg" alt="" >
-                                                        <p>RM 901</p>
-                                                            </div>
-                                                            <div class="slides">
-                                                                <img src="PERSONAL.jpg" alt="" >
-                                                                <p>RM 1000</p>
-                                                                    </div>
-                                </div>
-                                <div class="nav-buttons">
-                                    <button class="nav-button" onclick="plusSlides(-1)" >&#10094;</button>
-                                    <button class="nav-button" onclick="plusSlides(1)"  >&#10095;</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </section>
-                    <div class="showw">
-                        <button id="show" class="heading"> See Certifications </button>
-                    </div>
-                    <section id="resume" class="resume">
-                        <h1>My <span>Resume</span> </h1>
-                    </section>
-                    
-                -->
+                <!--CERTIFICATION SECTION-->
+
+                
                 <!--SERVICES SECTION-->
                 <section class="services" id="services" style="margin-top: 10rem;">
                     <big><bi><big> <h1 class="heading" style="text-align: center;">
                      My <span>Services</span>
                     </h1></big> </big> </big>
                     <div class="services-container">
+                        <div class="services-box" >
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
+                            <h1 style="color: aquamarine;" id="serve">Data Analysis</h1>
+                            <p id="person">
+                                Using iBM SPSS and STATA, 
+                                Primary and Secondary Data Entry, 
+                                Computing statistics, 
+                                Developing Graphs and charts, Diagnostic Tests,
+                                 Estimating regression models
+                            </p>
+                            <a href="#"><button style="margin-top: 200px;">Read More &diams;</button></a>
+                        </div>
                         <div class="services-box" >
                             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M320-242 80-482l242-242 43 43-199 199 197 197-43 43Zm318 2-43-43 199-199-197-197 43-43 240 240-242 242Z" /></svg>
                              <h1 style="color: aquamarine;" id="serve">Web Development</h1>
@@ -217,18 +174,6 @@
                         </div>
                         <div class="services-box" >
                             <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" /></svg>  
-                           <h1 style="color: aquamarine;" id="serve">Data Analysis</h1>
-                            <p id="person">
-                                Using iBM SPSS and STATA, 
-                                Primary and Secondary Data Entry, 
-                                Computing statistics, 
-                                Developing Graphs and charts, Diagnostic Tests,
-                                 Estimating regression models
-                            </p>
-                            <a href="#"><button>Read More &diams;</button></a>
-                        </div>
-                        <div class="services-box" >
-                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960"  fill="#75FBFD"><path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" /></svg>  
                            <h1 style="color: aquamarine;" id="serve">Programming <br> Languages Skills</h1>
                             <p id="person">
                                 Python,
@@ -246,8 +191,35 @@
                     </div>
                 </section>
 
+                <!--CLIENTS-->
+
+                <div class="portfolio-section">  
+                    <h1 class="heading">My <span>Achievements</span></h1>  
+                    <div class="stats" id="stats">  
+                        <div class="stat-item">  
+                            <span class="add">+</span><span class="counter" id="clients"> 0</span>  
+                            <p>Clients</p>  
+                        </div>  
+                        <div class="stat-item">  
+                            <span class="add">+</span><span class="counter" id="hours"> 0</span>  
+                            <p>Hours Worked</p>  
+                        </div>  
+                        <div class="stat-item">  
+                            <span class="add">+</span><span class="counter" id="projects"> 0</span>  
+                            <p>Projects Done</p>  
+                        </div>  
+                        <div class="stat-item">  
+                            <span class="add">+</span><span class="counter" id="awards"> 0</span>  
+                            <p>Awards</p>  
+                        </div> 
+                    </div>  
+                </div>  
+            
+                <div class="spacer"></div> <!-- Just to provide scrolling space -->  
+            
+            
                 <!--PROJECTS SECTION-->
-                <section class="portfolio" id="portfolio" style="background-color: transparent;">
+                <section class="portfolio" id="portfolio">
                     <h2 class="heading">Latest <span>Projects</span></h2>
                     <div class="portfolio-container">
                         <div class="portfolio-box">
@@ -334,9 +306,6 @@
                         <input type="submit" value="Send Message" class="btn" />  
                     </form>
                 </section>  
-                <div class="more">
-                    <p class="whatsapp-icon" id="icon"><i class="fab fa-whatsapp"></i></p> 
-               </div>
                <div class="footer-iconTop">
                 <a href="#home"> <i class="bx bx-up-arrow-alt"></i> Back To Home</a>
             </div>
@@ -349,6 +318,7 @@
                     <p id="copy">Copyright &copy; 2025 by .W. Andrew <span><b> | </b></span> All Rights Reserved.</p>
                 </div>
             </footer> 
+       </div>
                 <script src="BIO.js"></script>        
 </body>
 </html>
