@@ -22,6 +22,21 @@ text.onclick = function () {
     window.location.href = "https://wa.me/+254708909399?text=Hello%20Andrew!";
 }
 
+/*
+//SCROLL REVEAL EVENTS
+
+ScrollReveal({
+    //reset: true,
+    distance: '100px',
+    duration: 1000,
+    delay: 100
+});
+ScrollReveal().reveal('.home-content, .contact-us h1, .updates h1, .feedback, .choosing h1, .testimonials h1', { origin: 'top' });
+ScrollReveal().reveal('.body-columnn, .news', { origin: 'bottom' });
+ScrollReveal().reveal('.blue, .whatsap, .choosing h2, .project-column, .maps, .lenovo img', { origin: 'left' });
+ScrollReveal().reveal('.hp img, .youtube, .insta, .X, .linkedin, .choose p, .telegram, .searching', { origin: 'right' });
+
+*/
 /* toggle icon navbar */
 
 let menuIcon = document.querySelector('#menu-icon');
@@ -56,22 +71,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-
-
-// Initialize ScrollReveal with options  
-ScrollReveal({  
-    //reset: true, // Uncomment if you want elements to animate again when scrolled back into view  
-    distance: '50px', // Default distance  
-    duration: 1000,  
-    delay: 100 
-
-}); 
-
-    //Reveal elements with adjusted settings  
-    //ScrollReveal().reveal('.home-content,', { origin: 'top' });  
-    //ScrollReveal().reveal('.home-img, .about-content, .skill, .services-container, .portfolio-container, .contact', { origin: 'bottom' });  
-    //ScrollReveal().reveal('.about-imgg', { origin: 'leftt' });  
-    //ScrollReveal().reveal('.skilll', { origin: 'rightt' });  
 
 
 //CERTIFICATION SECTION
