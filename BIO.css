@@ -171,8 +171,11 @@ body{
         margin-right: 0;
     }
     .navbar a{
-        display: block;
-        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.1rem;
         color: aqua;
         margin-bottom: 5px;
     }
@@ -1063,7 +1066,7 @@ span{
         right: 20px;
         bottom: 80px;
         color: aliceblue;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.8rem;
         display: inline-flex;
         gap: 10px;
@@ -1071,11 +1074,13 @@ span{
         padding: 2px 8px;
         border-radius: 20px;
         cursor: pointer;
+        box-shadow: 0 5px 5px black;
     }
     #whatsapp i{
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     #whatsapp #text{
         cursor: pointer;
         color: white;
+        margin-right: 10px;
     }
