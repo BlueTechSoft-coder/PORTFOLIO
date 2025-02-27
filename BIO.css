@@ -98,6 +98,8 @@ body{
 .navbar{
     margin-right: 15px;
     margin-top: 0;
+    right: 0;
+    transition: right 5s ease;
 }
  .navbar a{
     font-size:19px;
@@ -150,7 +152,6 @@ body{
     .navbar{
         position: absolute;
         display: none;
-        transition: right 5s ease;
         margin-top: 100px 0 0 0;
         top: 100%;
         right: 0;
@@ -175,7 +176,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 2.1rem;
+        font-size: 2.3rem;
         color: aqua;
         margin-bottom: 5px;
     }
@@ -187,7 +188,9 @@ body{
         background-color:transparent;
         color:aliceblue;
     }
-
+    .navbar a::after{
+        color: white;
+    }
 }
 /*HOME SECTION*/
 .home{
@@ -195,18 +198,6 @@ body{
     margin-top: 200px;
     padding-left: 30px;
     padding: 30px;
-}
-.home-img img{
-    border:solid 2px #75FBFD;
-    display: inline;
-    border-radius: 25px;
-    width: 370px;
-    height: 370px;
-    box-shadow:0 0 20rem  #75FBFD;
-    animation:floatimage 4s ease-in-out infinite;
-}
-.home-img img:hover{
-    transform:scaleY(1.05);
 }
 #person{
     font-size:medium;
@@ -218,6 +209,16 @@ body{
     font-weight:700;
     color:white;
     margin-bottom: 10px;
+}
+#hello, #andy{
+    font-size: 2.5rem;
+}
+#andy{
+    color: aliceblue;
+}
+h1 img{
+    border-radius: 50%;
+    margin-bottom: -20px;
 }
 span{
    color:#75FBFD;
@@ -279,8 +280,17 @@ span{
     padding: 22px;
     margin-right: 12px;
 }
-.social-media a .fa-instagram{
-    color:rgb(239, 72, 100);
+.WhatsApp-link{
+    color: rgb(4, 118, 4);
+}
+.Instagram-link{
+    color: rgb(225, 84, 107);
+}
+.LinkedIn-link{
+    color: blue;
+}
+.github{
+    color: black;
 }
 .social-media a:hover{
     transform:scale(1.05);
@@ -309,6 +319,17 @@ span{
     border: #0ef;
     box-shadow:0 0 20px  #75FBFD;
     cursor: pointer;
+}
+.home-img img{
+    border:solid 2px #75FBFD;
+    display: inline;
+    border-radius: 25px;
+    width: 370px;
+    height: 370px;
+    box-shadow:0 0 20rem  #75FBFD;
+}
+.home-img img:hover{
+    transform:scaleY(1.05);
 }
 @media(max-width:770px){
     .home{
@@ -373,14 +394,6 @@ span{
         width: 95%;
         margin-left: 10px;
     }
-    #sociall{
-        font-size: 2.5rem;
-        margin-right: 40px 40px 0 40px;
-        border: none;
-    }
-    .github{
-        margin-right: 0;
-    }
     #btn{
         width: 100%;
         margin: 0 auto;
@@ -400,14 +413,17 @@ span{
         border-radius: 7px;
 }
     .home-img{
-        display: grid;
-        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
         text-align: center;
-        margin: 50px auto 0 8px;
+        margin: 50px 0;
     }
     .home-img img{
         border-radius: 20px;
-        width: 100%;
+        width: 95%;
         border: none;
 }
 }
@@ -421,7 +437,6 @@ span{
     padding-right: 20px;
     margin-right: 0;
     margin-top: 100px;
-    background-color:rgb(27, 61, 124);
 }
 .about-content{
     padding: 0;
@@ -474,6 +489,20 @@ span{
     align-self:center;
     justify-content:center;
 }
+.Skills .skill{
+    background-color:transparent;
+    border:aqua solid 2px;
+    border-radius: 7px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    padding:0rem;
+    min-width:550px;
+    height: auto;
+    text-align:center;
+    color:black;
+}
 .Skills .btn{
     display: inline-block;
     margin: 5px;
@@ -489,18 +518,11 @@ span{
     transform: scale(1.05);
     border-radius: 12px;
 }
-.Skills .skill{
-    background-color:transparent;
-    border:aqua solid 2px;
-    border-radius: 7px;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    padding:0rem;
-    min-width:550px;
-    text-align:center;
-    color:black;
+.btn img{
+    border-radius: 35%;
+}
+#git img{
+    background-color: #00fbff;
 }
 @media(max-width:770px){
     .about{
@@ -547,7 +569,7 @@ span{
         display: block;
         justify-content: center;
         align-items: center;
-        margin: 100px 0 680px 0;
+        margin: 100px 0 100px 0;
         padding: 0;
     }
     .Skills h2{
@@ -586,7 +608,8 @@ span{
 }
 .services .heading{
     margin-bottom: 50px;
-    font-size: 1.8em;
+    font-size: 3rem;
+    text-align: center;
 }
 .services-container{
     display: flex;
@@ -600,19 +623,16 @@ span{
     margin-top: 300px;
 }
 .services-box{
-    align-items: baseline;
     text-align: center;
     width: 30%;
-    max-height: 100vh;
     height: auto;
     margin-bottom: 50px;
-    min-height: 500px;
+    min-height: 100vh;
     display: flex;
     flex-direction: grid;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    align-items: center;
     margin-right: 20px;
     border: none;
     border-radius: 20px;
@@ -626,11 +646,10 @@ span{
     transform: scale(1.035);
     background-color: #016769;
 }
-.services-box #person{
-    margin-top: 0;
-}
 .services-box #serve{
     margin-bottom: 0;
+    color: aquamarine;
+    font-size: 2rem;
 }
 .services-box svg{
     margin-left: 40%;
@@ -642,7 +661,7 @@ span{
     margin-bottom: 20px;
 }
 .services-box button{
-    width: 160px;
+    width: 100%;
     color: #0f295a;
     background-color: #0ef;
     transition: .5s;
@@ -702,7 +721,6 @@ span{
     }
     .services-box{
         height: auto;
-        max-height: 200vh;
         width: 100%;
         margin-bottom: 50px;
         margin-right: 0;
@@ -1063,7 +1081,7 @@ span{
 /*WHATSAPP ICON*/
     #whatsapp{
         position: fixed;
-        right: 20px;
+        right: 10px;
         bottom: 80px;
         color: aliceblue;
         font-size: 1.2rem;
@@ -1071,7 +1089,7 @@ span{
         display: inline-flex;
         gap: 10px;
         background-color: green;
-        padding: 2px 8px;
+        padding: 2px 5px;
         border-radius: 20px;
         cursor: pointer;
         box-shadow: 0 5px 5px black;
