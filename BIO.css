@@ -279,6 +279,7 @@ span{
     transition:.5s ease;
     padding: 22px;
     margin-right: 12px;
+    box-shadow: 0 5px 5px 0 black;
 }
 .WhatsApp-link{
     color: rgb(4, 118, 4);
@@ -323,7 +324,7 @@ span{
 .home-img img{
     border:solid 2px #75FBFD;
     display: inline;
-    border-radius: 25px;
+    border-radius: 35px;
     width: 370px;
     height: 370px;
     box-shadow:0 0 20rem  #75FBFD;
@@ -640,13 +641,12 @@ span{
     border-radius: 20px;
     padding: 12px;
     transition: .3s;
-    box-shadow: 0 .5rem .5rem #00191a;
-    background-color: #016769;
+    box-shadow: 0 5px 5px 0 black;
+    background-color: transparent;
 }
 .services-box:hover{
     cursor: pointer;
     transform: scale(1.035);
-    background-color: #016769;
 }
 .services-box #serve{
     margin-bottom: 0;
@@ -805,15 +805,14 @@ span{
     padding: 15px;
     text-align: center;
     align-self: center;
-    border-radius:2rem;
-    background-color: #016769;
+    border-radius: 14px;
+    background-color: transparent;
     transition: .6s;
     margin-bottom: 40px;
-    box-shadow: 0 .5rem .5rem #00191a;
+    box-shadow: 0 5px 5px 0 black;
 }
 .portfolio-box:hover{
     transform:scale(1.05);
-    box-shadow:0 0 10rem  #045f60;
     border: none;
 }
 .portfolio-box img{
@@ -854,7 +853,6 @@ span{
     padding:0 4rem;
     transform:translateY(100%);
     transition:.7s ease;
-    border-radius:2rem;
 }
 .portfolio-box:hover .portfolio-layer{
     transform:translateY(0);
@@ -917,6 +915,11 @@ span{
     .portfolio-box .portfolio-layer svg{
         font-size: 50px;
         height: 80px;
+    }
+}
+@media (max-width: 365px){
+    .portfolio-box{
+        height: 60vh;
     }
 }
 /*CONTACTS SECTION*/
