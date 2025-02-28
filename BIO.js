@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 hourCounter++;  
                 hours.textContent = hourCounter;  
                 if (hourCounter === hourCount) clearInterval(hourInterval);  
-            }, 5); // Speed of counting  
+            }, 1); // Speed of counting  
 
             const projectInterval = setInterval(() => {  
                 projectCounter++;  
