@@ -22,21 +22,7 @@ text.onclick = function () {
     window.location.href = "https://wa.me/+254708909399?text=Hello%20Andrew!";
 }
 
-/*
-//SCROLL REVEAL EVENTS
 
-ScrollReveal({
-    //reset: true,
-    distance: '100px',
-    duration: 1000,
-    delay: 100
-});
-ScrollReveal().reveal('.home-content, .contact-us h1, .updates h1, .feedback, .choosing h1, .testimonials h1', { origin: 'top' });
-ScrollReveal().reveal('.body-columnn, .news', { origin: 'bottom' });
-ScrollReveal().reveal('.blue, .whatsap, .choosing h2, .project-column, .maps, .lenovo img', { origin: 'left' });
-ScrollReveal().reveal('.hp img, .youtube, .insta, .X, .linkedin, .choose p, .telegram, .searching', { origin: 'right' });
-
-*/
 /* toggle icon navbar */
 
 let menuIcon = document.querySelector('#menu-icon');
@@ -71,12 +57,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-
-
-//CERTIFICATION SECTION
-
-
-
 //CLIENTS
 document.addEventListener('DOMContentLoaded', function () {  
     const statsSection = document.getElementById('stats');  
@@ -92,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
             hasAnimated = true;  
 
             const clientCount = 13;   // Set your desired number of clients  
-            const hourCount = 1500;      // Set your desired hours worked  
+            const hourCount = 1460;      // Set your desired hours worked  
             const projectCount = 20;    // Set your desired number of projects  
             const awardCount = 15;
 
@@ -105,25 +85,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 clientCounter++;  
                 clients.textContent = clientCounter;  
                 if (clientCounter === clientCount) clearInterval(clientInterval);  
-            }, 200); // Speed of counting  
+            }, 100); // Speed of counting  
 
             const hourInterval = setInterval(() => {  
                 hourCounter++;  
                 hours.textContent = hourCounter;  
                 if (hourCounter === hourCount) clearInterval(hourInterval);  
-            }, 1); // Speed of counting  
+            }, 0.005); // Speed of counting  
 
             const projectInterval = setInterval(() => {  
                 projectCounter++;  
                 projects.textContent = projectCounter;  
                 if (projectCounter === projectCount) clearInterval(projectInterval);  
-            }, 200); // Speed of counting  
+            }, 100); // Speed of counting  
 
             const awardInterval = setInterval(() => {  
                 awardCounter++;  
                 awards.textContent = awardCounter;  
                 if (awardCounter === awardCount) clearInterval(awardInterval);  
-            }, 200); // Speed of counting  
+            }, 100); // Speed of counting  
         }  
     }  
 
