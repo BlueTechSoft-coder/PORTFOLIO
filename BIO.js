@@ -1,4 +1,5 @@
 //LOADING PAGE
+
 window.onload = function() {  
     // Hide the loading screen after 3 seconds  
     setTimeout(() => {  
@@ -8,18 +9,19 @@ window.onload = function() {
 };
 
 
+
 //WHATSAPP ICON & TEXT
 const text = document.getElementById('text');
 const iconn = document.getElementById('iconn');
 iconn.onclick = function () {
     if (text.innerText === ""){
-        text.innerText = "Hi, how may I help You?";
+        text.innerText = "Contact me on WhatsApp";
     } else {
         text.innerText = "";
     }
 }
 text.onclick = function () {
-    window.location.href = "https://wa.me/+254708909399?text=Hello%20Andrew!";
+    window.location.href = "https://wa.me/+254708909399?text=Hello%20Andrew%2C%0A%0AI%20hope%20this%20message%20finds%20you%20well.";
 }
 
 
@@ -91,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 hourCounter++;  
                 hours.textContent = hourCounter;  
                 if (hourCounter === hourCount) clearInterval(hourInterval);  
-            }, 0.005); // Speed of counting  
+            }, 1); // Speed of counting  
 
             const projectInterval = setInterval(() => {  
                 projectCounter++;  
