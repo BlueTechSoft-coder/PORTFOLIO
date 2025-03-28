@@ -120,3 +120,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', checkScroll);  
 });
+
+
+//SCROLL REVEAL 
+
+ScrollReveal({
+    //reset: true,
+    distance: '100px',
+    duration: 1000,
+    delay: 100
+});
+ScrollReveal().reveal('#relax, .session1, .header-cont, #about .service, #testimonials, #welcome ', { origin: 'top' });
+ScrollReveal().reveal('#achieve, .company, .work, .contacts, #privacy ', { origin: 'bottom' });
+ScrollReveal().reveal('#menucolumnn, .royal, .pool, .welcome, .shop, .offerrr, .social', { origin: 'left' });
+ScrollReveal().reveal('#junkk, .shoop, .delivery', { origin: 'right' });
