@@ -19,8 +19,14 @@ html{
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: visible;
+    overflow-x: hidden;
     color-scheme: dark;
+    font-size: 15px;
+}
+@media (max-width: 767px){
+    html{
+        font-size: 17px;
+    }
 }
 body{
     background: var(--bg-color);
@@ -30,7 +36,7 @@ body{
     padding:0;
     width: 100%;
     max-width: 200vw;
-    overflow-x: visible;
+    overflow-x: hidden;
 } 
 /*
 .loading-container{
@@ -165,7 +171,7 @@ body{
     column-gap: 5px;
 }
  .navbar a{
-    font-size: 17px;
+    font-size: 1.15em;
     color: var(--text-color);
     margin-left:18px;
     transition:.3s;
@@ -176,7 +182,7 @@ body{
     text-decoration:underline;
 }
 #menu-icon{
-    font-size:30px;
+    font-size: 2em;
     fill: var(--text-color);
     color: var(--text-color);
     display:none;
@@ -201,14 +207,11 @@ body{
         margin: 0;
         padding: 3px 7px;
     }
-    .logoo{
-        font-size: 1.5rem;
-    }
     #menu-icon{
         display: block;
         fill: var(--text-color);
         color: var(--text-color);
-        font-size: 2.5rem;
+        font-size: 2.5em;
         right: 0rem;
         top: 10px;
         position: absolute;
@@ -246,7 +249,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 2.2rem;
+        font-size: 2.2em;
         color: aqua;
         margin-bottom: 20px;
     }
@@ -286,18 +289,12 @@ body{
     margin: 170px 0 200px 0;
 }
 #person{
-    font-size:medium;
+    font-size: 1em;
+    line-height: 1.4em;
     margin-top: 0px;
-    line-height: 25px;
-}
-.home-content h3{
-    font-size:30px;
-    font-weight:700;
-    color:white;
-    margin-bottom: 10px;
 }
 #hello, #andy{
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 #andy{
     color: aliceblue;
@@ -324,7 +321,7 @@ span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .body h6{
-    font-size: 30px;
+    font-size: 2.5em;
     color: whitesmoke;
 }
 .body h6 > span{
@@ -338,6 +335,7 @@ span{
 .body h6 > span > span{
     display: block;
     animation: animateWords 15s infinite ease;
+    font-size: .7em;
 }
 @keyframes animateWords {
     10% {transform: translateY(0%);}
@@ -407,10 +405,10 @@ span{
     color: #0f295a;
     background-color: #0ef;
     transition: .8s;
-    padding: 6px 10px;
+    padding: 4px 10px;
     border-radius: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.3em;
     height: auto;
     font-weight: 600;
     border-style: outset;
@@ -450,12 +448,15 @@ span{
         margin: 0;
         width: 100%;
     }
-    #hello{
-        font-size: 2.2rem;
-        margin-bottom: 20px;
+    #hello, #andy, .home-content h1{
+        text-align: left;
+        margin-left: 20px;
+        margin-bottom: 1px;
     }
-    #andy{
-        font-size: 2.2rem;
+    .home-content .body h6{
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
     }
     .home-content .body{
         width: 100%;
@@ -468,19 +469,16 @@ span{
         justify-content: center;
         align-items: center;
     }
-    .body h6{
-        font-size: 2rem;
-        margin-top: 50px;
-        text-align: center;
-    }
     .body h6 > span{
         font-size: 1.5rem;
-        height: 50px;
+        height: 100px;
         width: 100%;
         margin: 0;
+        text-align: center;
     }
     .body h6 > span > span{
         display: block;
+        font-size: 1.2em;
         animation: animateWords 20s infinite ease;
 }
     @keyframes animateWords {
@@ -491,11 +489,9 @@ span{
         100% {transform: translateY(-400%);}
     }
     .home-content #person{
-        font-size: 1.1rem;
-        line-height: 30px;
         text-align: center;
         width: 95%;
-        margin-left: 10px;
+        margin: 0 auto;
     }
     #btn{
         width: 100%;
@@ -530,6 +526,16 @@ span{
         border: none;
 }
 }
+@media (max-width: 400px){
+     #me h6 > span > span{
+        font-size: 1em;
+     }
+}
+@media (max-width: 325px){
+    #me h6 > span > span{
+       font-size: .9em;
+    }
+}
 /*ABOUT SECTION*/
 .about{
     display: grid;
@@ -549,13 +555,13 @@ span{
 }
 .about h2{
     color:white;
-    font-size: 40px;
+    font-size: 2.5em;
     text-align: left;
-    margin-bottom: 1px;
+    margin: 0;
 }
 .about-content h3{
     color:white;
-    font-size: 30px;
+    font-size: 2em;
     margin-bottom: 20px;
 }
 .about-content button{
@@ -568,7 +574,7 @@ span{
     transition: .8s;
     padding: 3px 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.3em;
     border-radius: 7px;
     font-weight: 600;
     border-style: outset;
@@ -589,6 +595,7 @@ span{
 .Skills .heading h2{
     margin-bottom: 50px;
     text-align: center;
+    font-size: 2.5em;
 }
 .Skills .skill{
     background-color:transparent;
@@ -651,20 +658,12 @@ span{
     }
     .about-content .heading{
         text-align: center;
-        font-size: 3rem;
         margin-bottom: 0px;
     }
     .about-content h3{
-        font-size: 1.5rem;
         margin-bottom: 30px;
     }
-    .about-content #person{
-        font-size: 1.1rem;
-        width: 100%;
-        margin: 0;
-    }
     .about button{
-        font-size: 1.5rem;
         height: auto;
         width: auto;
     }
@@ -675,9 +674,6 @@ span{
         align-items: center;
         margin: 100px 0 100px 0;
         padding: 0;
-    }
-    .Skills h2{
-        font-size: 3rem;
     }
     #skills .skill{
         width: 100%;
@@ -710,7 +706,7 @@ span{
 }
 .services .heading{
     margin-bottom: 50px;
-    font-size: 3rem;
+    font-size: 2.5em;
     text-align: center;
 }
 .services-container{
@@ -724,7 +720,7 @@ span{
 }
 .services-container::after {
     content: "";
-    width: 65%;
+    width: 66%;
   }
 .services-box{
     display: flex;
@@ -751,12 +747,11 @@ span{
 .services-box #serve{
     margin-bottom: 0;
     color: aquamarine;
-    font-size: 2rem;
+    font-size: 2em;
 }
 .services-box svg{
     margin-left: 40%;
     margin-right: 40%;
-    font-size: 80px;
 }
 .services-box h1{
     text-align: center;
@@ -774,7 +769,7 @@ span{
     padding: 5px;
     text-align: center;
     justify-self: flex-end;
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: 600;
     border-radius: 8px;
     height: auto;
@@ -802,19 +797,17 @@ span{
         width: 45%;
     }
     .services .heading{
-        font-size: 2em;
         margin-top: 0px;
         margin-left: 50px;
     }
 }
-@media(max-width:770px) {
+@media(max-width: 767px) {
     .services{
         width: 100%;
         text-align: center;
         margin-top: 100px;
     }
     .services .heading{
-        font-size: 3rem;
         width: 100%;
         margin-left: 0;
     }
@@ -833,15 +826,8 @@ span{
         margin-bottom: 50px;
         margin-right: 0;
     }
-    #serve{
-        font-size: 2rem;
-    }
-    .services-box #person{
-        font-size: 1.1rem;
-    }
     .services-box button{
         height: auto;
-        font-size: 1.5rem;
     }
 }
 
@@ -855,7 +841,7 @@ span{
     transition: all 0.3s ease;  
 }  
 .portfolio-section h1{
-    font-size: 2.2rem;
+    font-size: 2.2em;
     flex-wrap: wrap;
 }
 .stats {  
@@ -874,12 +860,12 @@ span{
 }  
 
 .counter {  
-    font-size: 40px;  
+    font-size: 2.5em;  
     font-weight: 600;  
     color: #0ef;  
 }  
 .add{
-    font-size: 40px;  
+    font-size: 2.5em;  
     font-weight: 600;  
     color: white; 
 }
@@ -898,7 +884,7 @@ span{
     color:white;
     margin-bottom: 70px;
     text-align: center;
-    font-size: 45px;
+    font-size: 2.5em;
 }
 .portfolio-container{
     display: grid;
@@ -930,7 +916,7 @@ span{
     border-radius: 8px;
 }
 .portfolio h4{
-    font-size:30px;
+    font-size: 1.7em;
     font-weight:600;
     text-align:center;
     color: #0ef;
@@ -938,7 +924,7 @@ span{
     margin-bottom: 15px;
 }
 .portfolio-box p{
-    font-size: 20px;
+    font-size: 1.3em;
     line-height: 23px;
 }
 .portfolio-box svg:hover{
@@ -974,12 +960,6 @@ span{
     opacity:1;
     cursor: pointer;
 }
-@media (max-width:770px){
-    .portfolio-box .portfolio-layer svg{
-    height: 50px;
-    width: 50px;
-}
-}
 @media (max-width:990px){
     .portfolio-container{
         display: flex;
@@ -993,7 +973,7 @@ span{
         width: 45%;
     }
 }
-@media(max-width:770px){
+@media(max-width: 767px){
     .portfolio{
         width: 100%;
         margin-bottom: -100px;
@@ -1001,39 +981,29 @@ span{
     .portfolio .heading{
         margin-left: 0px;
         width: 100%;
-        font-size: 3rem;
     }
     .portfolio-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         width: 100%;
     }
-    .portfolio-box{
+    .portfolio-container .portfolio-box{
         width: 100%;
-        min-height: 80vh;
+        min-height: 40vh;
         margin-bottom: 0;
     }
-    .portfolio h4{
-        font-size: 1.5rem;
+    .portfolio-box .portfolio-layer svg{
+        height: 50px;
+        width: 50px;
     }
     .portfolio-layer{
         height: 100%;
     }
-    .portfolio-layer #port{
-        font-size: 1.2rem;
-        line-height: 1.4rem;
-    }
     .portfolio-box img{
-        min-height: 75vh;
+        min-height: 40vh;
     }
     .portfolio-box .portfolio-layer svg{
-        font-size: 50px;
         height: 80px;
-    }
-}
-@media (max-width: 365px){
-    .portfolio-box{
-        height: 60vh;
     }
 }
 /*CONTACTS SECTION*/
@@ -1044,13 +1014,13 @@ span{
 }
 .contact h2{
     color:white;
-    margin-bottom:3rem;
+    margin-bottom: 3rem;
     margin-top: 100px;
-    font-size: 50px;
+    font-size: 2.5em;
     text-align: center;
 }
 .contact h4{
-    font-size: 5rem;
+    font-size: 5em;
     width: 100%;
     margin-bottom: 40px;
     line-height: 120px;
@@ -1085,7 +1055,8 @@ span{
 .contact form textarea{
     width:100%;
     padding:10px;
-    font-size: 17px;
+    font-size: 1em;
+    line-height: 1.3em;
     color:white;
     background-color: rgb(14, 114, 121);
     border-radius:7px;
@@ -1111,7 +1082,7 @@ span{
     background-color: #0ef;
     color: #0f295a;
     transition: .6s;
-    font-size: 20px;
+    font-size: 1.4em;
     padding: 7px;
     width: 250px;
     border-radius: 12px;
@@ -1125,30 +1096,21 @@ span{
 @media (max-width: 460px){
     .contact h4{
         width: 100%;
-        font-size: 2.5rem;
-        line-height: 4rem;
     }
 }
-@media(max-width:770px){
+@media(max-width:767px){
     .contact{
         width: 100%;
     }
-    .contact h2{
-        font-size: 3rem;
-    }
     .contact h4{
         width: 100%;
-        font-size: 2.5rem;
         flex-wrap: wrap;
-        line-height: 5rem;
+        line-height: 1.7em;
+        font-size: 2.8em;
     }
     .contact form{
         width: 100%;
         min-height: 40vh;
-    }
-    .contact form input[type="text"],  .contact form input[type="email"],  .contact form input[type="tel"]{
-        font-size: 1.1rem;
-        line-height: 0rem;
     }
     .contact form input[type="submit"]{
         font-size: 1.5rem;
@@ -1156,11 +1118,9 @@ span{
         height: auto;
     }
     .contact form textarea{
-        font-size: 1.1rem;
         min-height: 30vh;
     }
     .contact form input::placeholder, textarea::placeholder{
-        font-size: 1.1rem;
         line-height: 1.7rem;
     } 
     .contact form input{
@@ -1176,7 +1136,7 @@ span{
     background-color: rgba(0, 0, 0, .4);
 }
 .footer-text p{
-    font-size: 1.1rem;
+    font-size: 1.1em;
     line-height: 1.5rem;
     position: relative;
     bottom: 0;
@@ -1192,7 +1152,7 @@ span{
     color: #0ef;
     
 }
-@media(max-width:770px){
+@media(max-width: 767px){
     .footer{
         display: block;
         width: 100%;
@@ -1225,7 +1185,7 @@ span{
         z-index: 999;
 }
     #whatsapp i{
-        font-size: 2rem;
+        font-size: 2em;
     }
     #whatsapp #text{
         cursor: pointer;
