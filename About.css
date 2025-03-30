@@ -19,8 +19,14 @@ html{
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: visible;
+    overflow-x: hidden;
     color-scheme: dark;
+    font-size: 15px;
+}
+@media (max-width: 767px){
+    html{
+        font-size: 17px;
+    }
 }
 body{
     background: var(--bg-color);
@@ -30,7 +36,7 @@ body{
     padding:0;
     width: 100%;
     max-width: 200vw;
-    overflow-x: visible;
+    overflow-x: hidden;
 } 
 
 
@@ -69,7 +75,7 @@ body{
     column-gap: 5px;
 }
  .navbar a{
-    font-size: 17px;
+    font-size: 1.15em;
     color: var(--text-color);
     margin-left:18px;
     transition:.3s;
@@ -80,7 +86,7 @@ body{
     text-decoration:underline;
 }
 #menu-icon{
-    font-size:30px;
+    font-size: 2em;
     fill: var(--text-color);
     color: var(--text-color);
     display:none;
@@ -88,18 +94,6 @@ body{
     cursor: pointer;
 }
 @media(max-width:767px){
-    html{
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
-    #bdy{
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-    }
     .header{
         width: 100%;
         margin: 0;
@@ -225,8 +219,8 @@ body{
 }
 @media (max-width: 767px){
     #welcome{
-        padding: 100px 0 20px 0;
-        min-height: 70vh;
+        padding: 70px 0 20px 0;
+        min-height: 30vh;
     }
     #welcome .heading{
         font-size: 2em;
@@ -243,7 +237,7 @@ body{
 #services{
     min-height: 100vh;
     width: 100%;
-    margin: 120px 0 0 0;
+    margin: 100px 0 0 0;
     padding: 50px 0;
     display: flex;
     flex-direction: column;
@@ -299,9 +293,9 @@ body{
     margin-bottom: 20px;
 }
 .service-box p{
-    font-size: 1.05em;
+    font-size: 1em;
+    line-height: 1.4em;
     text-align: center;
-    line-height: 1.3em;
 }
 .service-box a button{
     text-align: left;
@@ -376,7 +370,7 @@ body{
 .faq p {
     display: none;
     padding: 5px 0;
-    font-size: .95em;
+    font-size: 1em;
     line-height: 1.4em;
     color: #AEEEEE;
     font-weight: 500;
@@ -458,8 +452,8 @@ body{
 .plan p{
     text-align: left;
     margin-left: 0;
-    line-height: 1.9em;
     font-size: 1em;
+    line-height: 1.9em;
 }
 .plan p span{
     color: #0ef;
@@ -540,8 +534,11 @@ body{
     overflow: hidden;
 }
 @media (max-width: 767px){
-    #nice, #loved{
+      #nice, #loved{
         width: 100%;
+    }
+    #testimonial{
+        padding: 50px 10px;
     }
 }
 #testimonials h6{
@@ -551,6 +548,7 @@ body{
     color: #AEEEEE;
 }
 #testimonials p{
+    font-size: 1em;
     line-height: 1.4em;
 }
 #testimonials img{
@@ -600,6 +598,8 @@ cursor: pointer;
 }
 #newsletter p{
     margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.4em;
 }
 #newsletter label{
     margin-bottom: 20px;
@@ -664,7 +664,8 @@ cursor: pointer;
 .contact form textarea{
     width:100%;
     padding:10px;
-    font-size: 17px;
+    font-size: 1em;
+    line-height: 1.4em;
     color:white;
     background-color: rgb(14, 114, 121);
     border-radius:7px;
