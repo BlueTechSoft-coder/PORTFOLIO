@@ -69,7 +69,7 @@ ScrollReveal({
     duration: 1000,
     delay: 100
 });
-ScrollReveal().reveal(' .heading ', { origin: 'top' });
+ScrollReveal().reveal(' .headingg ', { origin: 'top' });
 ScrollReveal().reveal('.service-box, .plan, #loved, #nice, #faq, form', { origin: 'bottom' });
 ScrollReveal().reveal('#menucolumnn, .royal, .pool, .welcome, .shop, .offerrr, .social', { origin: 'left' });
 ScrollReveal().reveal('#junkk, .shoop, .delivery', { origin: 'right' });
