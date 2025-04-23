@@ -675,6 +675,10 @@ span{
     }
     .about-content h3{
         margin-bottom: 30px;
+        font-size: 1.8em;
+    }
+    .about-content h2{
+        font-size: 2em;
     }
     .about button{
         height: auto;
