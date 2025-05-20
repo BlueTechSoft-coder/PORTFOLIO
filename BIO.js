@@ -1,5 +1,6 @@
 //LOADING PAGE
 
+/*
 window.onload = function() {  
     // Hide the loading screen after 3 seconds  
     setTimeout(() => {  
@@ -7,6 +8,7 @@ window.onload = function() {
         document.getElementById('content').style.display = 'block';  
     }, 3000); // Change the duration as needed (3000 ms = 3 seconds)  
 };
+*/
 
 
 
