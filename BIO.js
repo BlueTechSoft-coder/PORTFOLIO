@@ -124,6 +124,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+// Contact Form Submission
+
+document.getElementById('contact_form').addEventListener('submit', function(event) {
+
+    // event.preventDefault();
+})
+
+
 //SCROLL REVEAL 
 
 ScrollReveal({
