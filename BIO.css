@@ -402,7 +402,7 @@ span{
     cursor: pointer;
 }
 .home-content #btn{
-    position: absolute;
+    position: relative;
     z-index: 10;
     display: flex;
     flex-direction: row;
