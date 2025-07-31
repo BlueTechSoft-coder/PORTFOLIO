@@ -269,14 +269,16 @@
     <div id="newsletter">
         <h1 class="heading">Newsletters <span>Updates</span></h1>
         <p>Enter your email address to subscibe to our news updates</p>
-        <label for="mail">
-            <input type="email" id="mail" name="mail" placeholder="Enter Your email address...">
-        </label>
-        <button type="submit">Subscribe &diams;</button>
+        <form action="subscribe.html" method="post">
+            <label>
+                <input type="email" id="mail" name="email" placeholder="Enter Your email address..." required>
+            </label><br>
+        <button type="submit" name="subscribe">Subscribe &diams;</button>
+        </form>
     </div>
 
     <h1 class="heading" >Contact <span>Me!</span></h1>
-    <form action="index.php" method="post">  
+    <form action="thankyou.html" method="post">  
         <div class="input-box">  
             <input type="text" id="name" name="name" placeholder="Full Name"  required />  
             <input type="email" id="email" name="email" placeholder="Email Address"  required />  
@@ -286,7 +288,7 @@
             <input type="text" id="subject" name="subject" placeholder="Email Subject"  required />  
         </div>  
         <textarea id="message" name="message" cols="30" rows="10" placeholder="Type Your Message Here..."  required></textarea>   
-        <input type="submit" value="Send Message" class="btn" />  
+        <input type="submit" name="subscribe" value="Send Message" class="btn" />  
     </form>
 </section> 
     <!--FOOTER SECTION-->
