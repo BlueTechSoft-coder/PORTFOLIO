@@ -129,6 +129,18 @@ function showNotification(message, isSuccess) {
 // Call this function when DOM is loaded
 document.addEventListener('DOMContentLoaded', showFormMessages);
 
+//LOADING PAGE
+
+/*
+window.onload = function() {  
+    // Hide the loading screen after 3 seconds  
+    setTimeout(() => {  
+        document.getElementById('loading').style.display = 'none';  
+        document.getElementById('content').style.display = 'block';  
+    }, 3000); // Change the duration as needed (3000 ms = 3 seconds)  
+};
+*/
+
 
 
 //WHATSAPP ICON & TEXT
@@ -180,29 +192,87 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
+//CLIENTS
+document.addEventListener('DOMContentLoaded', function () {  
+    const statsSection = document.getElementById('stats');  
+    const clients = document.getElementById('clients');  
+    const hours = document.getElementById('hours');  
+    const projects = document.getElementById('projects');  
+    const awards = document.getElementById('awards'); 
+    
+    let hasAnimated = false;  
 
-// FAQs SECTION
+    function animateCounters() {  
+        if (!hasAnimated) {  
+            hasAnimated = true;  
 
-function toggleFAQ(faq) {  
-    let answer = faq.nextElementSibling;  
-    if (answer.style.display === "block") {  
-        answer.style.display = "none";  
-    } else {  
-        answer.style.display = "block"; 
+            const clientCount = 13;   // Set your desired number of clients  
+            const hourCount = 1460;      // Set your desired hours worked  
+            const projectCount = 20;    // Set your desired number of projects  
+            const awardCount = 15;
+
+            let clientCounter = 0;  
+            let hourCounter = 0;  
+            let projectCounter = 0;  
+            let awardCounter = 0;
+
+            const clientInterval = setInterval(() => {  
+                clientCounter++;  
+                clients.textContent = clientCounter;  
+                if (clientCounter === clientCount) clearInterval(clientInterval);  
+            }, 100); // Speed of counting  
+
+            const hourInterval = setInterval(() => {  
+                hourCounter++;  
+                hours.textContent = hourCounter;  
+                if (hourCounter === hourCount) clearInterval(hourInterval);  
+            }, 1); // Speed of counting  
+
+            const projectInterval = setInterval(() => {  
+                projectCounter++;  
+                projects.textContent = projectCounter;  
+                if (projectCounter === projectCount) clearInterval(projectInterval);  
+            }, 100); // Speed of counting  
+
+            const awardInterval = setInterval(() => {  
+                awardCounter++;  
+                awards.textContent = awardCounter;  
+                if (awardCounter === awardCount) clearInterval(awardInterval);  
+            }, 100); // Speed of counting  
+        }  
     }  
-} 
 
+    // Function to check if the stats section is in view  
+    function checkScroll() {  
+        const rect = statsSection.getBoundingClientRect();  
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {  
+            animateCounters();  
+            window.removeEventListener('scroll', checkScroll); // Remove listener after counting  
+        }  
+    }  
+
+    window.addEventListener('scroll', checkScroll);  
+});
+
+
+
+// Contact Form Submission
+
+document.getElementById('contact_form').addEventListener('submit', function(event) {
+
+    // event.preventDefault();
+})
 
 
 //SCROLL REVEAL 
 
 ScrollReveal({
     //reset: true,
-    distance: '200px',
+    distance: '100px',
     duration: 1000,
     delay: 100
 });
-ScrollReveal().reveal(' .headingg ', { origin: 'top' });
-ScrollReveal().reveal('.service-box, .plan, #loved, #nice, #faq, form', { origin: 'bottom' });
+ScrollReveal().reveal('#relax, .session1, .header-cont, #about .service, #testimonials, #welcome ', { origin: 'top' });
+ScrollReveal().reveal('#achieve, .company, .work, .contacts, #privacy ', { origin: 'bottom' });
 ScrollReveal().reveal('#menucolumnn, .royal, .pool, .welcome, .shop, .offerrr, .social', { origin: 'left' });
 ScrollReveal().reveal('#junkk, .shoop, .delivery', { origin: 'right' });

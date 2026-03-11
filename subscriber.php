@@ -1,97 +1,85 @@
 <?php
+// Database configuration
+$host = "localhost";
+$username = "ourlady1_andrew";
+$password = "Bensey_05@625012389";
+$database = "ourlady1_andrew";
 
-// connecting to the database
-    $db_server = "localhost";
-    $db_user = "Andrew";
-    $db_pass = "Bensey@05";
-    $db_name = "portfoliodb";
-    $conn = "";
+// Create connection
+$conn = new mysqli($host, $username, $password, $database);
 
-    try{
-        $conn = mysqli_connect($db_server,
-                               $db_user,
-                               $db_pass,
-                               $db_name);
-    }
-    catch(mysqli_sql_exception){
-        // echo "Could not connect! <br>";
-    }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-// checking if the database is connected
-    if($conn){
-        // echo "You are connected! <br>";
-    }
-    else{
-        // echo "You are not connected! <br>";
-    }
+// Set charset to UTF-8
+$conn->set_charset("utf8mb4");
 
-    if(isset($_POST["subscribe"])){
-
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-            $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-
-            $sql = "INSERT INTO subscribers(email)
-                    VALUES('$email')";
-            try{
-                mysqli_query($conn, $sql);
-                // echo "Thank you for subscribing with us! <br>";
-            }
-            catch(mysqli_sql_exception){
-                // echo "You did not subscribe! Try Again. <br>";
+// Process form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['subscribe'])) {
+    // Sanitize and validate email
+    $email = trim($_POST['email']);
+    
+    // Validate email
+    if (empty($email)) {
+        $error = "Email address is required.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format.";
+    } else {
+        // Check if email already exists
+        $check_sql = "SELECT id FROM subscribers WHERE email = ?";
+        $check_stmt = $conn->prepare($check_sql);
+        $check_stmt->bind_param("s", $email);
+        $check_stmt->execute();
+        $check_stmt->store_result();
+        
+        if ($check_stmt->num_rows > 0) {
+            $error = "This email is already subscribed.";
+        } else {
+            // Prepare SQL statement
+            $sql = "INSERT INTO subscribers (email) VALUES (?)";
+            $stmt = $conn->prepare($sql);
+            
+            if ($stmt) {
+                $stmt->bind_param("s", $email);
+                
+                if ($stmt->execute()) {
+                    $success = "Thank you for subscribing!";
+                    // Reset email variable
+                    $email = "";
+                } else {
+                    $error = "Error: " . $stmt->error;
+                }
+                
+                $stmt->close();
+            } else {
+                $error = "Error preparing statement: " . $conn->error;
             }
         }
+        $check_stmt->close();
     }
+}
 
-    // closing the database connection
-    mysqli_close($conn);
+// Close connection
+$conn->close();
+
+// Redirect back to the About page with message
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $redirect_url = $_SERVER['HTTP_REFERER'];
     
+    // Add message parameters to URL
+    if (isset($success)) {
+        $redirect_url .= (strpos($redirect_url, '?') === false ? '?' : '&') . 'subscribe=success&message=' . urlencode($success);
+    } elseif (isset($error)) {
+        $redirect_url .= (strpos($redirect_url, '?') === false ? '?' : '&') . 'subscribe=error&message=' . urlencode($error);
+    }
+    
+    header("Location: " . $redirect_url);
+    exit();
+} else {
+    // Fallback if HTTP_REFERER is not available
+    header("Location: About.html");
+    exit();
+}
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-body{
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family:'Poppins', sans-serif;
-    background-color: rgb(1, 1, 51);
-}
-#thank{
-    margin: 0 auto;
-    height: 100%;
-    padding: 70px 50px;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    z-index: 999;
-    box-shadow: 0 0 10px 0 black;
-}
-a{
-    text-decoration: none;
-    background-color: rgb(1, 1, 51);
-    color: aqua;
-    padding: 7px;
-    border-radius: 7px;
-}
-    </style>
-</head>
-<body>
-    <div id="thank">
-        <h2>Thank You!</h2>
-        <a href="index.html">Back Home</a>
-    </div>
-</body>
-</html>

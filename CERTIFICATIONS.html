@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow with Indicators</title>
+  <style>
+    /* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Slides */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicators */
+.indicators {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.indicator {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: blue;
+}
+    </style>
+</head>
+<body>
+  <div class="slideshow-container">
+    <!-- Slides -->
+    <div class="slides">
+      <div class="slide" style="background-color: #ff5733;">Slide 1</div>
+      <div class="slide" style="background-color: #33ff57;">Slide 2</div>
+      <div class="slide" style="background-color: #3357ff;">Slide 3</div>
+      <div class="slide" style="background-color: #ff33a1;">Slide 4</div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+
+    <!-- Indicators -->
+    <div class="indicators">
+      <span class="indicator" onclick="goToSlide(0)"></span>
+      <span class="indicator" onclick="goToSlide(1)"></span>
+      <span class="indicator" onclick="goToSlide(2)"></span>
+      <span class="indicator" onclick="goToSlide(3)"></span>
+    </div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+let slides = document.querySelector('.slides');
+let indicators = document.querySelectorAll('.indicator');
+
+// Function to show the current slide
+function showSlide(index) {
+  if (index >= slides.children.length) slideIndex = 0;
+  if (index < 0) slideIndex = slides.children.length - 1;
+
+  slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+
+  // Update indicators
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle('active', i === slideIndex);
+  });
+}
+
+// Function to move to the next/previous slide
+function moveSlide(n) {
+  slideIndex += n;
+  showSlide(slideIndex);
+}
+
+// Function to go to a specific slide
+function goToSlide(index) {
+  slideIndex = index;
+  showSlide(slideIndex);
+}
+
+// Automatic slideshow
+let autoSlideInterval = setInterval(() => {
+  moveSlide(1);
+}, 5000);
+
+// Pause automatic slideshow on hover
+slides.parentElement.addEventListener('mouseenter', () => {
+  clearInterval(autoSlideInterval);
+});
+
+// Resume automatic slideshow on mouse leave
+slides.parentElement.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => {
+    moveSlide(1);
+  }, 5000);
+});
+
+// Initialize the first slide
+showSlide(slideIndex);
+  </script>
+</body>
+</html>

@@ -1,44 +1,41 @@
 <?php  
-// Check if the form was submitted  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-  // Get form data and sanitize (crucial for security!)  
-  $name = htmlspecialchars($_POST["name"]);  
-  $email = htmlspecialchars($_POST["email"]);  
-  $mobile = htmlspecialchars($_POST["mobile"]);  
-  $subject = htmlspecialchars($_POST["subject"]);  
-  $message = htmlspecialchars($_POST["message"]);  
+    // Collect and sanitize input data  
+    $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);  
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);  
+    $mobile = filter_var(trim($_POST['mobile']), FILTER_SANITIZE_STRING);  
+    $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_STRING);  
+    $message = filter_var(trim($_POST['message']), FILTER_SANITIZE_STRING);  
 
+    // Check that the required fields are not empty  
+    if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {  
+        // Set the recipient email address  
+        $to = 'recipient@example.com'; // Replace with your email address  
 
-  // Basic input validation (add more robust validation as needed)  
-  if (empty($name) || empty($email) || empty($mobile) || empty($subject) || empty($message)) {  
-    echo "Please fill in all fields.";  
-    exit(); // Stop further processing if validation fails  
-  }  
+        // Set the email subject  
+        $email_subject = "Contact Form: $subject";  
 
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {  
-    echo "Invalid email address.";  
-    exit();  
-  }  
+        // Create the email content  
+        $email_body = "You have received a new message from your website contact form.\n\n" .  
+                      "Name: $name\n" .  
+                      "Email: $email\n" .  
+                      "Mobile: $mobile\n" .  
+                      "Message:\n$message\n";  
 
+        // Set the email headers  
+        $headers = "From: $name <$email>\r\n";  
+        $headers .= "Reply-To: $email\r\n";  
 
-  // Set up email headers  
-  $to = "andrewbarasa412@gmail.com"; // Replace with your email address  
-  $headers = "From: " . $email . "\r\n" .  
-              "Reply-To: " . $email . "\r\n" .  
-              "X-Mailer: PHP/" . phpversion();  
-
-  // Compose email body  
-  $body = "Name: " . $name . "\n\n" .  
-          "Email: " . $email . "\n\n" .  
-          "Mobile: " . $mobile . "\n\n" .  
-          "Subject: " . $subject . "\n\n" .  
-          "Message: " . $message;  
-
-  // Send the email (error handling improved)  
-  if (mail($to, $subject, $body, $headers)) {  
-    echo "Thank you for your message! We'll get back to you soon.";  
-  } else {  
-    echo "There was an error sending your message. Please try again later.  Contact the site administrator.";  
-  }  
+        // Send the email  
+        if (mail($to, $email_subject, $email_body, $headers)) {  
+            echo "Message sent successfully!";  
+        } else {  
+            echo "There was a problem sending the email. Please try again.";  
+        }  
+    } else {  
+        echo "Please fill all the required fields.";  
+    }  
+} else {  
+    echo "Invalid request method.";  
 }  
 ?>

@@ -1,104 +1,127 @@
 <?php
+// Database configuration
+$host = "localhost";
+$username = "ourlady1_andrew";
+$password = "Bensey_05@625012389";
+$database = "ourlady1_andrew";
 
-// connecting to the database
-    $db_server = "localhost";
-    $db_user = "Andrew";
-    $db_pass = "Bensey@05";
-    $db_name = "portfoliodb";
-    $conn = "";
+// Create connection
+$conn = new mysqli($host, $username, $password, $database);
 
-    try{
-        $conn = mysqli_connect($db_server,
-                               $db_user,
-                               $db_pass,
-                               $db_name);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Set charset to UTF-8
+$conn->set_charset("utf8mb4");
+
+// Process form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    // Sanitize inputs
+    $name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $phone_number = trim($_POST['mobile']);
+    $subject = trim($_POST['subject']);
+    $message = trim($_POST['message']);
+    
+    // Validate inputs
+    $errors = [];
+    
+    if (empty($name)) {
+        $errors[] = "Name is required.";
+    } elseif (strlen($name) > 100) {
+        $errors[] = "Name must be less than 100 characters.";
     }
-    catch(mysqli_sql_exception){
-        // echo "Could not connect! <br>";
+    
+    if (empty($email)) {
+        $errors[] = "Email is required.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Invalid email format.";
+    } elseif (strlen($email) > 255) {
+        $errors[] = "Email must be less than 255 characters.";
     }
-
-// checking if the database is connected
-    if($conn){
-        // echo "You are connected! <br>";
+    
+    if (!empty($phone_number) && strlen($phone_number) > 20) {
+        $errors[] = "Phone number must be less than 20 characters.";
     }
-    else{
-        // echo "You are not connected! <br>";
+    
+    if (empty($subject)) {
+        $errors[] = "Subject is required.";
+    } elseif (strlen($subject) > 200) {
+        $errors[] = "Subject must be less than 200 characters.";
     }
-
-// checking the inputs
-    if(isset($_POST["submit"])){
-
-        if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-            $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_SPECIAL_CHARS);
-            $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-            $mobile = filter_input(INPUT_POST, "mobile", FILTER_SANITIZE_SPECIAL_CHARS);
-            $subject = filter_input(INPUT_POST, "subject", FILTER_SANITIZE_SPECIAL_CHARS);
-            $message = filter_input(INPUT_POST, "message", FILTER_SANITIZE_SPECIAL_CHARS);
-
-        // inserting data into contacts table
-        $sql = "INSERT INTO contacts(name, email, mobile, subject, message)
-                VALUES('$name','$email','$mobile','$subject','$message')";
+    
+    if (empty($message)) {
+        $errors[] = "Message is required.";
+    }
+    
+    // If no errors, insert into database
+    if (empty($errors)) {
+        // Prepare SQL statement
+        $sql = "INSERT INTO contact (name, email, phone_number, subject, message) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
         
-        try{
-            mysqli_query($conn, $sql);
-            // echo "Thank you! <br>";
+        if ($stmt) {
+            $stmt->bind_param("sssss", $name, $email, $phone_number, $subject, $message);
+            
+            if ($stmt->execute()) {
+                $success = "Your message has been sent successfully! I'll get back to you soon.";
+                
+                // Optional: Send email notification
+                $to = "andrewbarasa412@gmail.com";
+                $email_subject = "New Contact Form Submission: " . $subject;
+                $email_body = "You have received a new message from your website contact form.\n\n";
+                $email_body .= "Name: " . $name . "\n";
+                $email_body .= "Email: " . $email . "\n";
+                $email_body .= "Phone: " . $phone_number . "\n";
+                $email_body .= "Subject: " . $subject . "\n";
+                $email_body .= "Message:\n" . $message . "\n";
+                $headers = "From: " . $email . "\r\n" .
+                          "Reply-To: " . $email . "\r\n" .
+                          "X-Mailer: PHP/" . phpversion();
+                
+                // Uncomment to send email
+                // mail($to, $email_subject, $email_body, $headers);
+                
+            } else {
+                $error = "Error: " . $stmt->error;
+            }
+            
+            $stmt->close();
+        } else {
+            $error = "Error preparing statement: " . $conn->error;
         }
-        catch(mysqli_sql_exception){
-            // echo "Try again! <br>";
-        }
+    } else {
+        $error = implode("<br>", $errors);
     }
+}
+
+// Close connection
+$conn->close();
+
+// Determine which page to redirect back to
+if (isset($_SERVER['HTTP_REFERER'])) {
+    $redirect_url = $_SERVER['HTTP_REFERER'];
+    
+    // Remove any existing message parameters
+    $redirect_url = preg_replace('/[?&]contact=(success|error).*$/', '', $redirect_url);
+    $redirect_url = preg_replace('/[?&]message=.*$/', '', $redirect_url);
+    
+    // Add message parameters to URL
+    $separator = (strpos($redirect_url, '?') === false) ? '?' : '&';
+    
+    if (isset($success)) {
+        $redirect_url .= $separator . 'contact=success&message=' . urlencode($success);
+    } elseif (isset($error)) {
+        $redirect_url .= $separator . 'contact=error&message=' . urlencode($error);
     }
-
-    // closing the database connection
-    mysqli_close($conn);
-
+    
+    header("Location: " . $redirect_url);
+    exit();
+} else {
+    // Fallback if HTTP_REFERER is not available
+    header("Location: index.html");
+    exit();
+}
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-body{
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family:'Poppins', sans-serif;
-    background-color: rgb(1, 1, 51);
-}
-#thank{
-    margin: 0 auto;
-    height: 100%;
-    padding: 70px 50px;
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    z-index: 999;
-    box-shadow: 0 0 10px 0 black;
-}
-a{
-    text-decoration: none;
-    background-color: rgb(1, 1, 51);
-    color: aqua;
-    padding: 7px;
-    border-radius: 7px;
-}
-    </style>
-</head>
-<body>
-    <div id="thank">
-        <h2>Thank You!</h2>
-        <a href="index.html">Back Home</a>
-    </div>
-</body>
-</html>

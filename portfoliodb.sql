@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2025 at 06:21 PM
+-- Generation Time: Aug 26, 2025 at 11:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,8 +31,8 @@ CREATE TABLE `contacts` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `mobile` varchar(255) NOT NULL,
-  `subject` varchar(25) NOT NULL,
+  `mobile` varchar(25) NOT NULL,
+  `subject` varchar(255) NOT NULL,
   `message` varchar(255) NOT NULL,
   `reg_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -42,28 +42,15 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `mobile`, `subject`, `message`, `reg_date`) VALUES
-(1, 'Andrew Barasa Wandera', 'bluesofttech1@gmail.com', '0708909399', 'Web Development', 'Hello Andrew! I need a business website!', '2025-08-30 19:20:23'),
-(2, 'Benson Baraka Mubweka', 'bensey035@gmail.com', '0712822291', 'Web Development', 'Hello Andrew! I need a business website!', '2025-08-30 19:20:56');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `subscribers`
---
-
-CREATE TABLE `subscribers` (
-  `id` int(11) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `reg_date` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `subscribers`
---
-
-INSERT INTO `subscribers` (`id`, `email`, `reg_date`) VALUES
-(1, 'bluesofttech1@gmail.com', '2025-08-30 19:13:05'),
-(2, 'bensey035@gmail.com', '2025-08-30 19:13:44');
+(1, 'Andrew Barasa', 'andrewbarasa412@gmail.com', '0708909399', 'Student portal ', 'Hi', '2025-08-26 12:37:17'),
+(2, 'Andrew Barasa', 'andrewbarasa412@gmail.com', '0708909399', 'Student portal ', 'Hi', '2025-08-26 12:37:49'),
+(3, 'Andrew Barasa', 'andrewbarasa412@gmail.com', '0708909399', 'Student portal ', 'Hi', '2025-08-26 12:39:26'),
+(4, 'Andrew Barasa', 'andrewbarasa412@gmail.com', '0708909399', 'Student portal ', 'Hi', '2025-08-26 12:39:39'),
+(5, 'Benson Baraka', 'bensey035@gmail.com', '0708909399', 'TVETs', 'Hello', '2025-08-26 12:41:04'),
+(6, 'Benson Baraka', 'bensey035@gmail.com', '0708909399', 'TVETs', 'Hello', '2025-08-26 12:41:40'),
+(7, 'Benson Baraka', 'bensey035@gmail.com', '0708909399', 'TVETs', 'Hello', '2025-08-26 12:41:45'),
+(8, 'Benson Baraka', 'bensey035@gmail.com', '0708909399', 'TVETs', 'Hello', '2025-08-26 12:41:45'),
+(9, 'Benson Baraka', 'bensey035@gmail.com', '0708909399', 'TVETs', 'Hello', '2025-08-26 12:41:49');
 
 --
 -- Indexes for dumped tables
@@ -76,13 +63,6 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subscribers`
---
-ALTER TABLE `subscribers`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -90,13 +70,7 @@ ALTER TABLE `subscribers`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `subscribers`
---
-ALTER TABLE `subscribers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

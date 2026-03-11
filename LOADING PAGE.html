@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Loading Page</title>  
+    <style>
+body {  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+    background-color: #f0f0f0;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    height: 100vh;  
+}  
+
+.loading-container {  
+    text-align: center;  
+}  
+
+.loader {  
+    border: 10px solid #f3f3f3; /* Light grey */  
+    border-top: 10px solid #3498db; /* Blue */  
+    border-radius: 50%;  
+    width: 60px;  
+    height: 60px;  
+    animation: spin 1s linear infinite;  
+}  
+
+@keyframes spin {  
+    0% { transform: rotate(0deg); }  
+    100% { transform: rotate(360deg); }  
+}  
+
+.content {  
+    text-align: center;  
+    margin-top: 20px;  
+}
+        </style>
+</head>  
+<body>  
+
+    <div class="loading-container" id="loading">  
+        <div class="loader"></div>  
+        <h1>Loading...</h1>  
+    </div>  
+
+    <div class="content" id="content" style="display: none;">  
+        <h2>Welcome to My Website!</h2>  
+        <p>This is where your main page content goes.</p>  
+    </div>  
+
+    <script>
+        window.onload = function() {  
+    // Hide the loading screen after 3 seconds  
+    setTimeout(() => {  
+        document.getElementById('loading').style.display = 'none';  
+        document.getElementById('content').style.display = 'block';  
+    }, 5000); // Change the duration as needed (3000 ms = 3 seconds)  
+};
+    </script>  
+</body>  
+</html>

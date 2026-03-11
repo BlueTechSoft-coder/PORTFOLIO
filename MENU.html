@@ -1,0 +1,83 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <title>Sliding Menu</title> 
+    <style>
+    body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    overflow: hidden; /* Prevent scrolling when the menu is open */  
+}  
+
+.menu-icon {  
+    cursor: pointer;  
+    padding: 15px;  
+    font-size: 24px;  
+    background-color: #3498db;  
+    color: white;  
+    position: absolute;  
+    top: 10px;  
+    left: 10px;  
+    border: none;  
+    border-radius: 5px;  
+}  
+
+.menu {  
+    position: fixed;  
+    top: 0;  
+    right: -250px; /* Start off to the right (hidden) */  
+    width: 250px;  
+    height: 100%;  
+    background-color: #333;  
+    color: white;  
+    transition: right 0.5s ease; /* Smooth transition */  
+    padding-top: 60px;  
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);  
+}  
+
+.menu ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+.menu ul li {  
+    padding: 15px;  
+}  
+
+.menu ul li a {  
+    color: white;  
+    text-decoration: none;  
+}  
+
+.menu.open {  
+    right: 0; /* Slide in from the right */  
+}
+    </style>
+</head>  
+<body>  
+
+    <div class="menu-icon" id="menuIcon">&#9776; Menu</div>  
+    <nav class="menu" id="menu">  
+        <ul>  
+            <li><a href="#">Home</a></li>  
+            <li><a href="#">About</a></li>  
+            <li><a href="#">Services</a></li>  
+            <li><a href="#">Contact</a></li>  
+        </ul>  
+    </nav>  
+
+    <script>
+        // Get elements  
+const menuIcon = document.getElementById('menuIcon');  
+const menu = document.getElementById('menu');  
+
+// Add click event listener to the menu icon  
+menuIcon.addEventListener('click', () => {  
+    menu.classList.toggle('open'); // Toggle the 'open' class  
+});
+    </script>  
+</body>  
+</html>
